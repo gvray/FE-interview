@@ -1,3 +1,8 @@
+---
+sidebar_position: 2
+title: "虚拟 DOM"
+---
+
 # 虚拟（Virtual）dom
 
 ## 什么是虚拟DOM？
