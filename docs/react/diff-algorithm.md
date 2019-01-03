@@ -1,3 +1,8 @@
+---
+sidebar_position: 3
+title: "Diff算法"
+---
+
 # Diff算法
 
 Diff算法（差异算法）是React中用于比较Virtual DOM新旧节点之间的差异，并将这些差异应用到实际DOM上的一种算法。
