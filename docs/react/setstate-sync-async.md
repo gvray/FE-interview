@@ -1,3 +1,8 @@
+---
+sidebar_position: 6
+title: "setState同步异步"
+---
+
 # setState同步异步
 
 在React中，setState()可以用来更新组件的状态（state）。它有两种使用方式，同步和异步。
