@@ -1,3 +1,8 @@
+---
+sidebar_position: 8
+title: "React18新特性"
+---
+
 # React18新特性
 
 React 18是未发布的React版本，但有一些新功能和改进正在考虑和实现中。以下是一些React 18中可能包含的新特性：
