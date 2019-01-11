@@ -1,3 +1,8 @@
+---
+sidebar_position: 11
+title: "React技巧"
+---
+
 # React技巧
 
 ## useState、useRef避免重复创建初始值
