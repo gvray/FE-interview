@@ -1,3 +1,8 @@
+---
+sidebar_position: 12
+title: "ErrorBoundary"
+---
+
 # ErrorBoundary
 
 在React中，Hook是一种用于在函数组件中添加状态和其他React特性的方式。与类组件不同，函数组件没有内置的Error Boundary，这是因为函数组件在渲染周期中没有实例。Error Boundaries通常是类组件的一部分，它们可以捕获该组件及其子组件中的错误。
