@@ -1,3 +1,8 @@
+---
+sidebar_position: 14
+title: "useState 是如何实现的？"
+---
+
 # useState 是如何实现的？
 
 `useState` 是 React 的一个 Hook，用于在函数组件中管理状态。它使函数组件能够拥有类似于类组件中的 `this.state` 和 `this.setState` 的功能。`useState` 的实现涉及到 React 的内部机制，包括状态管理、更新队列和组件的重新渲染。
