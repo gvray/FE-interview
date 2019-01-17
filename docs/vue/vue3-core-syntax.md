@@ -1,3 +1,8 @@
+---
+sidebar_position: 1
+title: "Vue3核心语法"
+---
+
 # Vue3核心语法
 
 > ⚠️ 本文针对 **Vue 3**。
