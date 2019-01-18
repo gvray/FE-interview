@@ -1,3 +1,8 @@
+---
+sidebar_position: 2
+title: "路由"
+---
+
 # 路由
 
 > ⚠️ 本文针对 **Vue 3**。
