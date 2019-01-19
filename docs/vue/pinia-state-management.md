@@ -1,3 +1,8 @@
+---
+sidebar_position: 3
+title: "状态管理 pinia"
+---
+
 # 状态管理 pinia
 
 > ⚠️ 本文针对 **Vue 3**。
