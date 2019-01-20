@@ -1,3 +1,8 @@
+---
+sidebar_position: 4
+title: "组件通信"
+---
+
 # 组件通信
 
 > ⚠️ 本文针对 **Vue 3**。
