@@ -1,3 +1,8 @@
+---
+sidebar_position: 6
+title: "Vue3新组件"
+---
+
 # Vue3新组件
 
 > ⚠️ 本文针对 **Vue 3**。
