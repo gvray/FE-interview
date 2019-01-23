@@ -1,3 +1,8 @@
+---
+sidebar_position: 7
+title: "watch vs watchEffect 全面对比"
+---
+
 # 🧠 Vue `watch` vs `watchEffect` 全面对比
 
 > ⚠️ 本文针对 **Vue 3**。
