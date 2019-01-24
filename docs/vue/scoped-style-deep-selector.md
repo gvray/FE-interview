@@ -1,3 +1,8 @@
+---
+sidebar_position: 8
+title: "scoped 样式穿透机制"
+---
+
 # 🎯 Vue scoped 样式穿透机制
 
 > ⚠️ 本文针对 **Vue 3**。
