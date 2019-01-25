@@ -11,14 +11,14 @@ sidebar_position: 1
 
 ## Vue 3
 
-1. [Vue3核心语法](./1.md)
-2. [路由](./2.md)
-3. [状态管理 pinia](./3.md)
-4. [组件通信](./4.md)
-5. [常用API](./5.md)
-6. [Vue3新组件](./6.md)
-7. [watch vs watchEffect 全面对比](./7.md)
-8. [scoped 样式穿透机制](./8.md)
+1. [Vue3核心语法](./vue3-core-syntax.md)
+2. [路由](./vue-router.md)
+3. [状态管理 pinia](./pinia-state-management.md)
+4. [组件通信](./component-communication.md)
+5. [常用API](./vue-common-api.md)
+6. [Vue3新组件](./vue3-built-in-components.md)
+7. [watch vs watchEffect 全面对比](./watch-vs-watcheffect.md)
+8. [scoped 样式穿透机制](./scoped-style-deep-selector.md)
 
 ## 通用（Vue 2 / Vue 3）
 
