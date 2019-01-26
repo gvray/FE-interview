@@ -1,3 +1,8 @@
+---
+sidebar_position: 1
+title: "type和interface的区别"
+---
+
 # type和interface的区别
 
 TypeScript中的type和interface既有相似之处又有不同之处。以下是它们之间的主要区别：
