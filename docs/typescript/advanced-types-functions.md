@@ -1,3 +1,8 @@
+---
+sidebar_position: 2
+title: "type高级类型和函数"
+---
+
 
 # type高级类型和函数
 
