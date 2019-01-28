@@ -1,3 +1,8 @@
+---
+sidebar_position: 3
+title: "tsconfig.json详细配置"
+---
+
 # tsconfig.json详细配置
 
 tsconfig.json文件是 TypeScript 编译器的配置文件，TypeScript 编译器可以根据它的规则来对代码进行编译。
