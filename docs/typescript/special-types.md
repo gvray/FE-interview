@@ -1,3 +1,8 @@
+---
+sidebar_position: 6
+title: "特殊类型"
+---
+
 # 特殊类型
 
 让我们深入了解 `any`、`unknown`、`void` 和 `never` 这四个 TypeScript 中的特殊类型的用途和区别。
