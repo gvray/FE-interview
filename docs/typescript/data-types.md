@@ -1,4 +1,9 @@
 ---
+sidebar_position: 7
+title: "数据类型"
+---
+
+---
 sidebar_position: 3
 ---
 
