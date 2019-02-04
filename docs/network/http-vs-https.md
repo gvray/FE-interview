@@ -1,3 +1,8 @@
+---
+sidebar_position: 2
+title: "说一下http和https"
+---
+
 # 说一下http和https
 
 HTTP和HTTPS都是应用层协议，而HTTPS在HTTP基础上加入了传输层的SSL/TLS协议，使通信过程更加安全可靠。
