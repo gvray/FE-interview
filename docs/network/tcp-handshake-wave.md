@@ -1,3 +1,8 @@
+---
+sidebar_position: 7
+title: "TCP的三次握手和四次挥手"
+---
+
 # TCP的三次握手和四次挥手
 
 TCP（Transmission Control Protocol）是一种可靠的、面向连接的协议。在建立和终止连接时，TCP 使用了三次握手和四次挥手的过程。
