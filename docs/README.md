@@ -18,7 +18,7 @@ sidebar_position: 1
 | --------------------------------------------- | :--------- |
 | [CSS 垂直居中布局](./css/5.md)                | CSS        |
 | [BFC (块格式化上下文)](./css/4.md)            | CSS        |
-| [HTTP 缓存 - 强制、协商缓存](./network/4.md)  | HTTP       |
+| [HTTP 缓存 - 强制、协商缓存](./network/http-cache.md)  | HTTP       |
 | [JS 事件循环 (Event Loop)](./javascript/9.md) | JavaScript |
 | [type 和 interface 的区别](./typescript/1.md) | TypeScript |
 
