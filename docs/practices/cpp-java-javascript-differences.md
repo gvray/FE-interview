@@ -1,3 +1,8 @@
+---
+sidebar_position: 5
+title: "C++ Java JavaScript的区别"
+---
+
 # C++ Java JavaScript的区别
 
 从静态类型还是动态类型来看
