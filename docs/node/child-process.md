@@ -1,3 +1,8 @@
+---
+sidebar_position: 3
+title: "child_process"
+---
+
 # child_process
 
 `child_process` 模块是 Node.js 的一个核心模块，用于创建子进程并与其进行通信。它是执行外部命令、Shell 脚本以及其他进程的主要方式之一。下面我会详解 `child_process` 模块，然后列出一些常用的方法和可能涉及的面试题。
