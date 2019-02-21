@@ -1,3 +1,8 @@
+---
+sidebar_position: 1
+title: "Nginx 配置文件详解"
+---
+
 # Nginx 配置文件详解
 
 Nginx 的配置文件是一个名为 nginx.conf 的文本文件，既包含全局配置，也包括以http为上下文的Http模块配置和以server为上下文的Server模块配置等。该文件通常位于 /etc/nginx 或 /usr/local/nginx/conf 目录下。
