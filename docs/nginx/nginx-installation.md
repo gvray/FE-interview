@@ -1,3 +1,8 @@
+---
+sidebar_position: 2
+title: "Nginx安装"
+---
+
 # Nginx安装
 
 ## Mac 安装和使用Nginx
