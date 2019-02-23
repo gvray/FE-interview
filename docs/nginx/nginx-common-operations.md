@@ -1,3 +1,8 @@
+---
+sidebar_position: 3
+title: "Nginx常用操作"
+---
+
 # Nginx常用操作
 
 ## 查看nginx 安装目录
