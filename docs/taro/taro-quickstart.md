@@ -1,3 +1,8 @@
+---
+sidebar_position: 1
+title: "Taro快速掌握"
+---
+
 # Taro快速掌握
 
 ## CLI工具
