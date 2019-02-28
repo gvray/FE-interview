@@ -1,3 +1,8 @@
+---
+sidebar_position: 1
+title: "webpack常用插件"
+---
+
 # webpack常用插件
 
 1. `html-webpack-plugin` - 自动生成 HTML 文件，以及将打包后的 js 文件自动引入到 HTML 中；
