@@ -10,17 +10,17 @@ sidebar_position: 1
 
 | 推荐内容                  |    标签    |
 | ------------------------- | :--------: |
-| [闭包](./javascript/1.md) | JavaScript |
+| [闭包](./javascript/closure.md) | JavaScript |
 
 ## 高频面试题
 
 | 题目                                          | 标签       |
 | --------------------------------------------- | :--------- |
-| [CSS 垂直居中布局](./css/5.md)                | CSS        |
-| [BFC (块格式化上下文)](./css/4.md)            | CSS        |
+| [CSS 垂直居中布局](./css/vertical-center.md)  | CSS        |
+| [BFC (块格式化上下文)](./css/bfc.md)          | CSS        |
 | [HTTP 缓存 - 强制、协商缓存](./network/http-cache.md)  | HTTP       |
-| [JS 事件循环 (Event Loop)](./javascript/9.md) | JavaScript |
-| [type 和 interface 的区别](./typescript/1.md) | TypeScript |
+| [JS 事件循环 (Event Loop)](./javascript/event-loop.md) | JavaScript |
+| [type 和 interface 的区别](./typescript/type-vs-interface.md) | TypeScript |
 
 # 目录大纲
 

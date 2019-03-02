@@ -415,7 +415,7 @@ function sendToy(){
 
 ## pinia
 
-参考之前[pinia](./3.md)部分的讲解
+参考之前[pinia](./pinia-state-management.md)部分的讲解
 
 ## slot
 
