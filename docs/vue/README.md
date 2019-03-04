@@ -7,7 +7,7 @@ sidebar_position: 1
 
 ## Vue 2
 
-1. [快速预览](./快速预览.md)
+1. [快速预览](./quick-overview.md)
 
 ## Vue 3
 
