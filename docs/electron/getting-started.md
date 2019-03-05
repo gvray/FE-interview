@@ -1,3 +1,8 @@
+---
+sidebar_position: 1
+title: "入门教程"
+---
+
 # 入门教程
 
 ## 技术架构
