@@ -82,5 +82,5 @@ export default async function Home() {
 - 利用缓存与 revalidate 控制数据新鲜度与性能。
 
 ## 下一步
-- 路由与布局：[App Router 路由与布局](./02-routing.md)
-- 渲染与数据：[渲染模式与数据获取](./03-rendering.md)
+- 路由与布局：[App Router 路由与布局](./routing-layouts.md)
+- 渲染与数据：[渲染模式与数据获取](./rendering-data-fetching.md)
