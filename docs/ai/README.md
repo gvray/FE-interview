@@ -13,16 +13,16 @@ sidebar_label: 总览
 ### 🌱 第一阶段：AI 基础知识
 > 建立扎实的理论基础
 
-- [AI 基础概念](./basics/01-introduction.md) - 人工智能概述与发展历程
-- [机器学习基础](./basics/02-machine-learning.md) - 核心算法与实际应用
-- [深度学习入门](./basics/03-deep-learning.md) - 神经网络与架构设计
-- [大语言模型基础](./basics/04-large-language-models.md) - Transformer 与预训练技术
+- [AI 基础概念](./basics/introduction.md) - 人工智能概述与发展历程
+- [机器学习基础](./basics/machine-learning.md) - 核心算法与实际应用
+- [深度学习入门](./basics/deep-learning.md) - 神经网络与架构设计
+- [大语言模型基础](./basics/large-language-models.md) - Transformer 与预训练技术
 
 ### 🚀 第二阶段：应用开发实践
 > 掌握实际开发技能
 
-- [AI 应用开发入门](./app-development/01-introduction.md) - Prompt、Agent 与 Function Calling
-- [LangChain 框架](./app-development/langchain/01-introduction.md) - LLM 应用开发框架
+- [AI 应用开发入门](./app-development/introduction.md) - Prompt、Agent 与 Function Calling
+- [LangChain 框架](./app-development/langchain/introduction.md) - LLM 应用开发框架
 
 ### 💎 第三阶段：原理深入
 > 理解底层技术原理
