@@ -203,4 +203,4 @@ description: 人工智能核心概念与技术发展历程
 
 ---
 
-**下一节**：[机器学习基础](02-machine-learning.md)
+**下一节**：[机器学习基础](./machine-learning.md)
