@@ -111,7 +111,62 @@ const sidebars: SidebarsConfig = {
         createCategory("miniprogram"),
       ],
     },
-    createCategory("ai"),
+    {
+      type: "category",
+      label: "AI 开发",
+      collapsed: true,
+      link: {
+        type: "doc",
+        id: "ai/README",
+      },
+      items: [
+        {
+          type: "category",
+          label: "基础概念",
+          items: [
+            "ai/ai-introduction",
+            "ai/machine-learning",
+            "ai/deep-learning",
+            "ai/large-language-models",
+            "ai/llm-fundamentals",
+          ],
+        },
+        {
+          type: "category",
+          label: "应用开发",
+          items: [
+            "ai/application-development",
+            "ai/llm-selection",
+          ],
+        },
+        {
+          type: "category",
+          label: "LangChain",
+          items: [
+            "ai/langchain-introduction",
+            "ai/langchain-core-components",
+            "ai/langchain-seven-core-components",
+            "ai/langchain-components-manual",
+          ],
+        },
+        {
+          type: "category",
+          label: "LangGraph",
+          items: [
+            "ai/langgraph-introduction",
+            "ai/langgraph-core-concepts",
+            "ai/langgraph-build",
+            "ai/langgraph-state-checkpoints",
+            "ai/langgraph-events-observability",
+            "ai/langgraph-memory-conversation",
+            "ai/langgraph-tools-integration",
+            "ai/langgraph-patterns-architecture",
+            "ai/langgraph-testing-evaluation",
+            "ai/langgraph-production",
+          ],
+        },
+      ],
+    },
     createCategory("samples"),
   ],
 };
