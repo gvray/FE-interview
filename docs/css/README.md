@@ -21,4 +21,4 @@ sidebar_position: 1
 16. [重绘和重排](./repaint-reflow.md)
 
 [FAQ?](./FAQ.md)
-[常用技巧](./eg.md)
+[常用技巧](./tips-tricks.md)
