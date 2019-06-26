@@ -67,7 +67,7 @@ const sidebars: SidebarsConfig = {
       items: [
         createCategory("npm"),
         createCategory("webpack"),
-        createCategory("rollupjs"),
+        createCategory("rollup"),
         createCategory("jest"),
         createCategory("practices"),
         createCategory("design-patterns"),
