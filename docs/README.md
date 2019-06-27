@@ -40,7 +40,7 @@ sidebar_position: 1
 
 ### 工程化
 
-- [npm](./npm/) · [webpack](./webpack/) · [rollupjs](./rollupjs/) · [Jest](./jest/) · [工程实践](./practices/) · [设计模式](./design-patterns/) · [Git](./git/) · [Rust](./rust/)
+- [npm](./npm/) · [webpack](./webpack/) · [Rollup](./rollup/) · [Jest](./jest/) · [工程实践](./practices/) · [设计模式](./design-patterns/) · [Git](./git/) · [Rust](./rust/)
 
 ### 服务端与运维
 
