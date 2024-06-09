@@ -9,5 +9,6 @@ sidebar_position: 1
 4. [组件通信](./4.md)
 5. [常用API](./5.md)
 6. [Vue3新组件](./6.md)
+7. [watch vs watchEffect 全面对比](./7.md)
 
 [FAQ](./FAQ.md)
