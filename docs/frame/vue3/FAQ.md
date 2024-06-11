@@ -23,3 +23,8 @@ sidebar_position: 2
 | 多个依赖且不想手动指定 | `watchEffect`                   |
 | 立即执行副作用逻辑     | `watchEffect`                   |
 | 需要清理副作用         | 两者都可以，使用 `onInvalidate` |
+
+## Pinia 有哪些使用场景？
+
+Pinia 适用的场景非常广泛，涵盖全局状态管理、异步请求、模块化管理、状态持久化、TypeScript 支持等功能。在现代 Vue 3 项目中，Pinia 是轻量、高效、易用的状态管理工具，能够帮助开发者更好地组织和维护复杂的应用逻辑。
+
