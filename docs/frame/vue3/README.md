@@ -10,5 +10,6 @@ sidebar_position: 1
 5. [常用API](./5.md)
 6. [Vue3新组件](./6.md)
 7. [watch vs watchEffect 全面对比](./7.md)
+8. [scoped 样式穿透机制](./8.md)
 
 [FAQ](./FAQ.md)
