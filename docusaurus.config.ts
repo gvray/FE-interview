@@ -6,9 +6,9 @@ const config: Config = {
   title: '前端面试',
   tagline: '前端面试题收集汇总并全面给出权威优质的答案，更欢迎👏大家issues投稿 ❤️ 💞 💖，一起维护一套优质权威的前端知识体系。',
   favicon: 'img/favicon.ico',
-  url: 'https://gavinbirkhoff.github.io',
+  url: 'https://gvray.github.io',
   baseUrl: '/FE-interview',
-  organizationName: 'GavinBirkhoff',
+  organizationName: 'gvray',
   projectName: 'FE-interview',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -23,13 +23,13 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           editUrl:
-            'https://github.com/GavinBirkhoff/FE-interview/tree/main/',
+            'https://github.com/gvray/FE-interview/tree/main/',
           sidebarCollapsed: true,
         },
         blog: {
           showReadingTime: true,
           editUrl:
-            'https://github.com/GavinBirkhoff/FE-interview/tree/main/',
+            'https://github.com/gvray/FE-interview/tree/main/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -74,6 +74,12 @@ const config: Config = {
         },
         {
           type: 'docSidebar',
+          sidebarId: 'ai',
+          position: 'left',
+          label: 'AI 开发',
+        },
+        {
+          type: 'docSidebar',
           sidebarId: 'browser',
           position: 'left',
           label: '浏览器',
@@ -104,7 +110,7 @@ const config: Config = {
           label: '运维',
         },
         {
-          href: 'https://github.com/GavinBirkhoff/FE-interview',
+          href: 'https://github.com/gvray/FE-interview',
           label: 'GitHub',
           position: 'right',
         },
@@ -177,12 +183,12 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/GavinBirkhoff/FE-interview',
+              href: 'https://github.com/gvray/FE-interview',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} FE-interview. Built with GavinBirkhoff's Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} FE-interview. Built with GavinRay's Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
@@ -195,7 +201,7 @@ const config: Config = {
     },
     announcementBar: {
       id: 'announcementBar-1',
-      content: `⭐️ 如果您喜欢本网站，请点这里在<a target="_blank" class="cta" href="https://github.com/GavinBirkhoff/FE-interview"> <strong>GitHub</strong> </a>上给它一颗小星星！ ⭐️`,
+      content: `⭐️ 如果您喜欢本网站，请点这里在<a target="_blank" class="cta" href="https://github.com/gvray/FE-interview"> <strong>GitHub</strong> </a>上给它一颗小星星！ ⭐️`,
       isCloseable: true,
       backgroundColor: '#0AC1CF',
       textColor: '#000b34',

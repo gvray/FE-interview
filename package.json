@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GavinBirkhoff/FE-interview.git"
+    "url": "git+https://github.com/gvray/FE-interview.git"
   },
   "keywords": [
     "interview"
@@ -13,9 +13,9 @@
   "author": "Gavin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/GavinBirkhoff/FE-interview/issues"
+    "url": "https://github.com/gvray/FE-interview/issues"
   },
-  "homepage": "https://github.com/GavinBirkhoff/FE-interview#readme",
+  "homepage": "https://github.com/gvray/FE-interview#readme",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
