@@ -1,5 +1,4 @@
 ---
-id: ai-concepts
 title: Prompt、Agent、MCP 与 Function Calling
 sidebar_label: Prompt、Agent、MCP 与 Function Calling
 sidebar_position: 5

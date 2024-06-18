@@ -1,5 +1,4 @@
 ---
-id: ai-overview
 title: AI 与前端开发
 sidebar_label: 概述
 slug: /category/ai

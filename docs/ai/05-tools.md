@@ -1,5 +1,4 @@
 ---
-id: ai-tools
 title: AI 开发工具指南
 sidebar_label: AI 开发工具
 sidebar_position: 4
