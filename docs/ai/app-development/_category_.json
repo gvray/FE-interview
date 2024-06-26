@@ -1,0 +1,8 @@
+{
+  "label": "大模型应用开发",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "使用 LangChain 等框架进行大模型应用开发"
+  }
+}

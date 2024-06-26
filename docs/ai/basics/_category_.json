@@ -1,0 +1,8 @@
+{
+  "label": "AI 常识",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "AI 基础概念与常识入门"
+  }
+}
