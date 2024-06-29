@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Monitor -->
+  <rect x="100" y="50" width="300" height="200" rx="10" fill="#1e293b"/>
+  <rect x="110" y="60" width="280" height="170" rx="5" fill="#0f172a"/>
+  <!-- Code lines -->
+  <rect x="130" y="80" width="60" height="8" rx="2" fill="#818cf8"/>
+  <rect x="200" y="80" width="100" height="8" rx="2" fill="#a78bfa"/>
+  <rect x="130" y="100" width="40" height="8" rx="2" fill="#f472b6"/>
+  <rect x="180" y="100" width="80" height="8" rx="2" fill="#22d3ee"/>
+  <rect x="270" y="100" width="50" height="8" rx="2" fill="#a3e635"/>
+  <rect x="150" y="120" width="70" height="8" rx="2" fill="#fbbf24"/>
+  <rect x="230" y="120" width="90" height="8" rx="2" fill="#818cf8"/>
+  <rect x="150" y="140" width="50" height="8" rx="2" fill="#f472b6"/>
+  <rect x="210" y="140" width="60" height="8" rx="2" fill="#22d3ee"/>
+  <rect x="130" y="160" width="40" height="8" rx="2" fill="#818cf8"/>
+  <rect x="180" y="160" width="100" height="8" rx="2" fill="#a78bfa"/>
+  <rect x="130" y="180" width="80" height="8" rx="2" fill="#fbbf24"/>
+  <rect x="220" y="180" width="70" height="8" rx="2" fill="#22d3ee"/>
+  <!-- Monitor stand -->
+  <rect x="220" y="250" width="60" height="20" fill="#334155"/>
+  <rect x="200" y="270" width="100" height="10" rx="3" fill="#475569"/>
+  <!-- Floating elements -->
+  <circle cx="420" cy="100" r="30" fill="url(#grad1)" opacity="0.8"/>
+  <circle cx="80" cy="150" r="20" fill="url(#grad2)" opacity="0.6"/>
+  <rect x="400" y="200" width="50" height="50" rx="8" fill="#818cf8" opacity="0.5"/>
+  <polygon points="60,250 90,300 30,300" fill="#f472b6" opacity="0.5"/>
+  <!-- Decorative dots -->
+  <circle cx="440" cy="170" r="5" fill="#22d3ee"/>
+  <circle cx="460" cy="190" r="3" fill="#a3e635"/>
+  <circle cx="50" cy="100" r="4" fill="#fbbf24"/>
+  <circle cx="70" cy="80" r="3" fill="#f472b6"/>
+  <!-- AI/Brain icon -->
+  <g transform="translate(380, 280)">
+    <circle cx="30" cy="30" r="28" fill="none" stroke="url(#grad1)" stroke-width="3"/>
+    <path d="M20 25 Q30 15 40 25 Q50 35 40 40 Q30 50 20 40 Q10 30 20 25" fill="none" stroke="#818cf8" stroke-width="2"/>
+    <circle cx="25" cy="28" r="3" fill="#a78bfa"/>
+    <circle cx="35" cy="32" r="3" fill="#a78bfa"/>
+    <circle cx="30" cy="40" r="2" fill="#f472b6"/>
+  </g>
+</svg>

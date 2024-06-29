@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="c1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981"/>
+      <stop offset="100%" style="stop-color:#059669"/>
+    </linearGradient>
+    <linearGradient id="c2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#2563eb"/>
+    </linearGradient>
+  </defs>
+  <!-- Central person -->
+  <circle cx="100" cy="70" r="20" fill="url(#c1)"/>
+  <circle cx="100" cy="64" r="8" fill="white"/>
+  <path d="M88 80 Q100 72 112 80" fill="white"/>
+  <!-- Left person -->
+  <circle cx="50" cy="110" r="16" fill="url(#c2)"/>
+  <circle cx="50" cy="105" r="6" fill="white"/>
+  <path d="M40 118 Q50 112 60 118" fill="white"/>
+  <!-- Right person -->
+  <circle cx="150" cy="110" r="16" fill="url(#c2)"/>
+  <circle cx="150" cy="105" r="6" fill="white"/>
+  <path d="M140 118 Q150 112 160 118" fill="white"/>
+  <!-- Bottom left person -->
+  <circle cx="65" cy="160" r="14" fill="#a78bfa"/>
+  <circle cx="65" cy="156" r="5" fill="white"/>
+  <path d="M57 166 Q65 161 73 166" fill="white"/>
+  <!-- Bottom right person -->
+  <circle cx="135" cy="160" r="14" fill="#f472b6"/>
+  <circle cx="135" cy="156" r="5" fill="white"/>
+  <path d="M127 166 Q135 161 143 166" fill="white"/>
+  <!-- Connection lines -->
+  <line x1="100" y1="90" x2="50" y2="94" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4"/>
+  <line x1="100" y1="90" x2="150" y2="94" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4"/>
+  <line x1="50" y1="126" x2="65" y2="146" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4"/>
+  <line x1="150" y1="126" x2="135" y2="146" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4"/>
+  <line x1="79" y1="160" x2="121" y2="160" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4"/>
+  <!-- Pulse rings -->
+  <circle cx="100" cy="70" r="30" fill="none" stroke="#10b981" stroke-width="1" opacity="0.3"/>
+  <circle cx="100" cy="70" r="40" fill="none" stroke="#10b981" stroke-width="1" opacity="0.2"/>
+  <!-- Stars -->
+  <path d="M170 50 L172 55 L177 57 L172 59 L170 64 L168 59 L163 57 L168 55 Z" fill="#fbbf24"/>
+  <path d="M30 80 L32 84 L36 85 L32 86 L30 90 L28 86 L24 85 L28 84 Z" fill="#22d3ee"/>
+</svg>

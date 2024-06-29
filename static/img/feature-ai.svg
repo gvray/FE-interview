@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="ai1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#818cf8"/>
+      <stop offset="100%" style="stop-color:#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="ai2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f472b6"/>
+      <stop offset="100%" style="stop-color:#ec4899"/>
+    </linearGradient>
+  </defs>
+  <!-- Brain outline -->
+  <circle cx="100" cy="90" r="55" fill="none" stroke="url(#ai1)" stroke-width="3"/>
+  <!-- Neural network nodes -->
+  <circle cx="70" cy="70" r="8" fill="#818cf8"/>
+  <circle cx="100" cy="55" r="8" fill="#a78bfa"/>
+  <circle cx="130" cy="70" r="8" fill="#818cf8"/>
+  <circle cx="60" cy="100" r="8" fill="#c4b5fd"/>
+  <circle cx="100" cy="95" r="10" fill="url(#ai2)"/>
+  <circle cx="140" cy="100" r="8" fill="#c4b5fd"/>
+  <circle cx="75" cy="125" r="8" fill="#a78bfa"/>
+  <circle cx="125" cy="125" r="8" fill="#a78bfa"/>
+  <!-- Connections -->
+  <line x1="70" y1="70" x2="100" y2="55" stroke="#e0e7ff" stroke-width="2"/>
+  <line x1="100" y1="55" x2="130" y2="70" stroke="#e0e7ff" stroke-width="2"/>
+  <line x1="70" y1="70" x2="60" y2="100" stroke="#e0e7ff" stroke-width="2"/>
+  <line x1="130" y1="70" x2="140" y2="100" stroke="#e0e7ff" stroke-width="2"/>
+  <line x1="70" y1="70" x2="100" y2="95" stroke="#e0e7ff" stroke-width="2"/>
+  <line x1="130" y1="70" x2="100" y2="95" stroke="#e0e7ff" stroke-width="2"/>
+  <line x1="60" y1="100" x2="100" y2="95" stroke="#e0e7ff" stroke-width="2"/>
+  <line x1="140" y1="100" x2="100" y2="95" stroke="#e0e7ff" stroke-width="2"/>
+  <line x1="60" y1="100" x2="75" y2="125" stroke="#e0e7ff" stroke-width="2"/>
+  <line x1="140" y1="100" x2="125" y2="125" stroke="#e0e7ff" stroke-width="2"/>
+  <line x1="100" y1="95" x2="75" y2="125" stroke="#e0e7ff" stroke-width="2"/>
+  <line x1="100" y1="95" x2="125" y2="125" stroke="#e0e7ff" stroke-width="2"/>
+  <!-- Sparkles -->
+  <path d="M160 50 L163 57 L170 60 L163 63 L160 70 L157 63 L150 60 L157 57 Z" fill="#fbbf24"/>
+  <path d="M40 130 L42 135 L47 137 L42 139 L40 144 L38 139 L33 137 L38 135 Z" fill="#22d3ee"/>
+  <!-- Label -->
+  <rect x="60" y="160" width="80" height="24" rx="12" fill="url(#ai1)"/>
+  <text x="100" y="176" text-anchor="middle" fill="white" font-size="11" font-weight="600">LangChain</text>
+</svg>
