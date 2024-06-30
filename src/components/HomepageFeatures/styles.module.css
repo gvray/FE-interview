@@ -1,42 +1,106 @@
 .features {
   display: flex;
   align-items: center;
-  padding: 4rem 0;
+  padding: 5rem 0;
   width: 100%;
-  background: var(--ifm-background-color);
+  background: #fff;
+}
+
+[data-theme='dark'] .features {
+  background: #0f172a;
 }
 
 .featuresHeader {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
 }
 
 .featuresTitle {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  color: #1e293b;
+}
+
+[data-theme='dark'] .featuresTitle {
+  color: #f1f5f9;
 }
 
 .featuresSubtitle {
-  color: var(--ifm-color-emphasis-600);
+  color: #64748b;
   font-size: 1.1rem;
 }
 
+[data-theme='dark'] .featuresSubtitle {
+  color: #94a3b8;
+}
+
+.featureCard {
+  background: #f8fafc;
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: all 0.25s;
+  border: 1px solid #e2e8f0;
+  height: 100%;
+}
+
+.featureCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border-color: transparent;
+}
+
+[data-theme='dark'] .featureCard {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+[data-theme='dark'] .featureCard:hover {
+  background: #263548;
+}
+
 .featureSvg {
-  height: 160px;
-  width: 160px;
+  height: 140px;
+  width: 140px;
+  margin-bottom: 1.5rem;
+}
+
+.featureTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #1e293b;
+}
+
+[data-theme='dark'] .featureTitle {
+  color: #f1f5f9;
+}
+
+.featureDesc {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.6;
   margin-bottom: 1rem;
 }
 
+[data-theme='dark'] .featureDesc {
+  color: #94a3b8;
+}
+
 .featureLink {
-  display: inline-block;
-  margin-top: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
   font-weight: 600;
+  font-size: 0.95rem;
   color: var(--ifm-color-primary);
-  transition: color 0.2s;
+  transition: all 0.2s;
 }
 
 .featureLink:hover {
   color: var(--ifm-color-primary-dark);
   text-decoration: none;
+  gap: 0.5rem;
 }

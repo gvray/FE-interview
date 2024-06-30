@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" fill="none">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.15)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.05)"/>
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.2)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.1)"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Circuit lines -->
+  <g stroke="rgba(255,255,255,0.1)" stroke-width="1">
+    <path d="M0 100 H200 L250 150 H400"/>
+    <path d="M0 200 H150 L200 250 H350 L400 200 H500"/>
+    <path d="M0 300 H100 L150 350 H300"/>
+    <path d="M800 100 H600 L550 150 H450"/>
+    <path d="M800 250 H650 L600 200 H500"/>
+    <path d="M800 350 H700 L650 300 H550"/>
+  </g>
+  
+  <!-- Connection nodes -->
+  <g fill="rgba(255,255,255,0.3)">
+    <circle cx="200" cy="100" r="4"/>
+    <circle cx="250" cy="150" r="3"/>
+    <circle cx="400" cy="150" r="4"/>
+    <circle cx="150" cy="200" r="3"/>
+    <circle cx="350" cy="250" r="4"/>
+    <circle cx="500" cy="200" r="3"/>
+    <circle cx="100" cy="300" r="4"/>
+    <circle cx="300" cy="350" r="3"/>
+    <circle cx="600" cy="100" r="4"/>
+    <circle cx="550" cy="150" r="3"/>
+    <circle cx="650" cy="250" r="4"/>
+    <circle cx="600" cy="200" r="3"/>
+    <circle cx="700" cy="350" r="4"/>
+    <circle cx="550" cy="300" r="3"/>
+  </g>
+  
+  <!-- Floating geometric shapes -->
+  <rect x="50" y="50" width="60" height="60" rx="10" fill="url(#grad1)" transform="rotate(15 80 80)"/>
+  <rect x="680" y="280" width="50" height="50" rx="8" fill="url(#grad1)" transform="rotate(-10 705 305)"/>
+  <circle cx="700" cy="80" r="40" fill="url(#grad1)"/>
+  <circle cx="80" cy="320" r="30" fill="url(#grad1)"/>
+  
+  <!-- Code brackets -->
+  <g stroke="rgba(255,255,255,0.25)" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M620 120 L600 140 L620 160"/>
+    <path d="M660 120 L680 140 L660 160"/>
+    <path d="M140 260 L120 280 L140 300"/>
+    <path d="M180 260 L200 280 L180 300"/>
+  </g>
+  
+  <!-- Binary/Data streams -->
+  <g fill="rgba(255,255,255,0.15)" font-family="monospace" font-size="10">
+    <text x="30" y="150">01101</text>
+    <text x="750" cy="180">10110</text>
+    <text x="720" y="320">01001</text>
+    <text x="50" y="380">11010</text>
+  </g>
+  
+  <!-- Neural network style connections -->
+  <g stroke="rgba(255,255,255,0.08)" stroke-width="1">
+    <line x1="300" y1="50" x2="400" y2="100"/>
+    <line x1="400" y1="100" x2="350" y2="150"/>
+    <line x1="350" y1="150" x2="450" y2="180"/>
+    <line x1="450" y1="50" x2="500" y2="120"/>
+    <line x1="500" y1="120" x2="450" y2="180"/>
+  </g>
+  
+  <!-- AI brain icon -->
+  <g transform="translate(380, 280)">
+    <circle cx="40" cy="40" r="35" stroke="rgba(255,255,255,0.2)" stroke-width="2" fill="none"/>
+    <path d="M25 35 Q40 20 55 35 Q65 50 55 55 Q40 70 25 55 Q15 45 25 35" stroke="rgba(255,255,255,0.25)" stroke-width="2" fill="none"/>
+    <circle cx="32" cy="38" r="4" fill="rgba(255,255,255,0.3)"/>
+    <circle cx="48" cy="42" r="4" fill="rgba(255,255,255,0.3)"/>
+    <circle cx="40" cy="55" r="3" fill="rgba(255,255,255,0.2)"/>
+  </g>
+  
+  <!-- Hexagon grid pattern -->
+  <g stroke="rgba(255,255,255,0.06)" stroke-width="1" fill="none">
+    <path d="M550 40 L570 50 L570 70 L550 80 L530 70 L530 50 Z"/>
+    <path d="M580 60 L600 70 L600 90 L580 100 L560 90 L560 70 Z"/>
+    <path d="M200 320 L220 330 L220 350 L200 360 L180 350 L180 330 Z"/>
+    <path d="M230 340 L250 350 L250 370 L230 380 L210 370 L210 350 Z"/>
+  </g>
+  
+  <!-- Pulse rings -->
+  <circle cx="400" cy="200" r="60" stroke="rgba(255,255,255,0.05)" stroke-width="1" fill="none"/>
+  <circle cx="400" cy="200" r="90" stroke="rgba(255,255,255,0.04)" stroke-width="1" fill="none"/>
+  <circle cx="400" cy="200" r="120" stroke="rgba(255,255,255,0.03)" stroke-width="1" fill="none"/>
+</svg>

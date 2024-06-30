@@ -203,8 +203,8 @@ const config: Config = {
       id: 'announcementBar-1',
       content: `⭐️ 如果您喜欢本网站，请点这里在<a target="_blank" class="cta" href="https://github.com/gvray/FE-interview"> <strong>GitHub</strong> </a>上给它一颗小星星！ ⭐️`,
       isCloseable: true,
-      backgroundColor: '#0AC1CF',
-      textColor: '#000b34',
+      backgroundColor: '#6366f1',
+      textColor: '#ffffff',
     },
   } satisfies Preset.ThemeConfig,
 };
