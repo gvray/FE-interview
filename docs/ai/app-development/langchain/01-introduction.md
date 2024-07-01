@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: LangChain 入门
+title: 入门概念
 ---
 
 ## 什么是 LangChain
@@ -31,24 +31,3 @@ LangChain 是一个用于开发大语言模型（LLM）应用的框架，它提�
 ### 5. Memory（记忆）
 
 - 在对话中保持上下文
-
-## 快速开始
-
-```python
-# 安装
-pip install langchain langchain-openai
-
-# 基础示例
-from langchain_openai import ChatOpenAI
-from langchain_core.messages import HumanMessage
-
-model = ChatOpenAI(model="gpt-4")
-response = model.invoke([HumanMessage(content="你好")])
-print(response.content)
-```
-
-## 下一步
-
-- [LCEL 表达式语言](./02-lcel.md)
-- [Prompt 模板](./03-prompts.md)
-- [Chain 链式调用](./04-chains.md)
