@@ -7,34 +7,56 @@ import Heading from '@theme/Heading';
 
 import styles from './index.module.css';
 
+// Import SVG icons
+import HeroSvg from '@site/static/img/hero-tech.svg';
+import HTML5Icon from '@site/static/img/tech/html5.svg';
+import CSS3Icon from '@site/static/img/tech/css3.svg';
+import JavaScriptIcon from '@site/static/img/tech/javascript.svg';
+import TypeScriptIcon from '@site/static/img/tech/typescript.svg';
+import ReactIcon from '@site/static/img/tech/react.svg';
+import VueIcon from '@site/static/img/tech/vue.svg';
+import NextJSIcon from '@site/static/img/tech/nextjs.svg';
+import NodeJSIcon from '@site/static/img/tech/nodejs.svg';
+import WebpackIcon from '@site/static/img/tech/webpack.svg';
+import ViteIcon from '@site/static/img/tech/vite.svg';
+import TailwindIcon from '@site/static/img/tech/tailwind.svg';
+import GitIcon from '@site/static/img/tech/git.svg';
+import DockerIcon from '@site/static/img/tech/docker.svg';
+import NginxIcon from '@site/static/img/tech/nginx.svg';
+import PythonIcon from '@site/static/img/tech/python.svg';
+import OpenAIIcon from '@site/static/img/tech/openai.svg';
+
+import DocsIcon from '@site/static/img/stats/docs-new.svg';
+import TopicsIcon from '@site/static/img/stats/topics-new.svg';
+import CasesIcon from '@site/static/img/stats/cases-new.svg';
+import UpdateIcon from '@site/static/img/stats/update-new.svg';
+
 // Tech stack with real SVG icons
 const techStack = [
-  { name: 'HTML5', icon: require('@site/static/img/tech/html5.svg').default },
-  { name: 'CSS3', icon: require('@site/static/img/tech/css3.svg').default },
-  { name: 'JavaScript', icon: require('@site/static/img/tech/javascript.svg').default },
-  { name: 'TypeScript', icon: require('@site/static/img/tech/typescript.svg').default },
-  { name: 'React', icon: require('@site/static/img/tech/react.svg').default },
-  { name: 'Vue', icon: require('@site/static/img/tech/vue.svg').default },
-  { name: 'Next.js', icon: require('@site/static/img/tech/nextjs.svg').default },
-  { name: 'Node.js', icon: require('@site/static/img/tech/nodejs.svg').default },
-  { name: 'Webpack', icon: require('@site/static/img/tech/webpack.svg').default },
-  { name: 'Vite', icon: require('@site/static/img/tech/vite.svg').default },
-  { name: 'Tailwind', icon: require('@site/static/img/tech/tailwind.svg').default },
-  { name: 'Git', icon: require('@site/static/img/tech/git.svg').default },
-  { name: 'Docker', icon: require('@site/static/img/tech/docker.svg').default },
-  { name: 'Nginx', icon: require('@site/static/img/tech/nginx.svg').default },
-  { name: 'Python', icon: require('@site/static/img/tech/python.svg').default },
-  { name: 'OpenAI', icon: require('@site/static/img/tech/openai.svg').default },
+  { name: 'HTML5', icon: HTML5Icon },
+  { name: 'CSS3', icon: CSS3Icon },
+  { name: 'JavaScript', icon: JavaScriptIcon },
+  { name: 'TypeScript', icon: TypeScriptIcon },
+  { name: 'React', icon: ReactIcon },
+  { name: 'Vue', icon: VueIcon },
+  { name: 'Next.js', icon: NextJSIcon },
+  { name: 'Node.js', icon: NodeJSIcon },
+  { name: 'Webpack', icon: WebpackIcon },
+  { name: 'Vite', icon: ViteIcon },
+  { name: 'Tailwind', icon: TailwindIcon },
+  { name: 'Git', icon: GitIcon },
+  { name: 'Docker', icon: DockerIcon },
+  { name: 'Nginx', icon: NginxIcon },
+  { name: 'Python', icon: PythonIcon },
+  { name: 'OpenAI', icon: OpenAIIcon },
 ];
 
 const stats = [
-  { number: '300+', label: '面试题目', icon: '📝' },
-  { number: '15+', label: '技术专题', icon: '📚' },
-  { number: '50+', label: '实战案例', icon: '💻' },
-  { number: '24/7', label: '持续更新', icon: '🔄' },
+  { number: '300+', label: '面试题目', icon: DocsIcon },
+  { number: '15+', label: '技术专题', icon: TopicsIcon },
+  { number: '50+', label: '实战案例', icon: CasesIcon },
+  { number: '24/7', label: '持续更新', icon: UpdateIcon },
 ];
-
-const HeroSvg = require('@site/static/img/hero-tech.svg').default;
 
 function HomepageHeader() {
   return (
@@ -65,13 +87,16 @@ function StatsSection() {
     <section className={styles.statsSection}>
       <div className="container">
         <div className={styles.statsGrid}>
-          {stats.map((stat, idx) => (
-            <div key={idx} className={styles.statCard}>
-              <span className={styles.statIcon}>{stat.icon}</span>
-              <span className={styles.statNumber}>{stat.number}</span>
-              <span className={styles.statLabel}>{stat.label}</span>
-            </div>
-          ))}
+          {stats.map((stat, idx) => {
+            const Icon = stat.icon;
+            return (
+              <div key={idx} className={styles.statCard}>
+                <Icon className={styles.statIcon} />
+                <span className={styles.statNumber}>{stat.number}</span>
+                <span className={styles.statLabel}>{stat.label}</span>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
