@@ -596,4 +596,3 @@ final_output = Σ expert_weights[i] × expert_i(input)
 
 接下来可以学习：
 - [大模型应用开发](../app-development/01-introduction.md)
-- [大模型原理深入](../llm-fundamentals/01-introduction.md)

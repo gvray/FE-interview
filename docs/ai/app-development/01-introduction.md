@@ -1,6 +1,7 @@
 ---
 title: AI 应用开发入门
 description: Prompt、Agent、MCP 与 Function Calling 核心概念
+sidebar_position: 1
 ---
 
 # AI 应用开发入门
