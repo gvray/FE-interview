@@ -258,7 +258,7 @@ console.log(resp.output_text);
 
 下面这张结构图展示了每个组件如何在 Agent 执行周期中协作：
 
-![null](./langchain-7-components.png)![img](https://cdn.nlark.com/yuque/0/2026/png/12952636/1767782625162-db322dd0-c86f-4e40-a170-21399a0b9aff.png)
+![img](https://cdn.nlark.com/yuque/0/2026/png/12952636/1767782625162-db322dd0-c86f-4e40-a170-21399a0b9aff.png)
 
 ------
 
