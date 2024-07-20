@@ -1,6 +1,83 @@
 ---
 sidebar_position: 2
+title: FAQ
+sidebar_label: FAQ
 ---
+# FAQ（常见问题，面向 Next.js 16+）
+
+## Next.js 与 React 的关系是什么？
+- Next.js 是构建在 React 之上的全栈框架，提供路由、渲染策略、API、优化与部署整合。
+- 在 App Router 中默认使用 React Server Components，以服务端渲染优先降低客户端 JS。
+
+## App Router 与 Pages Router 有何区别？必须迁移吗？
+- App Router（app 目录）提供嵌套布局、并行/拦截路由、保留文件（error/loading/not-found）与更强的数据流能力。
+- Pages Router（pages 目录）仍可用，但缺少上述能力。新项目推荐使用 App Router；老项目按需迁移。
+
+## 在 Next.js 16+ 如何获取数据？
+- 在服务端组件中直接使用 fetch。
+- 通过 `next: { revalidate }` 与 cache 控制缓存与增量再生成。
+- 客户端交互通过 Server Actions 或调用 Route Handlers（API）。
+- Pages Router 中的 getStaticProps/getServerSideProps 只在 pages 目录可用；App Router 不再依赖它们。
+
+## 如何选择 SSR、SSG、ISR、PPR？
+- SSR：数据必须最新；适合个性化页面。
+- SSG：数据稳定；适合文档/营销页。
+- ISR：稳定但需定期更新；通过 revalidate 保持新鲜度。
+- PPR：静态外壳 + 动态数据流式填充，首屏更快、体验更佳。
+
+## 如何控制缓存与再验证？
+- 在 fetch 中设置：
+
+```ts
+await fetch("https://api.example.com/list", {
+  cache: "force-cache",
+  next: { revalidate: 120 },
+});
+```
+
+- 在页面/布局导出：
+
+```ts
+export const revalidate = 60;
+```
+
+## Server Actions 与 API 有何关系？
+- Server Actions 用于表单与数据变更，逻辑在服务端执行，简化提交流程。
+- Route Handlers 仍可用于 RESTful API，对外或多端调用更灵活。
+- 两者可结合使用，提交后用 revalidatePath 刷新页面。
+
+## 路由能力：动态、捕获、并行与拦截
+- 动态段：[id] → /users/123
+- 捕获所有：[...slug] → /blog/a/b/c
+- 并行路由：使用命名插槽（@slot）在布局中接入多个区域。
+- 拦截路由：用 (.)、(..) 前缀在模态等场景复用页面内容。
+
+## 样式如何选择？
+- CSS Modules、Tailwind、Styled Components 均可用。
+- 全局样式在 app/globals.css 引入，组件级样式推荐模块化。
+- 字体使用 next/font 管理，避免第三方阻塞。
+
+## 错误与重定向如何处理？
+- error.tsx/not-found.tsx 作为保留文件统一处理错误与 404。
+- 使用 redirect()/notFound() 在服务端控制跳转与 404。
+
+## 是否支持中间件与边缘运行？
+- 支持。在 middleware.ts 中实现鉴权与路由决策，运行于 Edge。
+- 使用 NextRequest/NextResponse 实现重写与重定向。
+
+## 如何优化图片与脚本？
+- 使用 next/image、next/font 与 next/script 控制资源加载。
+- 客户端组件按需动态导入，减少初始 JS。
+
+## 部署如何选择？
+- Vercel：一键部署、边缘加速、预览环境。
+- 自托管：使用 output: "standalone" 输出独立构建，并在容器/服务器运行。
+
+## 常见性能优化建议
+- 服务端组件优先，减少客户端 JS。
+- 使用 PPR/流式渲染提升首屏与交互速度。
+- 正确设置缓存与 revalidate，保持新鲜与性能平衡。
+
 # FAQ?
 
 ## 什么是Next.js？它的特点是什么？
