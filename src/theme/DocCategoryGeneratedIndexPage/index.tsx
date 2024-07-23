@@ -12,7 +12,7 @@ import styles from "./styles.module.css";
 
 export default function DocCategoryGeneratedIndexPage({
   categoryGeneratedIndex,
-}: Props): JSX.Element {
+}: Props): React.ReactElement {
   const category = useCurrentSidebarCategory();
   const allDocsData = useAllDocsData();
 
