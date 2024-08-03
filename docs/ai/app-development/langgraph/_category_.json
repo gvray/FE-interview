@@ -1,0 +1,8 @@
+{
+  "label": "LangGraph",
+  "position": 1000,
+  "link": {
+    "type": "generated-index",
+    "description": "LangGraph 深入浅出：图式智能体与稳健编排"
+  }
+}
