@@ -6,51 +6,61 @@ sidebar_position: 1
 
 前端面试题收集汇总并全面给出权威优质的答案，全程干货。更欢迎 👏 大家 issues 投稿 ❤️ 💞 💖，一起维护一套优质权威的前端知识体系。
 
-请耐心等等待 ⌛️，目前正在收集大纲，然后会验证检查每一个问题来确保问题的完整性和正确性。
-
 ## 推荐阅读
 
 | 推荐内容                  |    标签    |
 | ------------------------- | :--------: |
-| [闭包](./basic/javascript/1.md) | Javascript |
-
+| [闭包](./javascript/1.md) | JavaScript |
 
 ## 高频面试题
 
 | 题目                                          | 标签       |
 | --------------------------------------------- | :--------- |
-| [css 垂直居中布局](./basic/css/5.md)                | Css        |
-| [BFC (块格式化上下文)](./basic/css//4.md)           | Css        |
-| [Http 缓存-强制、协商缓存](./network/http/4.md)       | Http       |
-| [JS 事件循环(Event Loop)](./basic/javascript/9.md)  | Javascript |
-| [type 和 interface 的区别](./advance/typescript/1.md) | typescript |
-
+| [CSS 垂直居中布局](./css/5.md)                | CSS        |
+| [BFC (块格式化上下文)](./css/4.md)            | CSS        |
+| [HTTP 缓存 - 强制、协商缓存](./network/4.md)  | HTTP       |
+| [JS 事件循环 (Event Loop)](./javascript/9.md) | JavaScript |
+| [type 和 interface 的区别](./typescript/1.md) | TypeScript |
 
 # 目录大纲
 
-- [Javascript](./basic/javascript/)
-- [Typescript](./advance/typescript/) 已完结
-- [CSS](./basic/css/) 已完结
-- [HTML](./basic/html/)
-- 浏览器 DOM
-- [React](./frame/react/)
-- [Vue](./frame/vue/)
-- Angular
-- [浏览器](./software/browser/)
-- 正则表达式
-- webpack
-- babel
-- 前端工程化 关注于前端的开发、构建和自动化部署。包括前端构建工具的使用，自动化测试、持续集成和持续部署等。
-- 可视化 关注于数据的展示和可视化，包括数据的可视化图表、动态效果展示、地图可视化、前端可视化编辑器等。
-- 前端框架 关注前端框架的设计、开发和使用，比如 Angular、React、Vue 等。
-- 移动端开发 关注移动端的开发，包括移动端浏览器的适配和优化、稳定性、体验优化等。
-- 数据可视化 关注于对复杂数据的处理和可视化，通过前端技术让复杂的数据变得有意义，包括数据展示、图表、可视化仪表盘等。
-- 智能化 指通过前端技术实现人工智能功能，如自动化模型训练和测试、自然语言处理、图像识别等。
-- 移动 web 开发
-- 性能优化
-- [HTTP/HTTPS/计算机网络](./network/http/)
-- nodejs
-- [Linux](./devops/linux/)
+全扁平目录（39 个一级分类），按知识领域分组；菜单层级在 `sidebars.ts` 中拼装，与目录解耦。
+
+### 语言与基础
+
+- [JavaScript](./javascript/) · [TypeScript](./typescript/) · [CSS](./css/) · [HTML](./html/) · [正则表达式](./regex/)
+
+### 浏览器与运行时
+
+- [浏览器](./browser/) · [网络](./network/) · [性能优化](./performance/) · [安全与鉴权](./security/)
+
+### 框架
+
+- [React](./react/) · [Vue](./vue/)（含 Vue2/Vue3）· [Angular](./angular/) · [Next.js](./nextjs/) · [Electron](./electron/)
+
+### 工程化
+
+- [npm](./npm/) · [webpack](./webpack/) · [rollupjs](./rollupjs/) · [Jest](./jest/) · [工程实践](./practices/) · [设计模式](./design-patterns/) · [Git](./git/) · [Rust](./rust/)
+
+### 服务端与运维
+
+- [Node.js](./node/) · [Express](./express/) · [NestJS](./nestjs/) · [MySQL](./mysql/) · [API 设计](./api/) · [GraphQL](./graphql/) · [Docker](./docker/) · [Linux](./linux/) · [Nginx](./nginx/) · [Shell](./shell/)
+
+### 算法与数据结构
+
+- [算法](./algorithm/) · [数据结构](./data-structures/)
+
+### 移动端
+
+- [移动端适配](./mobile/) · [Taro](./taro/) · [小程序](./miniprogram/)
+
+### AI 开发
+
+- [AI 开发](./ai/) — 大模型基础、应用开发、LLM 原理。
+
+### 手写练习
+
+- [手写练习场](./samples/) — 手写 Promise、防抖节流、深拷贝、LRU 等。
 
 ## 参与贡献人员
 
