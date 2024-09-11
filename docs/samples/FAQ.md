@@ -79,4 +79,87 @@ imgs.forEach((image) => {
 
 ## 需要在本地实现一个聊天室，多个tab页相互通信，不能用websocket，你会怎么做？
 
-TODO
+由于不能使用 WebSocket，可以借助浏览器原生的跨标签页通信机制实现。常见有三种方案，优先级从高到低：
+
+**方案一：BroadcastChannel API（推荐）**
+
+原生 API，专为同源跨上下文广播设计，API 简洁，性能好。
+
+```js
+// 每个标签页都创建一个同名频道
+const channel = new BroadcastChannel('chat_room');
+
+// 发送消息
+channel.postMessage({ user: 'Tom', text: '你好', time: Date.now() });
+
+// 接收消息
+channel.onmessage = (e) => {
+  const { user, text, time } = e.data;
+  appendMessage(user, text, time);
+};
+```
+
+优点：API 简单、无第三方依赖、性能高。缺点：不兼容 IE，但现代浏览器均已支持。
+
+**方案二：localStorage + storage 事件**
+
+利用 `storage` 事件在同源其他标签页触发的特性，把消息写入 localStorage，其他标签页监听变化。
+
+```js
+const KEY = 'chat_room_messages';
+
+// 发送消息
+function send(user, text) {
+  const msg = { user, text, time: Date.now() };
+  // 注意：要写入新值才会触发 storage 事件，拼接随机数保证每次不同
+  localStorage.setItem(KEY, JSON.stringify(msg) + '|' + Math.random());
+}
+
+// 接收消息
+window.addEventListener('storage', (e) => {
+  if (e.key === KEY && e.newValue) {
+    const raw = e.newValue.split('|')[0];
+    const { user, text, time } = JSON.parse(raw);
+    appendMessage(user, text, time);
+  }
+});
+```
+
+优点：兼容性好（支持 IE8+）。缺点：需要处理存储值去重，容量受 localStorage 5MB 限制。
+
+**方案三：SharedWorker**
+
+创建一个所有标签页共享的 Worker，作为消息中心转发消息。
+
+```js
+// chat-worker.js
+const ports = new Set();
+onconnect = (e) => {
+  const port = e.ports[0];
+  ports.add(port);
+  port.onmessage = (ev) => {
+    // 广播给所有连接的标签页
+    ports.forEach((p) => p.postMessage(ev.data));
+  };
+};
+
+// 每个标签页
+const worker = new SharedWorker('./chat-worker.js');
+worker.port.onmessage = (e) => {
+  const { user, text, time } = e.data;
+  appendMessage(user, text, time);
+};
+
+// 发送
+worker.port.postMessage({ user: 'Tom', text: '你好', time: Date.now() });
+```
+
+优点：可以在 Worker 中维护完整状态、做复杂逻辑。缺点：调试相对复杂，部分浏览器需配置跨标签页共享。
+
+**选型建议：**
+
+- 现代项目首选 BroadcastChannel，简洁高效。
+- 需要兼容旧浏览器选 localStorage + storage 事件。
+- 需要在共享上下文中维护复杂状态（如在线人数、消息历史）选 SharedWorker。
+
+三种方案都只适用于同源页面；跨域场景需借助 `postMessage` + 中转页。
