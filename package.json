@@ -8,6 +8,22 @@
     "url": "git+https://github.com/gvray/FE-interview.git"
   },
   "keywords": [
+    "frontend",
+    "javascript",
+    "typescript",
+    "react",
+    "vue",
+    "angular",
+    "node",
+    "express",
+    "nestjs",
+    "mysql",
+    "api",
+    "graphql",
+    "docker",
+    "linux",
+    "nginx",
+    "shell",
     "interview"
   ],
   "author": "Gavin",

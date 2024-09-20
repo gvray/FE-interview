@@ -44,70 +44,47 @@ const config: Config = {
     navbar: {
       title: '前端面试',
       logo: {
-        alt: '前端面试 Logo',
+        alt: '前端面试',
         src: 'img/logo.svg',
       },
       items: [
-        // {
-        //   type: 'docSidebar',
-        //   sidebarId: 'docs',
-        //   position: 'left',
-        //   label: '八股文',
-        // },
         {
           type: 'docSidebar',
-          sidebarId: 'basic',
+          sidebarId: 'docs',
           position: 'left',
-          label: '基础',
+          label: '面试题',
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'frame',
+          to: '/blog',
+          label: '实战博客',
           position: 'left',
-          label: '框架',
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'advance',
+          type: 'dropdown',
+          label: '知识体系',
           position: 'left',
-          label: '进阶',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'ai',
-          position: 'left',
-          label: 'AI 开发',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'browser',
-          position: 'left',
-          label: '浏览器',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'pkg',
-          position: 'left',
-          label: '构建',
-        },
-        {to: '/blog', label: '实战案例', position: 'left'},
-        {
-          type: 'docSidebar',
-          sidebarId: 'network',
-          position: 'right',
-          label: '计算机网络',
-        },
-        // {
-        //   type: 'docSidebar',
-        //   sidebarId: 'server',
-        //   position: 'right',
-        //   label: '服务端',
-        // },
-        {
-          type: 'docSidebar',
-          sidebarId: 'devops',
-          position: 'right',
-          label: '运维',
+          items: [
+            {
+              type: 'doc',
+              label: '前端基础',
+              docId: 'javascript/README',
+            },
+            {
+              type: 'doc',
+              label: '前端框架',
+              docId: 'react/README',
+            },
+            {
+              type: 'doc',
+              label: '工程化',
+              docId: 'webpack/README',
+            },
+            {
+              type: 'doc',
+              label: '算法与数据结构',
+              docId: 'algorithm/README',
+            },
+          ],
         },
         {
           href: 'https://github.com/gvray/FE-interview',
@@ -120,75 +97,46 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: '面试宝典',
+          title: '面试题',
           items: [
-            {
-              label: '八股文(ALL.)',
-              to: '/docs',
-            },
-            {
-              label: '设计模式',
-              to: '/docs/category/设计模式',
-            },
-            {
-              label: '算法',
-              to: '/docs/category/算法',
-            },
-            {
-              label: '软件服务',
-              to: '/docs/category/软件服务',
-            },
-            {
-              label: '服务端开发',
-              to: '/docs/category/服务端开发',
-            },
-            {
-              label: '手写练习场',
-              to: '/docs/category/手写练习场',
-            },
+            { label: 'JavaScript', to: '/docs/javascript/' },
+            { label: 'TypeScript', to: '/docs/typescript/' },
+            { label: 'React', to: '/docs/react/' },
+            { label: 'Vue', to: '/docs/vue/' },
+            { label: 'CSS', to: '/docs/css/' },
+            { label: '浏览器', to: '/docs/browser/' },
           ],
         },
         {
-          title:'多端开发',
+          title: '技术栈',
           items: [
-            {
-              label: '移动端',
-              to: '#',
-            },
-            {
-              label: '小程序',
-              to: '#',
-            },
-            {
-              label: '桌面软件',
-              to: '/docs/category/移动端开发',
-            },
-           ]
+            { label: '工程化', to: '/docs/webpack/' },
+            { label: 'Node.js', to: '/docs/node/' },
+            { label: '算法', to: '/docs/algorithm/' },
+            { label: '数据结构', to: '/docs/data-structures/' },
+            { label: '设计模式', to: '/docs/design-patterns/' },
+            { label: 'AI', to: '/docs/ai/' },
+          ],
         },
         {
-          title: '社区',
+          title: '多端开发',
           items: [
-            {
-              label: 'Stack Overflow',
-              href: '#',
-            },
+            { label: '小程序', to: '/docs/miniprogram/' },
+            { label: '移动端', to: '/docs/mobile/' },
+            { label: '跨端框架', to: '/docs/taro/' },
+            { label: '桌面端', to: '/docs/electron/' },
           ],
         },
         {
           title: '更多',
           items: [
-            {
-              label: '博客',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/gvray/FE-interview',
-            },
+            { label: '实战博客', to: '/blog' },
+            { label: 'GitHub', href: 'https://github.com/gvray/FE-interview' },
+            { label: '贡献指南', href: 'https://github.com/gvray/FE-interview/blob/main/README.md' },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} FE-interview. Built with GavinRay's Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} FE-interview. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
