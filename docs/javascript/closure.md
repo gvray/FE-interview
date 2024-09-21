@@ -1,3 +1,8 @@
+---
+sidebar_position: 1
+title: 闭包
+---
+
 # 闭包
 
 ### 闭包的概念
