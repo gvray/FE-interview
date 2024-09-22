@@ -1,3 +1,8 @@
+---
+sidebar_position: 2
+title: 类的创建和继承
+---
+
 # 类的创建和继承
 
 类的创建（es5）：new 一个 function，在这个 function 的 prototype 里面增加属性和方法。
