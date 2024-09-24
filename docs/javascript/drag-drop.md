@@ -1,3 +1,8 @@
+---
+sidebar_position: 4
+title: JS 拖拽功能的实现
+---
+
 # JS 拖拽功能的实现
 
 首先是三个事件，分别是 mousedown，mousemove，mouseup
