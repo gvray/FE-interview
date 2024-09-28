@@ -1,3 +1,8 @@
+---
+sidebar_position: 8
+title: 变量声明与作用域
+---
+
 # 变量声明与作用域
 
 ## var
