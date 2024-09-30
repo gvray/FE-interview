@@ -1,3 +1,8 @@
+---
+sidebar_position: 10
+title: Promise
+---
+
 # Promise
 
 ## 对Promise的理解
