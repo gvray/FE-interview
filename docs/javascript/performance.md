@@ -1,3 +1,8 @@
+---
+sidebar_position: 12
+title: 性能优化
+---
+
 # 性能优化
 
 - 减少 HTTP 请求
