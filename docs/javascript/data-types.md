@@ -1,3 +1,8 @@
+---
+sidebar_position: 17
+title: 数据类型
+---
+
 # 数据类型
 
 ## 基本类型
