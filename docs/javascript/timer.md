@@ -1,3 +1,8 @@
+---
+sidebar_position: 19
+title: 定时器
+---
+
 # 定时器
 
 ## setTimeout 为什么不能保证能够及时执行？
