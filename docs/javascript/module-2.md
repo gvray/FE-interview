@@ -1,3 +1,8 @@
+---
+sidebar_position: 20
+title: 模块化
+---
+
 # 模块化
 
 ## ES6 模块与 CommonJS 模块有什么异同？
