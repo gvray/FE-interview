@@ -1,3 +1,8 @@
+---
+sidebar_position: 21
+title: ES6+有哪些新特性
+---
+
 # ES6+有哪些新特性
 
 ## ES6新增特性
