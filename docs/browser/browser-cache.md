@@ -1,3 +1,8 @@
+---
+sidebar_position: 4
+title: 浏览器缓存
+---
+
 # 浏览器缓存
 
 1. **Memory Cache（内存缓存）：**
