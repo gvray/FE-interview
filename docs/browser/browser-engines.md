@@ -1,3 +1,8 @@
+---
+sidebar_position: 5
+title: 常见的浏览器内核
+---
+
 # 常见的浏览器内核
 
 1. Trident (IE 内核):
