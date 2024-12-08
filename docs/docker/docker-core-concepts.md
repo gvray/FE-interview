@@ -1,5 +1,9 @@
-# Docker 的三大核心概念
+---
+sidebar_position: 1
+title: Docker 的三大核心概念
+---
 
+# Docker 的三大核心概念
 
 1. Docker 镜像（Docker Image）：Docker 镜像是用于创建容器的模板。它包含了运行应用程序所需的文件系统、应用程序代码、依赖项、库以及配置等。镜像是一个静态的、只读的文件，可以用于在 Docker 主机上创建和运行容器。
 
