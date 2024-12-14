@@ -1,3 +1,8 @@
+---
+sidebar_position: 1
+title: git stash
+---
+
 # git stash
 
 1. 什么是 `git stash`？它的作用是什么？
@@ -24,4 +29,3 @@
 
 8. 除了默认的工作目录修改，`git stash` 还会保存其他内容吗？
    - 是的，`git stash` 默认会保存暂存区（`index`）的修改，并可以选择保存未被追踪的文件（`untracked`）。
-
