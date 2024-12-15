@@ -1,4 +1,9 @@
-# tag
+---
+sidebar_position: 2
+title: git tag
+---
+
+# git tag
 
 1. **Create a lightweight tag:**
 
