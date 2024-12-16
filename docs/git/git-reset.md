@@ -1,4 +1,9 @@
-# reset
+---
+sidebar_position: 3
+title: git reset
+---
+
+# git reset
 
 Git 中的 `git reset` 命令用于重置当前分支的状态。它可以用于撤销提交、移动 HEAD 指针、修改暂存区域和工作树的状态等。以下是 `git reset` 命令的常见用法：
 
