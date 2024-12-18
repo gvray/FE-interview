@@ -1,3 +1,8 @@
+---
+sidebar_position: 5
+title: git remote
+---
+
 # git remote
 
 `git remote` 是用于管理 Git 仓库中远程仓库别名的命令。通过 `git remote` 命令，你可以查看、添加、重命名、删除和更新远程仓库别名。以下是一些常用的 `git remote` 子命令和它们的说明：
