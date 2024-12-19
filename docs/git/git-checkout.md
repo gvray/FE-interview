@@ -1,4 +1,9 @@
-# checkout
+---
+sidebar_position: 6
+title: git checkout
+---
+
+# git checkout
 
 1. 切换到指定分支：
    ```
@@ -39,4 +44,3 @@
    ```
    git checkout -f <branch-name>
    ```
-
