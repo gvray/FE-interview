@@ -1,4 +1,9 @@
-# rm
+---
+sidebar_position: 7
+title: git rm
+---
+
+# git rm
 
 `git rm` 命令用于从 Git 仓库中删除文件。以下是一些常见的 `git rm` 命令用法：
 
