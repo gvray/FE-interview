@@ -1,4 +1,9 @@
-# rebase
+---
+sidebar_position: 9
+title: git rebase
+---
+
+# git rebase
 
 `git rebase` 是一个强大的 Git 命令，用于合并 Git 分支的工具。它的主要作用是将一个分支的修改（通常是一个特性分支）应用到另一个分支（通常是主分支）上。与 `git merge` 不同，`git rebase` 会重新应用提交，以创建一个线性的提交历史。这有助于保持项目的提交历史整洁。
 
