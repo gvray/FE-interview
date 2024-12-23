@@ -1,3 +1,8 @@
+---
+sidebar_position: 10
+title: git config
+---
+
 # git config
 
 `git config` 是 Git 中用于配置和管理 Git 的全局、用户和仓库级别配置的命令。通过这个命令，您可以设置和查看各种 Git 的配置选项。以下是一些常见的用法：
