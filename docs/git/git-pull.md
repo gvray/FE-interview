@@ -1,3 +1,8 @@
+---
+sidebar_position: 11
+title: git pull
+---
+
 # git pull
 
 `git pull` 是一个用于从远程仓库获取更新并将它们合并到你的当前分支的 Git 命令。它实际上是两个 Git 命令的组合：`git fetch` 和 `git merge` 或 `git rebase`，具体取决于你的配置和命令行选项。
