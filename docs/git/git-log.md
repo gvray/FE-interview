@@ -1,3 +1,8 @@
+---
+sidebar_position: 13
+title: git log
+---
+
 # git log
 
 `git log` 是 Git 中用于查看提交历史的命令。它允许你浏览仓库中的提交记录，查看每个提交的详细信息，以及了解提交之间的关系。以下是关于 `git log` 命令的详细解释和用法：
