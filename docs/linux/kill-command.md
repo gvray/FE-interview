@@ -1,4 +1,9 @@
-# kill命令 – 杀死进程
+---
+sidebar_position: 2
+title: kill命令 - 杀死进程
+---
+
+# kill命令 - 杀死进程
 
 `kill` 命令用于向进程发送信号，通常用于控制进程的行为。在 Unix、Linux 和类 Unix 的系统上，`kill` 命令是一个常用的命令，用于管理和控制运行中的进程。以下是 `kill` 命令的常用选项和用法：
 
