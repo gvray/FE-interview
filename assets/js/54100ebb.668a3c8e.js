@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfe_interview=self.webpackChunkfe_interview||[]).push([[7494],{5205:e=>{e.exports=JSON.parse('{"permalink":"/FE-interview/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
