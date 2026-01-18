@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="zh-Hans" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-network/http/FAQ" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.1.1">
+<title data-rh="true">FAQ? | 前端面试</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://gvray.github.io/FE-interview/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://gvray.github.io/FE-interview/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://gvray.github.io/FE-interview/docs/network/http/FAQ"><meta data-rh="true" property="og:locale" content="zh_Hans"><meta data-rh="true" name="docusaurus_locale" content="zh-Hans"><meta data-rh="true" name="docsearch:language" content="zh-Hans"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="FAQ? | 前端面试"><meta data-rh="true" name="description" content="tcp三次握手，一句话概括"><meta data-rh="true" property="og:description" content="tcp三次握手，一句话概括"><link data-rh="true" rel="icon" href="/FE-interview/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://gvray.github.io/FE-interview/docs/network/http/FAQ"><link data-rh="true" rel="alternate" href="https://gvray.github.io/FE-interview/docs/network/http/FAQ" hreflang="zh-Hans"><link data-rh="true" rel="alternate" href="https://gvray.github.io/FE-interview/docs/network/http/FAQ" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/FE-interview/blog/rss.xml" title="前端面试 RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/FE-interview/blog/atom.xml" title="前端面试 Atom Feed"><link rel="stylesheet" href="/FE-interview/assets/css/styles.b743332f.css">
+<script src="/FE-interview/assets/js/runtime~main.99301c2a.js" defer="defer"></script>
+<script src="/FE-interview/assets/js/main.ad720e1f.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const a=new URLSearchParams(window.location.search).entries();for(var[t,e]of a)if(t.startsWith("docusaurus-data-")){var n=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(n,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_mKfG" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><div class="announcementBar_l5ze" style="background-color:#6366f1;color:#ffffff" role="banner"><div class="announcementBarPlaceholder_iuq2"></div><div class="content_KYoq announcementBarContent_M7ac">⭐️ 如果您喜欢本网站，请点这里在<a target="_blank" class="cta" href="https://github.com/gvray/FE-interview"> <strong>GitHub</strong> </a>上给它一颗小星星！ ⭐️</div><button type="button" aria-label="关闭" class="clean-btn close closeButton_RJAU announcementBarClose_oPuH"><svg viewBox="0 0 15 15" width="14" height="14"><g stroke="currentColor" stroke-width="3.1"><path d="M.75.75l13.5 13.5M14.25.75L.75 14.25"></path></g></svg></button></div><nav aria-label="主导航" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/FE-interview/"><div class="navbar__logo"><img src="/FE-interview/img/logo.svg" alt="前端面试 Logo" class="themedComponent_Ke1j themedComponent--light_p2qZ"><img src="/FE-interview/img/logo.svg" alt="前端面试 Logo" class="themedComponent_Ke1j themedComponent--dark_YsdK"></div><b class="navbar__title text--truncate">前端面试</b></a><a class="navbar__item navbar__link" href="/FE-interview/docs/basic/">基础</a><a class="navbar__item navbar__link" href="/FE-interview/docs/frame/">框架</a><a class="navbar__item navbar__link" href="/FE-interview/docs/advance/">进阶</a><a class="navbar__item navbar__link" href="/FE-interview/docs/ai/">AI 开发</a><a class="navbar__item navbar__link" href="/FE-interview/docs/software/browser/">浏览器</a><a class="navbar__item navbar__link" href="/FE-interview/docs/pkg/">构建</a><a class="navbar__item navbar__link" href="/FE-interview/blog">实战案例</a></div><div class="navbar__items navbar__items--right"><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/FE-interview/docs/network/">计算机网络</a><a class="navbar__item navbar__link" href="/FE-interview/docs/devops/">运维</a><a href="https://github.com/gvray/FE-interview" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_j_ow"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_I4jy colorModeToggle_Q83X"><button class="clean-btn toggleButton_z2h1 toggleButtonDisabled_SFuu" type="button" disabled="" title="切换浅色/暗黑模式（当前为浅色模式）" aria-label="切换浅色/暗黑模式（当前为浅色模式）" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_fkHc"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_pWxy"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_exMv"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_vPST"><div class="docsWrapper_oEiq"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_XSdM" type="button"></button><div class="docRoot_I1Wj"><aside class="theme-doc-sidebar-container docSidebarContainer_HZga"><div class="sidebarViewport_DZgC"><div class="sidebar_I8SY"><nav aria-label="文档侧边栏" class="menu thin-scrollbar menu_xGUh menuWithAnnouncementBar_TzMn"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/FE-interview/docs/network/">计算机网络</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" aria-expanded="true" href="/FE-interview/docs/category/http-1">HTTP</a><button aria-label="折叠侧边栏分类 &#x27;HTTP&#x27;" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/FE-interview/docs/network/http/">目录大纲</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/FE-interview/docs/network/http/FAQ">FAQ?</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/FE-interview/docs/network/http/1">get和post请求</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/FE-interview/docs/network/http/2">说一下http和https</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/FE-interview/docs/network/http/3">WebSocket的实现和应用</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/FE-interview/docs/network/http/4">Http缓存</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/FE-interview/docs/network/http/6">Http 状态码</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/FE-interview/docs/network/http/7">TCP的三次握手和四次挥手</a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_B66T"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_iTIt"><div class="docItemContainer_xTUK"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_tTgK" aria-label="页面路径"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="主页面" class="breadcrumbs__link" href="/FE-interview/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_R26V"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/FE-interview/docs/category/http-1"><span itemprop="name">HTTP</span></a><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">FAQ?</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_S8Cf theme-doc-toc-mobile tocMobile_AQKx"><button type="button" class="clean-btn tocCollapsibleButton_C5yC">本页总览</button></div><div class="theme-doc-markdown markdown"><h1>FAQ?</h1>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="tcp三次握手一句话概括">tcp三次握手，一句话概括<a href="#tcp三次握手一句话概括" class="hash-link" aria-label="tcp三次握手，一句话概括的直接链接" title="tcp三次握手，一句话概括的直接链接">​</a></h2>
+<p>客户端和服务端都需要直到各自可收发，因此需要三次握手。
+简化三次握手：</p>
+<p>从图片可以得到三次握手可以简化为：C 发起请求连接 S 确认，也发起连接 C 确认我们
+再看看每次握手的作用：第一次握手：S 只可以确认 自己可以接受 C 发送的报文段第
+二次握手：C 可以确认 S 收到了自己发送的报文段，并且可以确认 自己可以接受 S 发
+送的报文段第三次握手：S 可以确认 C 收到了自己发送的报文段</p>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="tcp和udp的区别">TCP和UDP的区别<a href="#tcp和udp的区别" class="hash-link" aria-label="TCP和UDP的区别的直接链接" title="TCP和UDP的区别的直接链接">​</a></h2>
+<p>（1）TCP 是面向连接的，udp 是无连接的即发送数据前不需要先建立链接。
+（2）TCP 提供可靠的服  务。也就是说，通过 TCP 连接传送的数据，无差错，不丢失，
+不重复，且按序到达;UDP 尽最大努力交付，即不保证可靠交付。 并且因为 tcp 可靠，
+面向连接，不会丢失数据因此适合大数据量的交换。
+（3）TCP 是面向字节流，UDP 面向报文，并且网络出现拥塞不会使得发送速率降低
+（因此会出现丢包，对实时的应用比如 IP 电话和视频会议等）。
+（4）TCP 只能是 1 对 1 的，UDP 支持 1 对 1,1 对多。
+（5）TCP 的首部较大为 20 字节，而 UDP 只有 8 字节。
+（6）TCP 是面向连接的可靠性传输，而 UDP 是不可靠的。</p>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="http请求的方式head方式">HTTP请求的方式，HEAD方式<a href="#http请求的方式head方式" class="hash-link" aria-label="HTTP请求的方式，HEAD方式的直接链接" title="HTTP请求的方式，HEAD方式的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="一个图片url访问后直接下载怎样实现">一个图片url访问后直接下载怎样实现？<a href="#一个图片url访问后直接下载怎样实现" class="hash-link" aria-label="一个图片url访问后直接下载怎样实现？的直接链接" title="一个图片url访问后直接下载怎样实现？的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="说一下web-quality无障碍">说一下web Quality（无障碍）<a href="#说一下web-quality无障碍" class="hash-link" aria-label="说一下web Quality（无障碍）的直接链接" title="说一下web Quality（无障碍）的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="几个很实用的bom属性对象方法">几个很实用的BOM属性对象方法?<a href="#几个很实用的bom属性对象方法" class="hash-link" aria-label="几个很实用的BOM属性对象方法?的直接链接" title="几个很实用的BOM属性对象方法?的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="说一下html5-drag-api">说一下HTML5 drag api<a href="#说一下html5-drag-api" class="hash-link" aria-label="说一下HTML5 drag api的直接链接" title="说一下HTML5 drag api的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="说一下http20">说一下http2.0<a href="#说一下http20" class="hash-link" aria-label="说一下http2.0的直接链接" title="说一下http2.0的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="补充-400-和-401--403-状态码">补充 400 和 401 、 403 状态码<a href="#补充-400-和-401--403-状态码" class="hash-link" aria-label="补充 400 和 401 、 403 状态码的直接链接" title="补充 400 和 401 、 403 状态码的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="fetch发送-2-次请求的原因">fetch发送 2 次请求的原因<a href="#fetch发送-2-次请求的原因" class="hash-link" aria-label="fetch发送 2 次请求的原因的直接链接" title="fetch发送 2 次请求的原因的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="cookie如何防范xss攻击">Cookie如何防范XSS攻击<a href="#cookie如何防范xss攻击" class="hash-link" aria-label="Cookie如何防范XSS攻击的直接链接" title="Cookie如何防范XSS攻击的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="cookie和session的区别">Cookie和session的区别<a href="#cookie和session的区别" class="hash-link" aria-label="Cookie和session的区别的直接链接" title="Cookie和session的区别的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="一句话概括restful">一句话概括RESTFUL<a href="#一句话概括restful" class="hash-link" aria-label="一句话概括RESTFUL的直接链接" title="一句话概括RESTFUL的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="讲讲viewport和移动端布局">讲讲viewport和移动端布局<a href="#  讲讲viewport和移动端布局" class="hash-link" aria-label="讲讲viewport和移动端布局的直接链接" title="讲讲viewport和移动端布局的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="click在ios上有300ms延迟原因及如何解决">click在ios上有300ms延迟，原因及如何解决？<a href="#click在ios上有300ms延迟原因及如何解决" class="hash-link" aria-label="click在ios上有300ms延迟，原因及如何解决？的直接链接" title="click在ios上有300ms延迟，原因及如何解决？的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="addeventlistener参数">addEventListener参数<a href="#addeventlistener参数" class="hash-link" aria-label="addEventListener参数的直接链接" title="addEventListener参数的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="cookie-sessionstorage-localstorage区别">cookie sessionStorage localStorage区别<a href="#cookie-sessionstorage-localstorage区别" class="hash-link" aria-label="cookie sessionStorage localStorage区别的直接链接" title="cookie sessionStorage localStorage区别的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="cookie-session区别">cookie session区别<a href="#cookie-session区别" class="hash-link" aria-label="cookie session区别的直接链接" title="cookie session区别的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="介绍知道的http返回的状态码">介绍知道的http返回的状态码<a href="#介绍知道的http返回的状态码" class="hash-link" aria-label="介绍知道的http返回的状态码的直接链接" title="介绍知道的http返回的状态码的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="http常用请求头">http常用请求头<a href="#http常用请求头" class="hash-link" aria-label="http常用请求头的直接链接" title="http常用请求头的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="讲讲强协商缓存">讲讲强，协商缓存<a href="#讲讲强协商缓存" class="hash-link" aria-label="讲讲强，协商缓存的直接链接" title="讲讲强，协商缓存的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="强缓存协商缓存什么时候用哪个">强缓存、协商缓存什么时候用哪个<a href="#强缓存协商缓存什么时候用哪个" class="hash-link" aria-label="强缓存、协商缓存什么时候用哪个的直接链接" title="强缓存、协商缓存什么时候用哪个的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="前端优化">前端优化<a href="#前端优化" class="hash-link" aria-label="前端优化的直接链接" title="前端优化的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="get和post的区别">GET和POST的区别<a href="#get和post的区别" class="hash-link" aria-label="GET和POST的区别的直接链接" title="GET和POST的区别的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="和-302-的区别">和 302 的区别<a href="#和-302-的区别" class="hash-link" aria-label="和 302 的区别的直接链接" title="和 302 的区别的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="http支持的方法">HTTP支持的方法<a href="#http支持的方法" class="hash-link" aria-label="HTTP支持的方法的直接链接" title="HTTP支持的方法的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="如何画一个三角形">如何画一个三角形<a href="#如何画一个三角形" class="hash-link" aria-label="如何画一个三角形的直接链接" title="如何画一个三角形的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="html5新增的元素">HTML5新增的元素<a href="#html5新增的元素" class="hash-link" aria-label="HTML5新增的元素的直接链接" title="HTML5新增的元素的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="在地址栏里输入一个url到这个页面呈现出来中间会发生什么">在地址栏里输入一个URL,到这个页面呈现出来，中间会发生什么？<a href="#在地址栏里输入一个url到这个页面呈现出来中间会发生什么" class="hash-link" aria-label="在地址栏里输入一个URL,到这个页面呈现出来，中间会发生什么？的直接链接" title="在地址栏里输入一个URL,到这个页面呈现出来，中间会发生什么？的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="cookie和session的区别localstorage和sessionstorage的区别">cookie和session的区别，localstorage和sessionstorage的区别<a href="#cookie和session的区别localstorage和sessionstorage的区别" class="hash-link" aria-label="cookie和session的区别，localstorage和sessionstorage的区别的直接链接" title="cookie和session的区别，localstorage和sessionstorage的区别的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="常见的http的头部">常见的HTTP的头部<a href="#常见的http的头部" class="hash-link" aria-label="常见的HTTP的头部的直接链接" title="常见的HTTP的头部的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="http20-的特性">HTTP2.0 的特性<a href="#http20-的特性" class="hash-link" aria-label="HTTP2.0 的特性的直接链接" title="HTTP2.0 的特性的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="cache-control的值有哪些">cache-control的值有哪些<a href="#cache-control的值有哪些" class="hash-link" aria-label="cache-control的值有哪些的直接链接" title="cache-control的值有哪些的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="浏览器在生成页面的时候会生成那两颗树">浏览器在生成页面的时候，会生成那两颗树？<a href="#浏览器在生成页面的时候会生成那两颗树" class="hash-link" aria-label="浏览器在生成页面的时候，会生成那两颗树？的直接链接" title="浏览器在生成页面的时候，会生成那两颗树？的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="csrf和xss的网络攻击及防范">csrf和xss的网络攻击及防范<a href="#csrf和xss的网络攻击及防范" class="hash-link" aria-label="csrf和xss的网络攻击及防范的直接链接" title="csrf和xss的网络攻击及防范的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="怎么看网站的性能如何">怎么看网站的性能如何<a href="#怎么看网站的性能如何" class="hash-link" aria-label="怎么看网站的性能如何的直接链接" title="怎么看网站的性能如何的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="介绍http协议特征">介绍HTTP协议(特征)<a href="#介绍http协议特征" class="hash-link" aria-label="介绍HTTP协议(特征)的直接链接" title="介绍HTTP协议(特征)的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="输入url到页面加载显示完成发生了什么">输入URL到页面加载显示完成发生了什么?<a href="#输入url到页面加载显示完成发生了什么" class="hash-link" aria-label="输入URL到页面加载显示完成发生了什么?的直接链接" title="输入URL到页面加载显示完成发生了什么?的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="说一下对cookie和session的认知cookie有哪些限制">说一下对Cookie和Session的认知，Cookie有哪些限制？<a href="#说一下对cookie和session的认知cookie有哪些限制" class="hash-link" aria-label="说一下对Cookie和Session的认知，Cookie有哪些限制？的直接链接" title="说一下对Cookie和Session的认知，Cookie有哪些限制？的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="描述一下xss和crsf攻击防御 方法">描述一下XSS和CRSF攻击？防御方法？<a href="#描述一下xss和crsf攻击防御方法" class="hash-link" aria-label="描述一下XSS和CRSF攻击？防御方法？的直接链接" title="描述一下XSS和CRSF攻击？防御方法？的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="知道-304-吗什么时候用-304-">知道 304 吗，什么时候用 304 ？<a href="#知道-304-吗什么时候用-304-" class="hash-link" aria-label="知道 304 吗，什么时候用 304 ？的直接链接" title="知道 304 吗，什么时候用 304 ？的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="具体有哪些请求头是跟缓存相关的">具体有哪些请求头是跟缓存相关的<a href="#具体有哪些请求头是跟缓存相关的" class="hash-link" aria-label="具体有哪些请求头是跟缓存相关的的直接链接" title="具体有哪些请求头是跟缓存相关的的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="cookie和session的区别-1">cookie和session的区别<a href="#cookie和session的区别-1" class="hash-link" aria-label="cookie和session的区别的直接链接" title="cookie和session的区别的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="cookie有哪些字段可以设置">cookie有哪些字段可以设置<a href="#cookie有哪些字段可以设置" class="hash-link" aria-label="cookie有哪些字段可以设置的直接链接" title="cookie有哪些字段可以设置的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="cookie有哪些编码方式">cookie有哪些编码方式？<a href="#cookie有哪些编码方式" class="hash-link" aria-label="cookie有哪些编码方式？的直接链接" title="cookie有哪些编码方式？的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="除了cookie还有什么存储方式说说cookie和localstorage的区别">除了cookie，还有什么存储方式。说说cookie和localStorage的区别<a href="#除了cookie还有什么存储方式说说cookie和localstorage的区别" class="hash-link" aria-label="除了cookie，还有什么存储方式。说说cookie和localStorage的区别的直接链接" title="除了cookie，还有什么存储方式。说说cookie和localStorage的区别的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="浏览器输入网址到页面渲染全过程">浏览器输入网址到页面渲染全过程<a href="#浏览器输入网址到页面渲染全过程" class="hash-link" aria-label="浏览器输入网址到页面渲染全过程的直接链接" title="浏览器输入网址到页面渲染全过程的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="html5和css3用的多吗你了解它们的新属性吗有在项目中用过吗">HTML5和CSS3用的多吗？你了解它们的新属性吗？有在项目中用过吗？<a href="#html5和css3用的多吗你了解它们的新属性吗有在项目中用过吗" class="hash-link" aria-label="HTML5和CSS3用的多吗？你了解它们的新属性吗？有在项目中用过吗？的直接链接" title="HTML5和CSS3用的多吗？你了解它们的新属性吗？有在项目中用过吗？的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="http常见的请求方法">http常见的请求方法<a href="#http常见的请求方法" class="hash-link" aria-label="http常见的请求方法的直接链接" title="http常见的请求方法的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="get和post的区别-1">get和post的区别<a href="#get和post的区别-1" class="hash-link" aria-label="get和post的区别的直接链接" title="get和post的区别的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="说说-302--301--304-的状态码">说说 302 ， 301 ， 304 的状态码<a href="#说说-302--301--304-的状态码" class="hash-link" aria-label="说说 302 ， 301 ， 304   的状态码的直接链接" title="说说 302 ， 301 ， 304 的状态码的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="web性能优化">web性能优化<a href="#web性能优化" class="hash-link" aria-label="web性能优化的直接链接" title="web性能优化的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="get-和-post-的请求的区别">GET 和 POST 的请求的区别<a href="#get-和-post-的请求的区别" class="hash-link" aria-label="GET 和 POST 的请求的区别的直接链接" title="GET 和 POST 的请求的区别的直接链接">​</a></h2>
+<ol>
+<li>
+<p>参数位置：GET 请求的参数是通过 URL 的查询字符串（query string）传递的，即参数会附加在 URL 的末尾。而 POST 请求的参数是通过请求的消息体（request body）传递的，参数不会直接显示在 URL 中。</p>
+</li>
+<li>
+<p>参数长度：由于 GET 请求的参数是附加在 URL 中的，所以参数长度受限于浏览器和服务器对 URL 长度的限制，通常在 2048 个字符左右。而 POST 请求的参数可以通过请求消息体传递，没有长度限制。</p>
+</li>
+<li>
+<p>安全性：GET 请求的参数会显示在 URL 中，因此不适合传递敏感信息，例如密码等。而 POST 请求的参数在消息体中，相对较安全，适合传递敏感信息。</p>
+</li>
+<li>
+<p>缓存：GET 请求默认可以被缓存，因为它的参数是显示在 URL 中的，浏览器可以直接使用缓存数据。而 POST 请求默认是不缓存的，因为它的参数不会显示在 URL 中，浏览器无法判断是否需要使用缓存数据。</p>
+</li>
+<li>
+<p>使用场景：GET 请求适用于请求数据，比如获取网页、图片等资源，以及向服务器查询数据。而 POST 请求适用于提交数据，比如用户登录、注册等操作，以及向服务器发送数据。</p>
+</li>
+</ol>
+<p>综上所述，GET 请求适合用于获取数据，参数较少且不敏感；而 POST 请求适合用  于提交数据，参数较多且可能包含敏感信息。在实际应用中，根据请求的目的和数据的安全性来选择使用 GET 或 POST 方法。</p>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="post-和-put-请求的区别">POST 和 PUT 请求的区别<a href="#post-和-put-请求的区别" class="hash-link" aria-label="POST 和 PUT 请求的区别的直接链接" title="POST 和 PUT 请求的区别的直接链接">​</a></h2>
+<ol>
+<li>
+<p>目的：POST 请求用于向服务器提交新的实体数据，通常用于创建资源。而 PUT 请求用于向服务器提交更新后的实体数据，通常用于更新资源。</p>
+</li>
+<li>
+<p>幂等性：POST 请求不具备幂等性，多次相同的 POST 请求会创建多个资源。而 PUT 请求具备幂等性，多次相同的 PUT 请求会更新同一资源，不会产生副作用。</p>
+</li>
+<li>
+<p>数据位置：POST 请求的数据是通过请求的消息体（request body）传递的，参数不会显示在 URL 中。而 PUT 请求的数据也是通过请求的消息体传递的，但通常会包含资源的标识符在 URL 中。</p>
+</li>
+<li>
+<p>资源标识符：对于 POST 请求，服务器通常会生成新的资源标识符，返回给客户端。而对于 PUT 请求，客户端需要在请求的 URL 中指定要更新的资源标识符。</p>
+</li>
+<li>
+<p>并发性：由于 PUT 请求具备幂等性，多个客户端同时发送相同的 PUT 请求不会产生冲突。而对于 POST 请求，多个客户端同时提交相同的数据可能会导致资源的创建冲突。</p>
+</li>
+</ol>
+<p>综上所述，POST 请求用于向服务器提交新的实体数据，不具备幂等性；而 PUT 请求用于向服务器提交更新后的实体数据，具备幂等性。正确选择 POST 或 PUT 请求取决于具体的应用场景和资源的创建或更新需求。</p>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="常见的-http-请求方法">常见的 HTTP 请求方法<a href="#常见的-http-请求方法" class="hash-link" aria-label="常见的 HTTP 请求方法的直接链接" title="常见的 HTTP 请求方法的直接链接">​</a></h2>
+<ol>
+<li>
+<p><code>GET</code>: 获取指定资源的信息。GET 请求通常用于从服务器获取数据，并不对服务器资源产生任何副作用。它应该是幂等的，多次请求相同的资源应该返回相同的结果。</p>
+</li>
+<li>
+<p><code>POST</code>: 在服务器上创建新的资源或提交数据。POST 请求通常用于提交表单数据或执行非幂等的操作。每次请求可能会创建新的资源或对服务器资源产生影响。</p>
+</li>
+<li>
+<p><code>PUT</code>: 更新服务器上的指定资源。PUT 请求通常用于更新已经存在的资源，其具备幂等性，多次相同的 PUT 请求应该对资源进行完全替换更新。</p>
+</li>
+<li>
+<p><code>DELETE</code>: 删除服务器上的指定资源。DELETE 请求用于删除服务器上的资源，其具备幂等性，多次相同的 DELETE 请求应该对资源产生相同的结果。</p>
+</li>
+<li>
+<p><code>PATCH</code>: 对服务器上的指定资源进行局部更新。PATCH 请求用于对资源的部分属性进行更新，而不是替换整个资源。它通常是非幂等的。</p>
+</li>
+<li>
+<p><code>HEAD</code>: 类似于 GET 请求，但只返回资源的头部信息而不返回实际内容。HEAD 请求用于获取资源的元数据，如响应状态、内容长度等。</p>
+</li>
+<li>
+<p><code>OPTIONS</code>: 查询服务器支持的请求方法。OPTIONS 请求用于检查服务器允许客户端使用的请求方法和其他可用功能。</p>
+</li>
+<li>
+<p><code>TRACE</code>: 回显服务器收到的请求，用于测试和诊断。</p>
+</li>
+</ol>
+<p>这些 HTTP 请求方法定义了客户端和服务器之间进行通信的不同方式，每种请求方法都有特定的语义和用途。在实际应用中，开发人员根据业务需求和 RESTful API 设计原则选择合适的请求方法。</p>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="常见的-http-请  求头和响应头">常见的 HTTP 请求头和响应头<a href="#常见的-http-请求头和响应头" class="hash-link" aria-label="常见的 HTTP 请求头和响应头的直接链接" title="常见的 HTTP 请求头和响应头的直接链接">​</a></h2>
+<p>HTTP 请求头：</p>
+<ol>
+<li><code>User-Agent</code>: 浏览器或客户端的标识字符串，用于告知服务器发送请求的客户端类型和版本。</li>
+<li><code>Accept</code>: 告知服务器客户端可以接受的内容类型（MIME 类型），用于指定服务器返回的数据类型。</li>
+<li><code>Content-Type</code>: 请求消息体的数据类型（MIME 类型），用于指定发送给服务器的数据类型。</li>
+<li><code>Authorization</code>: 用于进行身份验证，通常在请求头中包含用户凭证，如 Basic Auth 或 Bearer Token。</li>
+<li><code>Referer</code>: 表示当前请求的来源页面 URL，通常用于防止跨站请求伪造 (CSRF) 攻击。</li>
+<li><code>Cookie</code>: 包含客户端的会话标识，用于在多个请求间维持状态。</li>
+<li><code>Cache-Control</code>: 控制请求/响应的缓存策略，如缓存的有效时间、是否强制重新验证等。</li>
+<li><code>Origin</code>: 指示请求的来源，用于支持跨域请求时进行 CORS 验证。</li>
+</ol>
+<p>HTTP 响应头：</p>
+<ol>
+<li><code>Content-Type</code>: 响应消息体的数据类型（MIME 类型），用于指定返回的数据类型。</li>
+<li><code>Content-Length</code>: 响应消息体的长度，用于指示客户端正确解析响应内容。</li>
+<li><code>Cache-Control</code>: 控制响应的缓存策略，如缓存的有效时间、是否强制重新验证等。</li>
+<li><code>Set-Cookie</code>: 用于在响应头中设置客户端的 Cookie。</li>
+<li><code>Location</code>: 用于重定向响应，告知客户端新的资源位置。</li>
+<li><code>Access-Control-Allow-Origin</code>: 用于 CORS 验证，指定允许访问资源的源地址。</li>
+<li><code>ETag</code>: 用于缓存验证， 表示资源的标识符，与 If-None-Match 一起用于条件请求。</li>
+<li><code>Content-Encoding</code>: 响应消息体的数据编码方式，如 gzip、deflate 等。</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="content-type">Content-Type<a href="#content-type" class="hash-link" aria-label="Content-Type的直接链接" title="Content-Type的直接链接">​</a></h2>
+<p><code>Content-Type</code> 是 HTTP 请求和响应头中的一个字段，用于指示消息体的数据类型，即请求或响应中携带的实际数据的格式。</p>
+<p>在请求头中，<code>Content-Type</code> 用于指示客户端发送给服务器的数据类型，例如：</p>
+<ul>
+<li><code>Content-Type: application/json</code>: 表示请求消息体中的数据是 JSON 格式。</li>
+<li><code>Content-Type: application/x-www-form-urlencoded</code>: 表示请求消息体中的数据是 URL 编码表单数据。浏览器的原生 form 表 单 ， 如 果 不 设 置 enctype 属 性 ， 那 么 最 终 就 会 以 application/x-www-form-urlencoded 方式提交数据。该种方式提交 的数据放在 body 里面，数据按照 key1=val1&amp;key2=val2 的方式进 行编码，key 和 val 都进行了 URL 转码。</li>
+<li><code>Content-Type: multipart/form-data</code>: 表示请求消息体中的数据是一个表单，通常用于上传文件。</li>
+<li><code>Content-Type: text/plain</code>: 表示请求消息体中的数据是纯文本格式。</li>
+</ul>
+<p>在响应头中，<code>Content-Type</code> 用于指示服务器返回给客户端的数据类型，例如：</p>
+<ul>
+<li><code>Content-Type: application/json</code>: 表示响应消息体中的数据是 JSON 格式。</li>
+<li><code>Content-Type: text/html</code>: 表示响应消息体中的数据是 HTML 格式。</li>
+<li><code>Content-Type: image/jpeg</code>: 表示响应消息体中的数据是 JPEG 图像。</li>
+<li><code>Content-Type: application/octet-stream</code>: 表示响应消息体中的数据是二进制数据，通常用于下载  文件。</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="http-11-和-http-20-的区别">HTTP 1.1 和 HTTP 2.0 的区别<a href="#http-11-和-http-20-的区别" class="hash-link" aria-label="HTTP 1.1 和 HTTP 2.0 的区别的直接链接" title="HTTP 1.1 和 HTTP 2.0 的区别的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="http-和-https-协议的区别">HTTP 和 HTTPS 协议的区别<a href="#http-和-https-协议的区别" class="hash-link" aria-label="HTTP 和 HTTPS 协议的区别的直接链接" title="HTTP 和 HTTPS 协议的区别的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="http2-的头部压缩算法是怎样的">HTTP2 的头部压缩算法是怎样的？<a href="#http2-的头部压缩算法是怎样的" class="hash-link" aria-label="HTTP2 的头部压缩算法是怎样的？的直接链接" title="HTTP2 的头部压缩算法是怎样的？的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="说一下-http-30">说一下 HTTP 3.0<a href="#说一下-http-30" class="hash-link" aria-label="说一下 HTTP 3.0的直接链接" title="说一下 HTTP 3.0的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="什么是-https-协议">什么是 HTTPS 协议？<a href="#什么是-https-协议" class="hash-link" aria-label="什么是 HTTPS 协议？的直接链接" title="什么是 HTTPS 协议？的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="https-通信握手过程">HTTPS 通信（握手）过程<a href="#https-通信握手过程" class="hash-link" aria-label="HTTPS 通信（握手）过程的直接链接" title="HTTPS 通信（握手）过程的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="dns-完整的查询过程">DNS 完整的查询过程<a href="#dns-完整的查询过程" class="hash-link" aria-label="DNS 完整的查询过程的直接链接" title="DNS 完整的查询过程的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="osi-七层模型">OSI 七层模型<a href="#osi-七层模型" class="hash-link" aria-label="OSI 七层模型的直接链接" title="OSI 七层模型的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="谈一谈http的缺点">谈一谈http的缺点<a href="#谈一谈http的缺点" class="hash-link" aria-label="谈一谈http的缺点的直接链接" title="谈一谈http的缺点的直接链接">​</a></h2>
+<p>虽然 HTTP（Hypertext Transfer Protocol）是现代网络通信的基础之一，但它也存在一些缺点。以下是一些常见的 HTTP 缺点：</p>
+<ol>
+<li>
+<p><strong>无状态：</strong> HTTP 协议是无状态的，每个请求之间没有关联。这意味着服务器无法识别两个请求是否来自同一个客户端，需要额外的机制（如 Cookies 或 Tokens）来维护用户状态。</p>
+</li>
+<li>
+<p><strong>明文传输：</strong> HTTP 在传输过程中是明文的，容易受到中间人攻击。未加密的通信可能导致敏感信息泄露，因此需要使用 HTTPS 进行加密。</p>
+</li>
+<li>
+<p><strong>性能：</strong> 在传输大量数据时，HTTP 的性能可能受到影响。每个请求都需要建立连接、发送请求头等，这会导致额外的延迟。这在移动网络或高延迟环境下尤为明显。</p>
+</li>
+<li>
+<p><strong>单向通信：</strong> HTTP 是一种单向通信协议，只允许客户端发起请求，服务器只能响应。这种单向性可能不适用于一些实时性要求较高的应用场景。</p>
+</li>
+<li>
+<p><strong>Header 大小：</strong> HTTP 请求和响应的 Header 大小是有限制的，对于包含大量 Header 信息的复杂请求，可能需要进行优化或者采用其他机制。</p>
+</li>
+<li>
+<p><strong>连接保持问题：</strong> 默认情况下，HTTP 是一种短连接协议，每个请求都需要重新建立连接。虽然 HTTP/1.1 引入了持久连接（Keep-Alive），但仍然存在一些连接保持的管理问题，如  连接过早关闭或过度打开的问题。</p>
+</li>
+<li>
+<p><strong>缺乏推送机制：</strong> HTTP 是一种请求-响应模型，服务器不能主动向客户端推送数据。虽然有一些工具和技术可以模拟推送效果，但它们通常需要使用轮询或长连接等机制。</p>
+</li>
+<li>
+<p><strong>无法处理复杂的事务：</strong> 在某些场景下，HTTP 无法提供足够的支持，例如，对于需要处理复杂事务和事务回滚的系统，HTTP 可能显得力不从心。</p>
+</li>
+</ol>
+<p>尽管 HTTP 存在这些缺点，但它仍然是互联网通信的基石。为了解决其中一些问题，一些新的协议和技术如 HTTP/2、HTTP/3、WebSocket 等被引入，以提高性能、安全性和实时性。</p>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="http跨域时的options请求">http跨域时的options请求<a href="#http跨域时的options请求" class="hash-link" aria-label="http跨域时的options请求的直接链接" title="http跨域时的options请求的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="tcp和udp的区别-1">TCP和UDP的区别<a href="#tcp和udp的区别-1" class="hash-link" aria-label="TCP和UDP的区别的直接链接" title="TCP和UDP的区别的直接链接">​</a></h2>
+<p>UDP（User Datagram Protocol）和TCP（Transmission Control Protocol）是两种不同的传输层协议，它们在网络通信中有一些显著的区别：</p>
+<ol>
+<li>
+<p><strong>连接性：</strong></p>
+<ul>
+<li><strong>TCP：</strong> 提供面向连接的通信，建立可靠的、全双工的连接。在数据传输前，必须经过三次握手建立连接，保证数据的可靠性，然后通过四次挥手关闭连接。</li>
+<li><strong>UDP：</strong> 无连接的通信，发送数据前不需要建立连接，也不保证可靠性。每个UDP数据包都是一个独立的数据单元，相互之间没有关联。</li>
+</ul>
+</li>
+<li>
+<p><strong>可靠性：</strong></p>
+<ul>
+<li><strong>TCP：</strong> 提供可靠的数据传输，通过序列号、确认和重传机制来确保数据的完整性和有序性。如果数据包丢失或损坏，TCP会尝试重新发送。</li>
+<li><strong>UDP：</strong> 不保证可靠性，数据包可能会丢失或到达顺序可能被打乱。UDP更适用于实时性要求较高的应用，如音视频传输。</li>
+</ul>
+</li>
+<li>
+<p><strong>数据流：</strong></p>
+<ul>
+<li><strong>TCP：</strong> 提供面向字节流的通信，数据被视为字节流，确保有序且不丢失。</li>
+<li><strong>UDP：</strong> 数据被分割成数据包，每个数据包都是独立的，UDP对数据包的处理更为简单。</li>
+</ul>
+</li>
+<li>
+<p><strong>开销：</strong></p>
+<ul>
+<li><strong>TCP：</strong> 需要较多的开销来维护连接状态、序列号、确认等，适用于要求可靠性和完整性的应用。</li>
+<li><strong>UDP：</strong> 开销较小，适用于实时性要求高、可以容忍一些数据丢失的应用。</li>
+</ul>
+</li>
+<li>
+<p><strong>应用场景：</strong></p>
+<ul>
+<li><strong>TCP：</strong> 适用于需要可靠传输的应用，如文件传输、网页访问等。</li>
+<li><strong>UDP：</strong> 适用于实时性要求高、可以容忍一些数据丢失的应用，如音视频传输、在线游戏等。</li>
+</ul>
+</li>
+</ol>
+<p>总体而言，选择使用TCP还是UDP取决于具体的应用需求。TCP适用于对数据可靠性有较高要求的场景，而UDP适用于实时性要求高、对数据完整性要求相对较低的场景。</p>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="httphttps协议总结">http/https协议总结<a href="#httphttps协议总结" class="hash-link" aria-label="http/https协议总结的直接链接" title="http/https协议总结的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="正向代理和反向代理">正向代理和反向代理<a href="#正向代理和反向代理" class="hash-link" aria-label="正向代理和反向代理的直接链接" title="正向代理 和反向代理的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="dns如何工作的">DNS如何工作的<a href="#dns如何工作的" class="hash-link" aria-label="DNS如何工作的的直接链接" title="DNS如何工作的的直接链接">​</a></h2>
+<p>DNS（Domain Name System）是一种用于将域名映射到IP地址的分布式命名系统。DNS的工作涉及多个组件，包括客户端、本地DNS服务器、根域名服务器、顶级域名服务器和授权域名服务器。以下是DNS工作的基本过程：</p>
+<ol>
+<li>
+<p><strong>域名解析请求：</strong> 当用户在浏览器中输入一个域名（例如，<a href="http://www.example.com%EF%BC%89%E5%B9%B6%E6%8C%89%E4%B8%8BEnter%E9%94%AE%E6%97%B6%EF%BC%8C%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%A6%96%E5%85%88%E5%B0%9D%E8%AF%95%E6%9F%A5%E6%89%BE%E8%BF%99%E4%B8%AA%E5%9F%9F%E5%90%8D%E5%AF%B9%E5%BA%94%E7%9A%84IP%E5%9C%B0%E5%9D%80%E3%80%82" target="_blank" rel="noopener noreferrer">www.example.com）并按下Enter键时，计算机首先尝试查找这个域名对应的IP地址。</a></p>
+</li>
+<li>
+<p><strong>本地DNS缓存：</strong> 操作系统会首先检查本地的DNS缓存，看是否已经缓存了对应域名的IP地址。如果找到了，就直接使用缓存的IP地址。</p>
+</li>
+<li>
+<p><strong>本地DNS服务器：</strong> 如果本地缓存中没有找到对应的IP地址，计算机会向本地DNS服务器发起解析请求。本地DNS服务器通常由Internet服务提供商（ISP）提供，也可以是自己配置的其他DNS服务器。</p>
+</li>
+<li>
+<p><strong>根域名服务器：</strong> 如果本地DNS服务器无法直接解析请求，它将向根域名服务器发送查询。根域名服务器是全球DNS体系的顶级，负责管理顶级域名服务器的IP地址。</p>
+</li>
+<li>
+<p><strong>顶级域名服务器：</strong> 根域名服务器返回一个指向相应顶级域名服务器的IP地址。例如，在解析www.example.com时，它会指向.com顶级域名服务器。</p>
+</li>
+<li>
+<p><strong>授权域名服务器：</strong> 顶级域名服务器返回一个指向授权域名服务器的IP地址，负责管理该域的二级域名。在这个例子中，授权域名服务器可能指向管理example.com的域名服务器。</p>
+</li>
+<li>
+<p><strong>目标域名服务器：</strong> 最终，授权域名服务器返回请求域名的IP地址给本地DNS服务器。本地DNS服务器将这个IP地址缓存，并将其返回给计算机。</p>
+</li>
+<li>
+<p><strong>计算机：</strong> 最后，计算机得到了域名对应的IP地址，可以使用这个IP地址与目标服务器进行通信。</p>
+</li>
+</ol>
+<p>这个过程中，DNS采用了分布式的设计，将域名解析的任务分散到多个层次的服务器上，以提高效率和可靠性。每个层次的DNS服务器都负责管理一部分域名系统，从而实现了对整个互联网域名系统的管理。</p>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="http10-http11-http20版本之间的差异">HTTP/1.0 HTTP1.1 HTTP2.0版本之间的差异<a href="#http10-http11-http20版本之间的差异" class="hash-link" aria-label="HTTP/1.0 HTTP1.1 HTTP2.0版本之间的差异的直接链接" title="HTTP/1.0 HTTP1.1 HTTP2.0版本之间的差异的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="http10-http11-http20区别">HTTP/1.0 HTTP1.1 HTTP2.0区别<a href="#http10-http11-http20区别" class="hash-link" aria-label="HTTP/1.0 HTTP1.1 HTTP2.0区别的直接链接" title="HTTP/1.0 HTTP1.1 HTTP2.0区别的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="websocket和http协议有什么区别">Websocket和HTTP协议有什么区别<a href="#websocket和http协议有什么区别" class="hash-link" aria-label="Websocket和HTTP协议有什么区别的直接链接" title="Websocket和HTTP协议有什么区别的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="http跨域请求时为什么要发送options请求">HTTP跨域请求时为什么要发送options请求<a href="#http跨域请求时为什么要发送options请求" class="hash-link" aria-label="HTTP跨域请求时为什么要发送options请求的直接链接" title="HTTP跨域请求时为什么要发送options请求的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="http3">HTTP3<a href="#http3" class="hash-link" aria-label="HTTP3的直接链接" title="HTTP3的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="谈一谈你对http2理解">谈一谈你对HTTP/2理解<a href="#谈一谈你对http2理解" class="hash-link" aria-label="谈一谈你对HTTP/2理解的直接链接" title="谈一谈你对HTTP/2理解的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="ssl-连接断开后如何恢复">SSL 连接断开后如何恢复<a href="#ssl-连接断开后如何恢复" class="hash-link" aria-label="SSL 连接断开后如何恢复的直接链接" title="SSL 连接断开后如何恢复的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="介绍一个https工作原理">介绍一个HTTPS工作原理<a href="#介绍一个https工作原理" class="hash-link" aria-label="介绍一个HTTPS工作原理的直接链接" title="介绍一个HTTPS工作原理的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="https握手过程">HTTPS握手过程<a href="#https握手过程" class="hash-link" aria-label="HTTPS握手过程的直接链接" title="HTTPS握手过程的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="介绍一下https和http区别">介绍一下HTTPS和HTTP区别<a href="#介绍一下https和http区别" class="hash-link" aria-label="介绍一下HTTPS和HTTP区别的直接链接" title="介绍一下HTTPS和HTTP区别的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="http请求中token-cookie-和-session有什么区别">Http请求中token cookie 和 session有什么区别<a href="#http请求中token-cookie-和-session有什么区别" class="hash-link" aria-label="Http请求中token cookie 和 session有什么区别的直接链接" title="Http请求中token cookie 和 session有什么区别的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="谈一谈http数据传输">谈一谈HTTP数据传输<a href="#谈一谈http数据传输" class="hash-link" aria-label="谈一谈HTTP数据传输的直接链接" title="谈一谈HTTP数据传输的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="谈一谈队头阻塞问题">谈一谈队头阻塞问题<a href="#谈一谈队头阻塞问题" class="hash-link" aria-label="谈一谈队头阻塞问题的直接链接" title="谈一谈队头阻塞问题的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="http实体数据">HTTP实体数据<a href="#http实体数据" class="hash-link" aria-label="HTTP实体数据的直接链接" title="HTTP实体数据的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="http前生今世">HTTP前生今世<a href="#http前生今世" class="hash-link" aria-label="HTTP前生今世的直接链接" title="HTTP前生今世的直接链接">​</a></h2>
+<p>HTTP（Hypertext Transfer Protocol）是一种用于传输超文本的协议，是万维网（World Wide Web）的基础。HTTP的发展经历了多个版本，从初始的HTTP/0.9到目前主流的HTTP/1.1和HTTP/2，以及更新的HTTP/3。以下是HTTP的前世今生的简要概述：</p>
+<h3 class="anchor anchorWithStickyNavbar_Xbio" id="http091991年">HTTP/0.9（1991年）<a href="#http091991年" class="hash-link" aria-label="HTTP/0.9（1991年）的直接链接" title="HTTP/0.9（1991年）的直接链接">​</a></h3>
+<ul>
+<li><strong>特点：</strong> 初始版本，仅支持GET请求，没有Header，只能传输HTML。</li>
+<li><strong>用途：</strong> 用于简单的文本传输，适用于静态网页。</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_Xbio" id="http101996年">HTTP/1.0（1996年）<a href="#http101996年" class="hash-link" aria-label="HTTP/1.0（1996年）的直接链接" title="HTTP/1.0（1996年）的直接链接">​</a></h3>
+<ul>
+<li><strong>特点：</strong> 引入了多种HTTP方法（GET、POST等）、Header、状态码、协议版本号等。</li>
+<li><strong>用途：</strong> 用于传输更丰富的内容，支持动态生成页面和多媒体文件。</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_Xbio" id="http111997年">HTTP/1.1（1997年）<a href="#http111997年" class="hash-link" aria-label="HTTP/1.1（1997年）的直接链接" title="HTTP/1.1（1997年）的直接链接">​</a></h3>
+<ul>
+<li><strong>特点：</strong> 持久连接、管线化、虚拟主机等新特性，提高了性能。</li>
+<li><strong>用途：</strong> 成为当前主流的HTTP版本，用于绝大多数Web应用。</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_Xbio" id="http22015年">HTTP/2（2015年）<a href="#http22015年" class="hash-link" aria-label="HTTP/2（2015年）的直接链接" title="HTTP/2（2015年）的直接链接">​</a></h3>
+<ul>
+<li><strong>特点：</strong> 多路复用、头部压缩、服务器推送等新特性，提高了性能和效率。</li>
+<li><strong>用途：</strong> 通过单一连接并行传输多个资源，减少了加载时间，适用于现代Web应用。</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_Xbio" id="http32018年">HTTP/3（2018年）<a href="#http32018年" class="hash-link" aria-label="HTTP/3（2018年）的直接链接" title="HTTP/3（2018年）的直接链接">​</a></h3>
+<ul>
+<li><strong>特点：</strong> 基于UDP的QUIC协议，实现更低的延迟和更高的性能。</li>
+<li><strong>用途：</strong> 在不同网络条件下提供更好的性能，支持实时应用。</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_Xbio" id="发展趋势">发展趋势<a href="#发展趋势" class="hash-link" aria-label="发展趋势的直接链接" title="发展趋势的直接链接">​</a></h3>
+<ol>
+<li>
+<p><strong>安全性：</strong> HTTPS的推广和强制，使用TLS/SSL保护通信内容，提高数据传输的安全性。</p>
+</li>
+<li>
+<p><strong>性能优化：</strong> 不断推出新的协议版本和特性，如HTTP/2、HTTP/3，以提高传输效率和用户体验。</p>
+</li>
+<li>
+<p><strong>移动端优化：</strong> 针对移动设备的特性进行优化，减少页面加载时间和资源消耗。</p>
+</li>
+<li>
+<p><strong>Web应用需求：</strong> 随着Web应用的复杂性增加，HTTP协议会不断演进以满足更复杂的业务需求，例如大规模数据传输、实时通信等。</p>
+</li>
+</ol>
+<p>总体而言，HTTP协议的演进是为了适应互联网的不断发展和应对新的挑战。由于Web应用越来越复杂，HTTP协议的性能和安全性一直是关注的焦点。</p>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="http世界全览">HTTP世界全览<a href="#http世界全览" class="hash-link" aria-label="HTTP世界全览的直接链接" title="HTTP世界全览的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="http分层">HTTP分层<a href="#http分层" class="hash-link" aria-label="HTTP分层的直接链接" title="HTTP分层的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="http报文是什么样子">HTTP报文是什么样子<a href="#http报文是什么样子" class="hash-link" aria-label="HTTP报文是什么样子的直接链接" title="HTTP报文是什么样子的直接链接">​</a></h2>
+<p>HTTP报文是在客户端和服务器之间传输的数据块，它包括请求报文和响应报文。以下是HTTP请求和响应报文的一般结构：</p>
+<h3 class="anchor anchorWithStickyNavbar_Xbio" id="http请求报文">HTTP请求报文<a href="#http请求报文" class="hash-link" aria-label="HTTP请求报文的直接链接" title="HTTP请求报文的直接链接">​</a></h3>
+<p>一个HTTP请求报文通常由以下部分组成：</p>
+<ol>
+<li>
+<p><strong>请求行（Request Line）：</strong> 包  含HTTP方法（GET、POST等）、请求的URL和使用的协议版本。</p>
+<div class="codeBlockContainer__bYn theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_oqyV"><pre tabindex="0" class="prism-code language-text codeBlock_pH9g thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_xX5i"><span class="token-line" style="color:#393A34"><span class="token plain">GET /path/to/resource HTTP/1.1</span><br></span></code></pre><div class="buttonGroup_gqTI"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_lr74" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_PJSy"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_j3ue"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+</li>
+<li>
+<p><strong>请求头部（Request Headers）：</strong> 包含关于请求的附加信息，如Host、User-Agent、Content-Type等。</p>
+<div class="codeBlockContainer__bYn theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_oqyV"><pre tabindex="0" class="prism-code language-text codeBlock_pH9g thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_xX5i"><span class="token-line" style="color:#393A34"><span class="token plain">Host: www.example.com</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Content-Type: application/json</span><br></span></code></pre><div class="buttonGroup_gqTI"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_lr74" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_PJSy"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_j3ue"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+</li>
+<li>
+<p><strong>空行（CRLF）：</strong> 表示请求头部的结束，用一个空行（回车换行符）分隔请求头部和请求体。</p>
+<div class="codeBlockContainer__bYn theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_oqyV"><pre tabindex="0" class="prism-code language-text codeBlock_pH9g thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_xX5i"><span class="token-line" style="color:#393A34"><span class="token plain">(空行)</span><br></span></code></pre><div class="buttonGroup_gqTI"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_lr74" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_PJSy"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_j3ue"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+</li>
+<li>
+<p><strong>请求体（Request Body）：</strong> 对于一些HTTP方法（如POST、PUT），可以包含请求的数据。</p>
+<div class="codeBlockContainer__bYn theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_oqyV"><pre tabindex="0" class="prism-code language-text codeBlock_pH9g thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_xX5i"><span class="token-line" style="color:#393A34"><span class="token plain">{&quot;key&quot;: &quot;value&quot;}</span><br></span></code></pre><div class="buttonGroup_gqTI"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_lr74" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_PJSy"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_j3ue"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_Xbio" id="http响应报文">HTTP响应报文<a href="#http响应报文" class="hash-link" aria-label="HTTP响应报文的直接链接" title="HTTP响应报文的直接链接">​</a></h3>
+<p>一个HTTP响应报文通常由以下部分组成：</p>
+<ol>
+<li>
+<p><strong>状态行（Status Line）：</strong> 包含协议版本、状态码和状态消息。</p>
+<div class="codeBlockContainer__bYn theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_oqyV"><pre tabindex="0" class="prism-code language-text codeBlock_pH9g thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_xX5i"><span class="token-line" style="color:#393A34"><span class="token plain">HTTP/1.1 200 OK</span><br></span></code></pre><div class="buttonGroup_gqTI"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_lr74" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_PJSy"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_j3ue"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+</li>
+<li>
+<p><strong>响应头部（Response Headers）：</strong> 包含关于响应的附加信息，如Server、Content-Type、Content-Length等。</p>
+<div class="codeBlockContainer__bYn theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_oqyV"><pre tabindex="0" class="prism-code language-text codeBlock_pH9g thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_xX5i"><span class="token-line" style="color:#393A34"><span class="token plain">Server: Apache/2.4.38 (Unix)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Content-Type: text/html; charset=UTF-8</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Content-Length: 1234</span><br></span></code></pre><div class="buttonGroup_gqTI"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_lr74" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_PJSy"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_j3ue"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+</li>
+<li>
+<p><strong>空行（CRLF）：</strong> 表示响应头部的结束，用一个空行（回车换行符）分隔响应头部和响应体。</p>
+<div class="codeBlockContainer__bYn theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_oqyV"><pre tabindex="0" class="prism-code language-text codeBlock_pH9g thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_xX5i"><span class="token-line" style="color:#393A34"><span class="token plain">(空行)</span><br></span></code></pre><div class="buttonGroup_gqTI"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_lr74" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_PJSy"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_j3ue"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+</li>
+<li>
+<p><strong>响应体（Response Body）：</strong> 包含服务器返回的数据。</p>
+<div class="codeBlockContainer__bYn theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_oqyV"><pre tabindex="0" class="prism-code language-text codeBlock_pH9g thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_xX5i"><span class="token-line" style="color:#393A34"><span class="token plain">&lt;html&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &lt;head&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;title&gt;Hello, World!&lt;/title&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &lt;/head&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &lt;body&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;h1&gt;Hello, World!&lt;/h1&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &lt;/body&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&lt;/html&gt;</span><br></span></code></pre><div class="buttonGroup_gqTI"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_lr74" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_PJSy"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_j3ue"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+</li>
+</ol>
+<p>上述结构是HTTP报文的基本组成部分，实际的报文内容和头部字段会根据具体的请求或响应而有所变化。HTTP报文的设计是为了传输和描述Web页面及其相关资源的信息。</p>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="http之url">HTTP之URL<a href="#http之url" class="hash-link" aria-label="HTTP之URL的直接链接" title="HTTP之URL的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="什么是https中间人攻击如何预防https加密过程原理">什么是https中间人攻击，如何预防（HTTPS加密过程、原理）<a href="#什么是https中间人攻击如何预防https加密过程原理" class="hash-link" aria-label="什么是https中间人攻击，如何预防（HTTPS加密过程、原理）的直接链接" title="什么是https中间人攻击，如何预防（HTTPS加密过程、原理）的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="http协议的主要特点">HTTP协议的主要特点<a href="#http协议的主要特点" class="hash-link" aria-label="HTTP协议的主要特点的直接链接" title="HTTP协议的主要特点的直接链接">​</a></h2>
+<p>简单快速、灵活、无连接、无状态</p>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="http  报文的组成部分">HTTP报文的组成部分<a href="#http报文的组成部分" class="hash-link" aria-label="HTTP报文的组成部分的直接链接" title="HTTP报文的组成部分的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="持久链接http长链接">持久链接/http长链接<a href="#持久链接http长链接" class="hash-link" aria-label="持久链接/http长链接的直接链接" title="持久链接/http长链接的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="长链接中的管线化">长链接中的管线化<a href="#长链接中的管线化" class="hash-link" aria-label="长链接中的管线化的直接链接" title="长链接中的管线化的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="http-报文的组成部分">HTTP 报文的组成部分<a href="#http-报文的组成部分" class="hash-link" aria-label="HTTP 报文的组成部分的直接链接" title="HTTP 报文的组成部分的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="常见状态码">常见状态码<a href="#常见状态码" class="hash-link" aria-label="常见状态码的直接链接" title="常见状态码的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="从输入url到呈现页面过程">从输入URL到呈现页面过程<a href="#从输入url到呈现页面过程" class="hash-link" aria-label="从输入URL到呈现页面过程的直接链接" title="从输入URL到呈现页面过程的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="udp-和-tcp有什么区别">UDP 和 TCP有什么区别<a href="#udp-和-tcp有什么区别" class="hash-link" aria-label="UDP 和 TCP有什么区别的直接链接" title="UDP 和 TCP有什么区别的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="tcp为什么要三次握手">TCP为什么要三次握手<a href="#tcp为什么要三次握手" class="hash-link" aria-label="TCP为什  么要三次握手的直接链接" title="TCP为什么要三次握手的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="三次握手过程中可以携带数据吗">三次握手过程中可以携带数据吗<a href="#三次握手过程中可以携带数据吗" class="hash-link" aria-label="三次握手过程中可以携带数据吗的直接链接" title="三次握手过程中可以携带数据吗的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="tcp的四次挥手">TCP的四次挥手<a href="#tcp的四次挥手" class="hash-link" aria-label="TCP的四次挥手的直接链接" title="TCP的四次挥手的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="tcp-和-udp-的区别">TCP 和 UDP 的区别<a href="#tcp-和-udp-的区别" class="hash-link" aria-label="TCP 和 UDP 的区别的直接链接" title="TCP 和 UDP 的区别的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="http和tcp的不同">HTTP和TCP的不同<a href="#http和tcp的不同" class="hash-link" aria-label="HTTP和TCP的不同的直接链接" title="HTTP和TCP的不同的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="http2相关">HTTP2相关<a href="#http2相关" class="hash-link" aria-label="HTTP2相关的直接链接" title="HTTP2相关的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="说一下-http20">说一下 http2.0<a href="#说一下-http20" class="hash-link" aria-label="说一下 http2.0的直接链接" title="说一下 http2.0的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="http2和http1有什么区别">HTTP2和HTTP1有什么区别<a href="#http2和http1有什么区别" class="hash-link" aria-label="HTTP2和HTTP1有什么区别的直接链接" title="HTTP2和HTTP1有什么区别的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="http2为什么要做头部压缩实现原理是什么">http/2为什么要做 头部压缩，实现原理是什么？<a href="#http2为什么要做头部压缩实现原理是什么" class="hash-link" aria-label="http/2为什么要做头部压缩，实现原理是什么？的直接链接" title="http/2为什么要做头部压缩，实现原理是什么？的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="http2的server-push有什么优点">http/2的Server Push有什么优点<a href="#http2的server-push有什么优点" class="hash-link" aria-label="http/2的Server Push有什么优点的直接链接" title="http/2的Server Push有什么优点的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="谈谈你对多路复用的理解">谈谈你对多路复用的理解<a href="#谈谈你对多路复用的理解" class="hash-link" aria-label="谈谈你对多路复用的理解的直接链接" title="谈谈你对多路复用的理解的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="https相关">https相关<a href="#https相关" class="hash-link" aria-label="https相关的直接链接" title="https相关的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="https加的一层ssl在七层中哪个位置">HTTPS加的一层SSL在七层中哪个位置<a href="#https加的一层ssl在七层中哪个位置" class="hash-link" aria-label="HTTPS加的一层SSL在七层中哪个位置的直接链接" title="HTTPS加的一层SSL在七层中哪个位置的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="https-协议的优点">https 协议的优点<a href="#https-协议的优点" class="hash-link" aria-label="https 协议的优点的直接链接" title="https 协议的优点的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="https-协议的缺点">https 协议的缺点<a href="#https-协议的缺点" class="hash-link" aria-label="https 协议的缺点的直接链接" title="https 协议的缺点的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="http与https区别">http与https区别<a href="#http与https区别" class="hash-link" aria-label="http与https区别的直接链接" title="http与https区别的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="https传输的具体过程">https传输的具体过程<a href="#https传输的具体过程" class="hash-link" aria-label="https传输的具体过程的直接链接" title="https传输的具体过程的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="https的整体过程分为证书验证和数据传输阶段">HTTPS的整体过程分为证书验证和数据传输阶段<a href="#https的整体过程分为证书验证和数据传输阶段" class="hash-link" aria-label="HTTPS的整体过程分为证书验证和数据传输阶段的直接链接" title="HTTPS的整体过程分为证书验证和数据传输阶段的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="介绍一下https的握手过程">介绍一下https的握手过程<a href="#介绍一下https的握手过程" class="hash-link" aria-label="介绍一下https的握手过程的直接链接" title="介绍一下https的握手过程的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="为什么https数据传输使用对称加密">为什么https数据传输使用对称加密<a href="#为什么https数据传输使用对称加密" class="hash-link" aria-label="为什么https数据传输使用对称加密的直接链接" title="为什么https数据传输使用对称加密的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="介绍下https中间人攻击的过程">介绍下https中间人攻击的过程<a href="#介绍下https中间人攻击的过程" class="hash-link" aria-label="介绍下https中间人攻击的过程的直接链接" title="介绍下https中间人攻击的过程的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="https-握手过程中客户端如何验  证证书的合法性">HTTPS 握手过程中，客户端如何验证证书的合法性<a href="#https-握手过程中客户端如何验证证书的合法性" class="hash-link" aria-label="HTTPS 握手过程中，客户端如何验证证书的合法性的直接链接" title="HTTPS 握手过程中，客户端如何验证证书的合法性的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="问题">问题<a href="#问题" class="hash-link" aria-label="问题的直接链接" title="问题的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="数字签名它是什么">数字签名？它是什么<a href="#数字签名它是什么" class="hash-link" aria-label="数字签名？它是什么的直接链接" title="数字签名？它是什么的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="谈谈对数字证书的理解">谈谈对数字证书的理解<a href="#谈谈对数字证书的理解" class="hash-link" aria-label="谈谈对数字证书的理解的直接链接" title="谈谈对数字证书的理解的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="为什么说数字证书就能对通信方的身份进行验证呢">为什么说数字证书就能对通信方的身份进行验证呢<a href="#为什么说数字证书就能对通信方的身份进行验证呢" class="hash-link" aria-label="为什么说数字证书就能对通信方的身份进行验证呢的直接链接" title="为什么说数字证书就能对通信方的身份进行验证呢的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="请详细的说一下https它的加密传输过程涉及到哪些算法呢">请详细的说一下HTTPS它的加密传输过程，涉及到哪些算法呢？<a href="#请详细的说一下https它的加密传输过程涉及到哪些算法呢" class="hash-link" aria-label="请详细的说一下HTTPS它的加密传输过程，涉及到哪些算法呢？的直接链接" title="请详细的说一下HTTPS它的加密传输过程，涉及到哪些算法呢？的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="描述一下rsa握手">描述一下RSA握手<a href="#描述一下rsa握手" class="hash-link" aria-label="描述一下RSA握手的直接链接" title="描述一下RSA握手的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="ecdhe握手和rsa握手又有什么区别呢">ECDHE握手和RSA握手又有什么区别呢<a href="#ecdhe握手和rsa握手又有什么区别呢" class="hash-link" aria-label="ECDHE握手和RSA握手又有什么区别呢的直接链接" title="ECDHE握手和RSA握手又有什么区别呢的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="你知道tsl13版本吗它较tsl12做了哪些改进呢">你知道TSL1.3版本吗？它较TSL1.2做了哪些改进呢？<a href="#你知道tsl13版本吗它较tsl12做了哪些改进呢" class="hash-link" aria-label="你知道TSL1.3版本吗？它较TSL1.2做了哪些改进呢？的直接链接" title="你知道TSL1.3版本吗？它较TSL1.2做了哪些改进呢？的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="介绍下-https-中间人攻击">介绍下 HTTPS 中间人攻击<a href="#介绍下-https-中间人攻击" class="hash-link" aria-label="介绍下 HTTPS 中间人攻击的直接链接" title="介绍下 HTTPS 中间人攻击的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="httphttps-协议总结">http/https 协议总结<a href="#httphttps-协议总结" class="hash-link" aria-label="http/https 协议总结的直接链接" title="http/https 协议总结的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="websocket的实现和应用">WebSocket的实现和应用<a href="#websocket的实现和应用" class="hash-link" aria-label="WebSocket的实现和应用的直接链接" title="WebSocket的实现和应用的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="什么是-websocket">什么是 WebSocket<a href="#什么是-websocket" class="hash-link" aria-label="什么是 WebSocket的直接链接" title="什么是 WebSocket的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="websocket-是什么样的协议具体有什么优点">WebSocket 是什么样的协议，具体有什么优点<a href="#websocket-是什么样的协议具体有什么优点" class="hash-link" aria-label="WebSocket 是什么样的协议，具体有什么优点的直接链接" title="WebSocket 是什么样的协议，具体有什么优点的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="理解websocket协议的底层原理与http的区别">理解WebSocket协议的底层原理、与HTTP的区别<a href="#理解websocket协议的底层原理与http的区别" class="hash-link" aria-label="理解WebSocket协议的底层原理、与HTTP的区别的直接链接" title="理解WebSocket协议的底层原理、与HTTP的区别的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="tokencookiesession区别">Token、cookie、Session区别<a href="#tokencookiesession区别" class="hash-link" aria-label="Token、cookie、Session区别的直接链接" title="Token、cookie、Session区别的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="cookie-和-token-都存放在-header-中为什么不会劫持-token">cookie 和 token 都存放在 header 中，为什么不会劫持 token？<a href="#cookie-和-token-都存放在-header-中为什么不会劫持-token" class="hash-link" aria-label="cookie 和 token 都存放在 header 中，为什么不会劫持 token？的直接链接" title="cookie 和 token 都存放在 header 中，为什么不会劫持 token？的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="介绍下如何实现-token-加密">介绍下如何实现 token 加密<a href="#介绍下如何实现-token-加密" class="hash-link" aria-label="介绍下如何  实现 token 加密的直接链接" title="介绍下如何实现 token 加密的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="一个图片-url-访问后直接下载怎样实现">一个图片 url 访问后直接下载怎样实现<a href="#一个图片-url-访问后直接下载怎样实现" class="hash-link" aria-label="一个图片 url 访问后直接下载怎样实现的直接链接" title="一个图片 url 访问后直接下载怎样实现的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="fetch-发送-2-次请求的原因">fetch 发送 2 次请求的原因<a href="#fetch-发送-2-次请求的原因" class="hash-link" aria-label="fetch 发送 2 次请求的原因的直接链接" title="fetch 发送 2 次请求的原因的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="get-和-post-的区别">GET 和 POST 的区别<a href="#get-和-post-的区别" class="hash-link" aria-label="GET 和 POST 的区别的直接链接" title="GET 和 POST 的区别的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="301和-302-的区别">301和 302 的区别<a href="#301和-302-的区别" class="hash-link" aria-label="301和 302 的区别的直接链接" title="301和 302 的区别的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="dns的作用dns解析的详细过程dns优化原理">DNS的作用、DNS解析的详细过程，DNS优化原理<a href="#dns的作用dns解析的详细过程dns优化原理" class="hash-link" aria-label="DNS的作用、DNS解析的详细过程，DNS优化原理的直接链接" title="DNS的作用、DNS解析的详细过程，DNS优化原理的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="简单请求和复杂请求">简单请求和复杂请求<a href="#简单请求和复杂请求" class="hash-link" aria-label="简单请求和复杂请求的直接链接" title="简单请求和复杂请求的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="http请求中的keep-alive有了解吗">Http请求中的keep-alive有了解吗<a href="#http请求中的keep-alive有了解吗" class="hash-link" aria-label="Http请求中的keep-alive有了解吗的直接链接" title="Http请求中的keep-alive有了解吗的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="管道机制的作用是什么">管道机制的作用是什么<a href="#管道机制的作用是什么" class="hash-link" aria-label="管道机制的作用是什么的直接链接" title="管道机制的作用是什么的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="什么情况下会触发option请求">什么情况下会触发option请求<a href="#什么情况下会触发option请求" class="hash-link" aria-label="什么情况下会触发option请求的直接链接" title="什么情况下会触发option请求的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="get可以上传图片吗">GET可以上传图片吗<a href="#get可以上传图片吗" class="hash-link" aria-label="GET可以上传图片吗的直接链接" title="GET可以上传图片吗的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="cdn的作用和原理">CDN的作用和原理<a href="#cdn的作用和原理" class="hash-link" aria-label="CDN的作用和原理的直接链接" title="CDN的作用和原理的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="如何捕获cdn上的js运行时导致的详细错误信息">如何捕获CDN上的js运行时导致的详细错误信息？<a href="#如何捕获cdn上的js运行时导致的详细错误信息" class="hash-link" aria-label="如何捕获CDN上的js运行时导致的详细错误信息？的直接链接" title="如何捕获CDN上的js运行时导致的详细错误信息？的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="强缓存命中发生了什么">强缓存命中发生了什么？<a href="#强缓存命中发生了什么" class="hash-link" aria-label="强缓存命中发生了什么？的直接链接" title="强缓存命中发生了什么？的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="默认的强制缓存时间是多少">默认的强制缓存时间是多少？<a href="#默认的强制缓存时间是多少" class="hash-link" aria-label="默认的强制缓存时间是多少？的直接链接" title="默认的强制缓存时间是多少？的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="cors跨域的原理">CORS跨域的原理<a href="#cors跨域的原理" class="hash-link" aria-label="CORS跨域的原理的直接链接" title="CORS跨域的原理的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="cors的哪些是简单请求">CORS的哪些是简单请求？<a href="#cors的哪些是简单请求" class="hash-link" aria-label="CORS的哪些是简单请求？的直接链接" title="CORS的哪些是简单请求？的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="cors的预检请求具体是怎样的">CORS的预检请求具体是怎样的？<a href="#cors的预检请求具体是怎样的" class="hash-link" aria-label="CORS的预检请求具体是怎样的？的直接链接" title="CORS的预检请求具体是怎样的？的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="为什么简单请求不需要预检">为什么简单请求不需要预检？<a href="#为什么简单请求不需要预检" class="hash-link" aria-label="为什么简单请求不需要预检？的直接链接" title="为什么简单请求不需要预检？的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="复杂请求预检检查什么东西">复杂请求预检检查什么东西？<a href="#复杂请求预检检查什么东西" class="hash-link" aria-label="复杂请求预检检查什么东西？的直接链接" title="复杂请求预检检查什  么东西？的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="如果cors附带身份凭证要怎样做">如果CORS附带身份凭证要怎样做？<a href="#如果cors附带身份凭证要怎样做" class="hash-link" aria-label="如果CORS附带身份凭证要怎样做？的直接链接" title="如果CORS附带身份凭证要怎样做？的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="如何减少cors预请求的次数">如何减少CORS预请求的次数？<a href="#如何减少cors预请求的次数" class="hash-link" aria-label="如何减少CORS预请求的次数？的直接链接" title="如何减少CORS预请求的次数？的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="在深圳的网页上输入百度是怎么把这个请求发到北京的">在深圳的网页上输入百度，是怎么把这个请求发到北京的<a href="#在深圳的网页上输入百度是怎么把这个请求发到北京的" class="hash-link" aria-label="在深圳的网页上输入百度，是怎么把这个请求发到北京的的直接链接" title="在深圳的网页上输入百度，是怎么把这个请求发到北京的的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="为什么使用多域名部署">为什么使用多域名部署？<a href="#为什么使用多域名部署" class="hash-link" aria-label="为什么使用多域名部署？的直接链接" title="为什么使用多域名部署？的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="页面10张imghttp1是怎样的加载表现怎样解决的">页面10张img，http1是怎样的加载表现？怎样解决的？<a href="#页面10张imghttp1是怎样的加载表现怎样解决的" class="hash-link" aria-label="页面10张img，http1是怎样的加载表现？怎样解决的？的直接链接" title="页面10张img，http1是怎样的加载表现？怎样解决的？的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="说一说sso单点登录">说一说SSO单点登录<a href="#说一说sso单点登录" class="hash-link" aria-label="说一说SSO单点登录的直接链接" title="说一说SSO单点登录的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="说一说oauth">说一说OAuth<a href="#说一说oauth" class="hash-link" aria-label="说一说OAuth的直接链接" title="说一说OAuth的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="http传输大文件">HTTP传输大文件<a href="#http传输大文件" class="hash-link" aria-label="HTTP传输大文件的直接链接" title="HTTP传输大文件的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="http的代理服务">HTTP的代理服务<a href="#http的代理服务" class="hash-link" aria-label="HTTP的代理服务的直接链接" title="HTTP的代理服务的直接链接">​</a></h2>
+<ul>
+<li>负载均衡： 代理服务器可以分发客户端请求到多个目标服务器，以实现负载均衡。这有助于提高系统的可伸缩性和性能。</li>
+<li>健康检查：使用“心跳”等机制监控后端服务器，发现有故障就及时“踢出”集群，保证服务高可用；</li>
+<li>安全防护：保护被代理的后端服务器，限制 IP地址或流量，抵御网络攻击和过载；</li>
+<li>加密卸载：对外网使用 SSL/TLS 加密通信认证，而在安全的内网不加密，消除加解密成本；</li>
+<li>数据过滤：拦截上下行的数据，任意指定策略修改请求或者响应；</li>
+<li>内容缓存：暂存、复用服务器响应</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/gvray/FE-interview/tree/main/docs/network/http/FAQ.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_bjoM" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>编辑此页</a></div><div class="col lastUpdated_Dykw"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="文件选项卡"><a class="pagination-nav__link pagination-nav__link--prev" href="/FE-interview/docs/network/http/"><div class="pagination-nav__sublabel">上一页</div><div class="pagination-nav__label">目录大纲</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/FE-interview/docs/network/http/1"><div class="pagination-nav__sublabel">下一页</div><div class="pagination-nav__label">get和post请求</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_hZ7f thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#tcp三次握手一句话概括" class="table-of-contents__link toc-highlight">tcp三次握手，一句话概括</a></li><li><a href="#tcp和udp的区别" class="table-of-contents__link toc-highlight">TCP和UDP的区别</a></li><li><a href="#http请求的方式head方式" class="table-of-contents__link toc-highlight">HTTP请求的方式，HEAD方式</a></li><li><a href="#一个图片url访问后直接下载怎样实现" class="table-of-contents__link toc-highlight">一个图片url访问后直接下载怎样实现？</a></li><li><a href="#说一下web-quality无障碍" class="table-of-contents__link toc-highlight">说一下web Quality（无障碍）</a></li><li><a href="#几个很实用的bom属性对象方法" class="table-of-contents__link toc-highlight">几个很实用的BOM属性对象方法?</a></li><li><a href="#说一下html5-drag-api" class="table-of-contents__link toc-highlight">说一下HTML5 drag api</a></li><li><a href="#说一下http20" class="table-of-contents__link toc-highlight">说一下http2.0</a></li><li><a href="#补充-400-和-401--403-状态码" class="table-of-contents__link toc-highlight">补充 400 和 401 、 403 状态码</a></li><li><a href="#fetch发送-2-次请求的原因" class="table-of-contents__link toc-highlight">fetch发送 2 次请求的原因</a></li><li><a href="#cookie如何防范xss攻击" class="table-of-contents__link toc-highlight">Cookie如何防范XSS攻击</a></li><li><a href="#cookie和session的区别" class="table-of-contents__link toc-highlight">Cookie和session的区别</a></li><li><a href="#一句话概括restful" class="table-of-contents__link toc-highlight">一句话概括RESTFUL</a></li><li><a href="#讲讲viewport和移动端布局" class="table-of-contents__link toc-highlight">讲讲viewport和移动端布局</a></li><li><a href="#click在ios上有300ms延迟原因及如何解决" class="table-of-contents__link toc-highlight">click在ios上有300ms延迟，原因及如何解决？</a></li><li><a href="#addeventlistener参数" class="table-of-contents__link toc-highlight">addEventListener参数</a></li><li><a href="#cookie-sessionstorage-localstorage区别" class="table-of-contents__link toc-highlight">cookie sessionStorage localStorage区别</a></li><li><a href="#cookie-session区别" class="table-of-contents__link toc-highlight">cookie session区别</a></li><li><a href="#介绍知道的http返回的状态码" class="table-of-contents__link toc-highlight">介绍知道的http返回的状态码</a></li><li><a href="#http常用请求头" class="table-of-contents__link toc-highlight">http常用请求头</a></li><li><a href="#讲讲强协商缓存" class="table-of-contents__link toc-highlight">讲讲强，协商缓存</a></li><li><a href="#强缓存协商缓存什么时候用哪个" class="table-of-contents__link toc-highlight">强缓存、协商缓存什么时候用哪个</a></li><li><a href="#前端优化" class="table-of-contents__link toc-highlight">前端优化</a></li><li><a href="#get和post的区别" class="table-of-contents__link toc-highlight">GET和POST的区别</a></li><li><a href="#和-302-的区别" class="table-of-contents__link toc-highlight">和 302 的区别</a></li><li><a href="#http支持的方法" class="table-of-contents__link toc-highlight">HTTP支持的方法</a></li><li><a href="#如何画一个三角形" class="table-of-contents__link toc-highlight">如何画一个三角形</a></li><li><a href="#html5新增的元素" class="table-of-contents__link toc-highlight">HTML5新增的元素</a></li><li><a href="#在地址栏里输入一个url到这个页面呈现出来中间会发生什么" class="table-of-contents__link toc-highlight">在地址栏里输入一个URL,到这个页面呈现出来，中间会发生什么？</a></li><li><a href="#cookie和session的区别localstorage和sessionstorage的区别" class="table-of-contents__link toc-highlight">cookie和session的区别，localstorage和sessionstorage的区别</a></li><li><a href="#常见的http的头部" class="table-of-contents__link toc-highlight">常见的HTTP的头部</a></li><li><a href="#http20-的特性" class="table-of-contents__link toc-highlight">HTTP2.0 的特性</a></li><li><a href="#cache-control的值有哪些" class="table-of-contents__link toc-highlight">cache-control的值有哪些</a></li><li><a href="#浏览器在生成页面的时候会生成那两颗树" class="table-of-contents__link toc-highlight">浏览器在生成页面的时候，会生成那两颗树？</a></li><li><a href="#csrf和xss的网络攻击及防范" class="table-of-contents__link toc-highlight">csrf和xss的网络攻击及防范</a></li><li><a href="#怎么看网站的性能如何" class="table-of-contents__link toc-highlight">怎么看网站的性能如何</a></li><li><a href="#介绍http协议特征" class="table-of-contents__link toc-highlight">介绍HTTP协议(特征)</a></li><li><a href="#输入url到页面加载显示完成发生了什么" class="table-of-contents__link toc-highlight">输入URL到页面加载显示完成发生了什么?</a></li><li><a href="#说一下对cookie和session的认知cookie有哪些限制" class="table-of-contents__link toc-highlight">说一下对Cookie和Session的认知，Cookie有哪些限制？</a></li><li><a href="#描述一下xss和crsf攻击防御方法" class="table-of-contents__link toc-highlight">描述一下XSS和CRSF攻击？防御方法？</a></li><li><a href="#知道-304-吗什么时候用-304-" class="table-of-contents__link toc-highlight">知道 304 吗，什么时候用 304 ？</a></li><li><a href="#具体有哪些请求头是跟缓存相关的" class="table-of-contents__link toc-highlight">具体有哪些请求头是跟缓存相关的</a></li><li><a href="#cookie和session的区别-1" class="table-of-contents__link toc-highlight">cookie和session的区别</a></li><li><a href="#cookie有哪些字段可以设置" class="table-of-contents__link toc-highlight">cookie有哪些字段可以设置</a></li><li><a href="#cookie有哪些编码方式" class="table-of-contents__link toc-highlight">cookie有哪些编码方式？</a></li><li><a href="#除了cookie还有什么存储方式说说cookie和localstorage的区别" class="table-of-contents__link toc-highlight">除了cookie，还有什么存储方式。说说cookie和localStorage的区别</a></li><li><a href="#浏览器输入网址到页面渲染全过程" class="table-of-contents__link toc-highlight">浏览器输入网址到页面渲染全过程</a></li><li><a href="#html5和css3用的多吗你了解它们的新属性吗有在项目中用过吗" class="table-of-contents__link toc-highlight">HTML5和CSS3用的多吗？你了解它们的新属性吗？有在项目中用过吗？</a></li><li><a href="#http常见的请求方法" class="table-of-contents__link toc-highlight">http常见的请求方法</a></li><li><a href="#get和post的区别-1" class="table-of-contents__link toc-highlight">get和post的区别</a></li><li><a href="#说说-302--301--304-的状态码" class="table-of-contents__link toc-highlight">说说 302 ， 301 ， 304 的状态码</a></li><li><a href="#web性能优化" class="table-of-contents__link toc-highlight">web性能优化</a></li><li><a href="#get-和-post-的请求的区别" class="table-of-contents__link toc-highlight">GET 和 POST 的请求的区别</a></li><li><a href="#post-和-put-请求的区别" class="table-of-contents__link toc-highlight">POST 和 PUT 请求的区别</a></li><li><a href="#常见的-http-请求方法" class="table-of-contents__link toc-highlight">常见的 HTTP 请求方法</a></li><li><a href="#常见的-http-请求头和响应头" class="table-of-contents__link toc-highlight">常见的 HTTP 请求头和响应头</a></li><li><a href="#content-type" class="table-of-contents__link toc-highlight">Content-Type</a></li><li><a href="#http-11-和-http-20-的区别" class="table-of-contents__link toc-highlight">HTTP 1.1 和 HTTP 2.0 的区别</a></li><li><a href="#http-和-https-协议的区别" class="table-of-contents__link toc-highlight">HTTP 和 HTTPS 协议的区别</a></li><li><a href="#http2-的头部压缩算法是怎样的" class="table-of-contents__link toc-highlight">HTTP2 的头部压缩算法是怎样的？</a></li><li><a href="#说一下-http-30" class="table-of-contents__link toc-highlight">说一下 HTTP 3.0</a></li><li><a href="#什么是-https-协议" class="table-of-contents__link toc-highlight">什么是 HTTPS 协议？</a></li><li><a href="#https-通信握手过程" class="table-of-contents__link toc-highlight">HTTPS 通信（握手）过程</a></li><li><a href="#dns-完整的查询过程" class="table-of-contents__link toc-highlight">DNS 完整的查询过程</a></li><li><a href="#osi-七层模型" class="table-of-contents__link toc-highlight">OSI 七层模型</a></li><li><a href="#谈一谈http的缺点" class="table-of-contents__link toc-highlight">谈一谈http的缺点</a></li><li><a href="#http跨域时的options请求" class="table-of-contents__link toc-highlight">http跨域时的options请求</a></li><li><a href="#tcp和udp的区别-1" class="table-of-contents__link toc-highlight">TCP和UDP的区别</a></li><li><a href="#httphttps协议总结" class="table-of-contents__link toc-highlight">http/https协议总结</a></li><li><a href="#正 向代理和反向代理" class="table-of-contents__link toc-highlight">正向代理和反向代理</a></li><li><a href="#dns如何工作的" class="table-of-contents__link toc-highlight">DNS如何工作的</a></li><li><a href="#http10-http11-http20版本之间的差异" class="table-of-contents__link toc-highlight">HTTP/1.0 HTTP1.1 HTTP2.0版本之间的差异</a></li><li><a href="#http10-http11-http20区别" class="table-of-contents__link toc-highlight">HTTP/1.0 HTTP1.1 HTTP2.0区别</a></li><li><a href="#websocket和http协议有什么区别" class="table-of-contents__link toc-highlight">Websocket和HTTP协议有什么区别</a></li><li><a href="#http跨域请求时为什么要发送options请求" class="table-of-contents__link toc-highlight">HTTP跨域请求时为什么要发送options请求</a></li><li><a href="#http3" class="table-of-contents__link toc-highlight">HTTP3</a></li><li><a href="#谈一谈你对http2理解" class="table-of-contents__link toc-highlight">谈一谈你对HTTP/2理解</a></li><li><a href="#ssl-连接断开后如何恢复" class="table-of-contents__link toc-highlight">SSL 连接断开后如何恢复</a></li><li><a href="#介绍一个https工作原理" class="table-of-contents__link toc-highlight">介绍一个HTTPS工作原理</a></li><li><a href="#https握手过程" class="table-of-contents__link toc-highlight">HTTPS握手过程</a></li><li><a href="#介绍一下https和http区别" class="table-of-contents__link toc-highlight">介绍一下HTTPS和HTTP区别</a></li><li><a href="#http请求中token-cookie-和-session有什么区别" class="table-of-contents__link toc-highlight">Http请求中token cookie 和 session有什么区别</a></li><li><a href="#谈一谈http数据传输" class="table-of-contents__link toc-highlight">谈一谈HTTP数据传输</a></li><li><a href="#谈一谈队头阻塞问题" class="table-of-contents__link toc-highlight">谈一谈队头阻塞问题</a></li><li><a href="#http实体数据" class="table-of-contents__link toc-highlight">HTTP实体数据</a></li><li><a href="#http前生今世" class="table-of-contents__link toc-highlight">HTTP前生今世</a><ul><li><a href="#http091991年" class="table-of-contents__link toc-highlight">HTTP/0.9（1991年）</a></li><li><a href="#http101996年" class="table-of-contents__link toc-highlight">HTTP/1.0（1996年）</a></li><li><a href="#http111997年" class="table-of-contents__link toc-highlight">HTTP/1.1（1997年）</a></li><li><a href="#http22015年" class="table-of-contents__link toc-highlight">HTTP/2（2015年）</a></li><li><a href="#http32018年" class="table-of-contents__link toc-highlight">HTTP/3（2018年）</a></li><li><a href="#发展趋势" class="table-of-contents__link toc-highlight">发展趋势</a></li></ul></li><li><a href="#http世界全览" class="table-of-contents__link toc-highlight">HTTP世界全览</a></li><li><a href="#http分层" class="table-of-contents__link toc-highlight">HTTP分层</a></li><li><a href="#http报文是什么样子" class="table-of-contents__link toc-highlight">HTTP报文是什么样子</a><ul><li><a href="#http请求报文" class="table-of-contents__link toc-highlight">HTTP请求报文</a></li><li><a href="#http响应报文" class="table-of-contents__link toc-highlight">HTTP响应报文</a></li></ul></li><li><a href="#http之url" class="table-of-contents__link toc-highlight">HTTP之URL</a></li><li><a href="#什么是https中间人攻击如何预防https加密过程原理" class="table-of-contents__link toc-highlight">什么是https中间人攻击，如何预防（HTTPS加密过程、原理）</a></li><li><a href="#http协议的主要特点" class="table-of-contents__link toc-highlight">HTTP协议的主要特点</a></li><li><a href="#http报文的组成部分" class="table-of-contents__link toc-highlight">HTTP报文的组成部分</a></li><li><a href="#持久链接http长链接" class="table-of-contents__link toc-highlight">持久链接/http长链接</a></li><li><a href="#长链接中的管线化" class="table-of-contents__link toc-highlight">长链接中的管线化</a></li><li><a href="#http-报文的组成部分" class="table-of-contents__link toc-highlight">HTTP 报文的组成部分</a></li><li><a href="#常见状态码" class="table-of-contents__link toc-highlight">常见状态码</a></li><li><a href="#从输入url到呈现页面过程" class="table-of-contents__link toc-highlight">从输入URL到呈现页面过程</a></li><li><a href="#udp-和-tcp有什么区别" class="table-of-contents__link toc-highlight">UDP 和 TCP有什么区别</a></li><li><a href="#tcp为什么要三次握手" class="table-of-contents__link toc-highlight">TCP为什么要三次握手</a></li><li><a href="#三次握手过程中可以携带数据吗" class="table-of-contents__link toc-highlight">三次握手过程中可以携带数据吗</a></li><li><a href="#tcp的四次挥手" class="table-of-contents__link toc-highlight">TCP的四次挥手</a></li><li><a href="#tcp-和-udp-的区别" class="table-of-contents__link toc-highlight">TCP 和 UDP 的区别</a></li><li><a href="#http和tcp的不同" class="table-of-contents__link toc-highlight">HTTP和TCP的不同</a></li><li><a href="#http2相关" class="table-of-contents__link toc-highlight">HTTP2相关</a></li><li><a href="#说一下-http20" class="table-of-contents__link toc-highlight">说一下 http2.0</a></li><li><a href="#http2和http1有什么区别" class="table-of-contents__link toc-highlight">HTTP2和HTTP1有什么区别</a></li><li><a href="#http2为什么要做头部压缩实现原理是什么" class="table-of-contents__link toc-highlight">http/2为什么要做头部压缩，实现原理是什么？</a></li><li><a href="#http2的server-push有什么优点" class="table-of-contents__link toc-highlight">http/2的Server Push有什么优点</a></li><li><a href="#谈谈你对多路复用的理解" class="table-of-contents__link toc-highlight">谈谈你对多路复用的理解</a></li><li><a href="#https相关" class="table-of-contents__link toc-highlight">https相关</a></li><li><a href="#https加的一层ssl在七层中哪个位置" class="table-of-contents__link toc-highlight">HTTPS加的一层SSL在七层中哪个位置</a></li><li><a href="#https-协议的优点" class="table-of-contents__link toc-highlight">https 协议的优点</a></li><li><a href="#https-协议的缺点" class="table-of-contents__link toc-highlight">https 协议的缺点</a></li><li><a href="#http与https区别" class="table-of-contents__link toc-highlight">http与https区别</a></li><li><a href="#https传输的具体过程" class="table-of-contents__link toc-highlight">https传输的具体过程</a></li><li><a href="#https的整体过程分为证书验证和数据传输阶段" class="table-of-contents__link toc-highlight">HTTPS的整体过程分为证书验证和数据传输阶段</a></li><li><a href="#介绍一下https的握手过程" class="table-of-contents__link toc-highlight">介绍一下https的握手过程</a></li><li><a href="#为什么https数据传输使用对称加密" class="table-of-contents__link toc-highlight">为什么https数据传输使用对称加密</a></li><li><a href="#介绍下https中间人攻击的过程" class="table-of-contents__link toc-highlight">介绍下https中间人攻击的过程</a></li><li><a href="#https-握手过程中客户端如何验证证书的合法性" class="table-of-contents__link toc-highlight">HTTPS 握手过程中，客户端如何验证证书的合法性</a></li><li><a href="#问题" class="table-of-contents__link toc-highlight">问题</a></li><li><a href="#数字签名它是什么" class="table-of-contents__link toc-highlight">数字签名？它是什么</a></li><li><a href="#谈谈对数字证书的理解" class="table-of-contents__link toc-highlight">谈谈对数字证书的理解</a></li><li><a href="#为什么说数字证书就能对通信方的身份进行验证呢" class="table-of-contents__link toc-highlight">为什么说数字证书就能对通信方的身份进行验证呢</a></li><li><a href="#请详细的说一下https它的加密传输过程涉及到哪些算法呢" class="table-of-contents__link toc-highlight">请详细的说一下HTTPS它的加密传输过程，涉及到哪些算法呢？</a></li><li><a href="#描述一下rsa握手" class="table-of-contents__link toc-highlight">描述一下RSA握手</a></li><li><a href="#ecdhe握手和rsa握手又有什么区别呢" class="table-of-contents__link toc-highlight">ECDHE握手和RSA握手又有什么区别呢</a></li><li><a href="#你知道tsl13版本吗它较tsl12做了哪些改进呢" class="table-of-contents__link toc-highlight">你知道TSL1.3版本吗？它较TSL1.2做了哪些改进呢？</a></li><li><a href="#介绍下-https-中间人攻击" class="table-of-contents__link toc-highlight">介绍下 HTTPS 中间人攻击</a></li><li><a href="#httphttps-协议总结" class="table-of-contents__link toc-highlight">http/https 协议总结</a></li><li><a href="#websocket的实现和应用" class="table-of-contents__link toc-highlight">WebSocket的实现和应用</a></li><li><a href="#什么是-websocket" class="table-of-contents__link toc-highlight">什么是 WebSocket</a></li><li><a href="#websocket-是什么样的协议具体有什么优点" class="table-of-contents__link toc-highlight">WebSocket 是什么样的协议，具体有什么优点</a></li><li><a href="#理解websocket协议的底层原理与http的区别" class="table-of-contents__link toc-highlight">理解WebSocket协议的底层原理、与HTTP的区别</a></li><li><a href="#tokencookiesession区别" class="table-of-contents__link toc-highlight">Token、cookie、Session区别</a></li><li><a href="#cookie-和-token-都存放在-header-中为什么不会劫持-token" class="table-of-contents__link toc-highlight">cookie 和 token 都存放在 header 中，为什么不会劫持 token？</a></li><li><a href="#介绍下如何实现-token-加密" class="table-of-contents__link toc-highlight">介绍下如何实现 token 加密</a></li><li><a href="#一个图片-url-访问后直接下载怎样实现" class="table-of-contents__link toc-highlight">一个图片 url 访问后直接下载怎样实现</a></li><li><a href="#fetch-发送-2-次请  求的原因" class="table-of-contents__link toc-highlight">fetch 发送 2 次请求的原因</a></li><li><a href="#get-和-post-的区别" class="table-of-contents__link toc-highlight">GET 和 POST 的区别</a></li><li><a href="#301和-302-的区别" class="table-of-contents__link toc-highlight">301和 302 的区别</a></li><li><a href="#dns的作用dns解析的详细过程dns优化原理" class="table-of-contents__link toc-highlight">DNS的作用、DNS解析的详细过程，DNS优化原理</a></li><li><a href="#简单请求和复杂请求" class="table-of-contents__link toc-highlight">简单请求和复杂请求</a></li><li><a href="#http请求中的keep-alive有了解吗" class="table-of-contents__link toc-highlight">Http请求中的keep-alive有了解吗</a></li><li><a href="#管道机制的作用是什么" class="table-of-contents__link toc-highlight">管道机制的作用是什么</a></li><li><a href="#什么情况下会触发option请求" class="table-of-contents__link toc-highlight">什么情况下会触发option请求</a></li><li><a href="#get可以上传图片吗" class="table-of-contents__link toc-highlight">GET可以上传图片吗</a></li><li><a href="#cdn的作用和原理" class="table-of-contents__link toc-highlight">CDN的作用和原理</a></li><li><a href="#如何捕获cdn上的js运行时导致的详细错误信息" class="table-of-contents__link toc-highlight">如何捕获CDN上的js运行时导致的详细错误信息？</a></li><li><a href="#强缓存命中发生了什么" class="table-of-contents__link toc-highlight">强缓存命中发生了什么？</a></li><li><a href="#默认的强制缓存时间是多少" class="table-of-contents__link toc-highlight">默认的强制缓存时间是多少？</a></li><li><a href="#cors跨域的原理" class="table-of-contents__link toc-highlight">CORS跨域的原理</a></li><li><a href="#cors的哪些是简单请求" class="table-of-contents__link toc-highlight">CORS的哪些是简单请求？</a></li><li><a href="#cors的预检请求具体是怎样的" class="table-of-contents__link toc-highlight">CORS的预检请求具体是怎样的？</a></li><li><a href="#为什么简单请求不需要预检" class="table-of-contents__link toc-highlight">为什么简单请求不需要预检？</a></li><li><a href="#复杂请求预检检查什么东西" class="table-of-contents__link toc-highlight">复杂请求预检检查什么东西？</a></li><li><a href="#如果cors附带身份凭证要怎样做" class="table-of-contents__link toc-highlight">如果CORS附带身份凭证要怎样做？</a></li><li><a href="#如何减少cors预请求的次数" class="table-of-contents__link toc-highlight">如何减少CORS预请求的次数？</a></li><li><a href="#在深圳的网页上输入百度是怎么把这个请求发到北京的" class="table-of-contents__link toc-highlight">在深圳的网页上输入百度，是怎么把这个请求发到北京的</a></li><li><a href="#为什么使用多域名部署" class="table-of-contents__link toc-highlight">为什么使用多域名部署？</a></li><li><a href="#页面10张imghttp1是怎样的加载表现怎样解决的" class="table-of-contents__link toc-highlight">页面10张img，http1是怎样的加载表现？怎样解决的？</a></li><li><a href="#说一说sso单点登录" class="table-of-contents__link toc-highlight">说一说SSO单点登录</a></li><li><a href="#说一说oauth" class="table-of-contents__link toc-highlight">说一说OAuth</a></li><li><a href="#http传输大文件" class="table-of-contents__link toc-highlight">HTTP传输大文件</a></li><li><a href="#http的代理服务" class="table-of-contents__link toc-highlight">HTTP的代理服务</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">面试宝典</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/FE-interview/docs">八股文(ALL.)</a></li><li class="footer__item"><a class="footer__link-item" href="/FE-interview/docs/category/设计模式">设计模式</a></li><li class="footer__item"><a class="footer__link-item" href="/FE-interview/docs/category/算法">算法</a></li><li class="footer__item"><a class="footer__link-item" href="/FE-interview/docs/category/软件服务">软件服务</a></li><li class="footer__item"><a class="footer__link-item" href="/FE-interview/docs/category/服务端开发">服务端开发</a></li><li class="footer__item"><a class="footer__link-item" href="/FE-interview/docs/category/手写练习场">手写练习场</a></li></ul></div><div class="col footer__col"><div class="footer__title">多端开发</div><ul class="footer__items clean-list"><li class="footer__item"><a href="#" class="footer__link-item">移动端</a></li><li class="footer__item"><a href="#" class="footer__link-item">小程序</a></li><li class="footer__item"><a class="footer__link-item" href="/FE-interview/docs/category/移动端开发">桌面软件</a></li></ul></div><div class="col footer__col"><div class="footer__title">社区</div><ul class="footer__items clean-list"><li class="footer__item"><a href="#" class="footer__link-item">Stack Overflow</a></li></ul></div><div class="col footer__col"><div class="footer__title">更多</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/FE-interview/blog">博客</a></li><li class="footer__item"><a href="https://github.com/gvray/FE-interview" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_j_ow"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 FE-interview. Built with GavinRay's Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

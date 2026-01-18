@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-Hans" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-software/browser/9" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.1.1">
+<title data-rh="true">垃圾回收和内存泄漏 | 前端面试</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://gvray.github.io/FE-interview/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://gvray.github.io/FE-interview/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://gvray.github.io/FE-interview/docs/software/browser/9"><meta data-rh="true" property="og:locale" content="zh_Hans"><meta data-rh="true" name="docusaurus_locale" content="zh-Hans"><meta data-rh="true" name="docsearch:language" content="zh-Hans"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="垃圾回收和内存泄漏 | 前端面试"><meta data-rh="true" name="description" content="内存生命周期"><meta data-rh="true" property="og:description" content="内存生命周期"><link data-rh="true" rel="icon" href="/FE-interview/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://gvray.github.io/FE-interview/docs/software/browser/9"><link data-rh="true" rel="alternate" href="https://gvray.github.io/FE-interview/docs/software/browser/9" hreflang="zh-Hans"><link data-rh="true" rel="alternate" href="https://gvray.github.io/FE-interview/docs/software/browser/9" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/FE-interview/blog/rss.xml" title="前端面试 RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/FE-interview/blog/atom.xml" title="前端面试 Atom Feed"><link rel="stylesheet" href="/FE-interview/assets/css/styles.b743332f.css">
+<script src="/FE-interview/assets/js/runtime~main.99301c2a.js" defer="defer"></script>
+<script src="/FE-interview/assets/js/main.ad720e1f.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const a=new URLSearchParams(window.location.search).entries();for(var[t,e]of a)if(t.startsWith("docusaurus-data-")){var n=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(n,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_mKfG" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><div class="announcementBar_l5ze" style="background-color:#6366f1;color:#ffffff" role="banner"><div class="announcementBarPlaceholder_iuq2"></div><div class="content_KYoq announcementBarContent_M7ac">⭐️ 如果您喜欢本网站，请点这里在<a target="_blank" class="cta" href="https://github.com/gvray/FE-interview"> <strong>GitHub</strong> </a>上给它一颗小星星！ ⭐️</div><button type="button" aria-label="关闭" class="clean-btn close closeButton_RJAU announcementBarClose_oPuH"><svg viewBox="0 0 15 15" width="14" height="14"><g stroke="currentColor" stroke-width="3.1"><path d="M.75.75l13.5 13.5M14.25.75L.75 14.25"></path></g></svg></button></div><nav aria-label="主导航" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/FE-interview/"><div class="navbar__logo"><img src="/FE-interview/img/logo.svg" alt="前端面试 Logo" class="themedComponent_Ke1j themedComponent--light_p2qZ"><img src="/FE-interview/img/logo.svg" alt="前端面试 Logo" class="themedComponent_Ke1j themedComponent--dark_YsdK"></div><b class="navbar__title text--truncate">前端面试</b></a><a class="navbar__item navbar__link" href="/FE-interview/docs/basic/">基础</a><a class="navbar__item navbar__link" href="/FE-interview/docs/frame/">框架</a><a class="navbar__item navbar__link" href="/FE-interview/docs/advance/">进阶</a><a class="navbar__item navbar__link" href="/FE-interview/docs/ai/">AI 开发</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/FE-interview/docs/software/browser/">浏览器</a><a class="navbar__item navbar__link" href="/FE-interview/docs/pkg/">构建</a><a class="navbar__item navbar__link" href="/FE-interview/blog">实战案例</a></div><div class="navbar__items navbar__items--right"><a class="navbar__item navbar__link" href="/FE-interview/docs/network/">计算机网络</a><a class="navbar__item navbar__link" href="/FE-interview/docs/devops/">运维</a><a href="https://github.com/gvray/FE-interview" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_j_ow"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_I4jy colorModeToggle_Q83X"><button class="clean-btn toggleButton_z2h1 toggleButtonDisabled_SFuu" type="button" disabled="" title="切换浅色/暗黑模式（当前为浅色模式）" aria-label="切换浅色/暗黑模式（当前为浅色模式）" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_fkHc"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_pWxy"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_exMv"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_vPST"><div class="docsWrapper_oEiq"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_XSdM" type="button"></button><div class="docRoot_I1Wj"><aside class="theme-doc-sidebar-container docSidebarContainer_HZga"><div class="sidebarViewport_DZgC"><div class="sidebar_I8SY"><nav aria-label="文档侧边栏" class="menu thin-scrollbar menu_xGUh menuWithAnnouncementBar_TzMn"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/FE-interview/docs/software/browser/">目录大纲</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/FE-interview/docs/software/browser/FAQ">FAQ?</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/FE-interview/docs/software/browser/1">重绘和重排（回流）</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/FE-interview/docs/software/browser/10">从输⼊ URL 到⻚⾯加载发⽣了什么？</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/FE-interview/docs/software/browser/11">跨域</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/FE-interview/docs/software/browser/15">web常见的攻击方式有哪些，以及如何进行防御？</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/FE-interview/docs/software/browser/2">XSS 攻击</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/FE-interview/docs/software/browser/3">CSRF 攻击</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/FE-interview/docs/software/browser/4">浏览器缓存</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/FE-interview/docs/software/browser/5">常见的浏览器内核</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/FE-interview/docs/software/browser/6">浏览器的渲染过程</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/FE-interview/docs/software/browser/7">事件</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/FE-interview/docs/software/browser/8">事件循环</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/FE-interview/docs/software/browser/9">垃圾回收和内存泄漏</a></li></ul></nav></div></div></aside><main class="docMainContainer_B66T"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_iTIt"><div class="docItemContainer_xTUK"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_tTgK" aria-label="页面路径"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="主页面" class="breadcrumbs__link" href="/FE-interview/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_R26V"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">垃圾回收和内存泄漏</span><meta itemprop="position" content="1"></li></ul></nav><div class="tocCollapsible_S8Cf theme-doc-toc-mobile tocMobile_AQKx"><button type="button" class="clean-btn tocCollapsibleButton_C5yC">本页总览</button></div><div class="theme-doc-markdown markdown"><h1>垃圾回收和内存泄漏</h1>
+<p><strong>内存生命周期</strong>
+不管什么程序语言，内存生命周期基本是一致的：</p>
+<p>分配你所需要的内存
+使用分配到的内存（读、写）
+不需要时将其释放\归还
+所有语言第二部分都是明确的。第一和第三部分在底层语言中是明确的，但在像 JavaScript 这些高级语言中，大部分都是隐含的。</p>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="垃圾回收garbage-collection">垃圾回收（Garbage Collection）<a href="#垃圾回收garbage-collection" class="hash-link" aria-label="垃圾回收（Garbage Collection）的直接链接" title="垃圾回收（Garbage Collection）的直接链接">​</a></h2>
+<p>垃圾回收是一种自动管理内存的机制，目的是识别和释放不再被程序引用的内存，以防止内存泄漏。JavaScript 使用垃圾回收器来跟踪对象的引用关系，当对象不再被引用时，将其标记为垃圾，并回收这些垃圾以释放内存。</p>
+<p>垃 圾回收策略是为了管理程序运行时产生的不再使用的内存，各种编程语言和环境都可以使用不同的垃圾回收策略。以下是一些常见的垃圾回收策略：</p>
+<ol>
+<li>
+<p><strong>标记-清除（Mark and Sweep）：</strong> 这是最基本的垃圾回收算法之一。它通过标记不再使用的对象，然后清除它们来释放内存。标记-清除算法可以分为两个阶段：标记阶段和清除阶段。</p>
+</li>
+<li>
+<p><strong>分代回收（Generational Garbage Collection）：</strong> 这个策略基于一个假设，即大多数对象在创建后很快就变得不可达。它将对象分为不同的代，如新生代和老生代，采用不同的回收频率来提高效率。</p>
+</li>
+<li>
+<p><strong>引用计数（Reference Counting）：</strong> 这种策略跟踪每个对象的引用计数，当引用计数变为零时，对象被回收。然而，它无法处理循环引用的情况，因此容易导致内存泄漏。</p>
+</li>
+<li>
+<p><strong>复制回收（Copying Garbage Collection）：</strong> 主要用于新生代的回收。它将内存分为两个区域，一个用于存储活动对象，另一个用于存储垃圾对象。在回收时，将存活的对象复制到另一个区域，然后清空原区域。</p>
+</li>
+<li>
+<p><strong>引用追踪（Reference Tracing）：</strong> 这是一种基于对象之间引用关系的策略。它从根对象开始追踪对象之间的引用，从而确定哪些对象是可达的，哪些对象是不可达的。</p>
+</li>
+<li>
+<p><strong>增量回收（Incremental Garbage Collection）：</strong> 这个策略试图将垃圾回收的工作分成多个小步骤，以减小对应用程序的影响。它通常与标记-清除算法一起使用。</p>
+</li>
+<li>
+<p><strong>引用计数加强版（Smart Pointers）：</strong> 在一些语言中，引用计数被加强为智能指针，能够处理循环引用等问题。例如，C++ 中的 <code>shared_ptr</code> 和 <code>unique_ptr</code>。</p>
+</li>
+<li>
+<p><strong>内存池（Memory Pool）：</strong> 这是一种管理内存的策略，它预先分配一块内存池，然后将对象分配在内存池中，以减少内存碎片和提高分配速度。</p>
+</li>
+</ol>
+<p>不同的编程语言和运行时环境可以选择不同的垃圾回收策略，具体选择取决于应用程序的需求和性能考虑。每种策略都有其优点和缺点，开发人员需要根据实际情况来选择合适的策略以确保内存管理的有效性。</p>
+<p>Chrome 浏览器使用了一种高效的垃圾回收策略，主要基于以下两种算法：</p>
+<ol>
+<li>
+<p><strong>标记-清除算法（Mark and Sweep）：</strong> 这是最常见的垃圾回收算法，用于标记和清除不再使用的对象。Chrome 使用标记-清除算法来管理老生代（老对象）的垃圾回收。它从根对象开始，标记所有可以访问的对象，然后清除未被标记的对象。这个过程会定期执行，以释放老生代中的不再使用的内存。</p>
+</li>
+<li>
+<p><strong>分代回收算法（Generational Garbage Collection）：</strong> Chrome 还使用分代回收算法，将对象分为不同的代。新创建的对象通常被分配到新生代，经过一轮回收后仍然存活的对象会被晋升到老生代。这个策略基于一个假设：大多数对象在创建后很快就变得不可达，因此新生代的回收频率比较高，而老生代的回收频率较低。这可以提高垃圾回收的效率。</p>
+</li>
+</ol>
+<p>Chrome 还使用了一种称为 <strong>V8 引擎</strong> 的 JavaScript 引擎，它对垃圾回收进行了优化，包括了一种叫做 <strong>增量标记（Incremental Marking）</strong> 的技术，以减少垃圾回收对应用程序的影响。</p>
+<p>总的来说，Chrome 使用了多种垃圾回收策略和算法的组合，以提供高效的内存管理和垃圾回收，从而保证了浏览器的性能和稳定性。这些策略的具体实现可能会根据不同的 Chrome 版本和配置进行  调整和改进。</p>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="内存泄漏memory-leak">内存泄漏（Memory Leak）<a href="#内存泄漏memory-leak" class="hash-link" aria-label="内存泄漏（Memory Leak）的直接链接" title="内存泄漏（Memory Leak）的直接链接">​</a></h2>
+<p>内存泄漏是指应用程序中的某些对象被无意中保留在内存中，无法被垃圾回收器回收。这可能导致内存占用不断增加，最终导致程序崩溃或性能下降。</p>
+<p>JavaScript 中导致内存泄漏的方式多种多样，下面列举了一些常见的情况以及如何解决它们：</p>
+<p><strong>1. 未释放引用：</strong></p>
+<ul>
+<li><strong>问题：</strong> 对象持有了不再需要的引用，导致对象无法被垃圾回收。</li>
+<li><strong>解决方案：</strong> 及时释放不再需要的引用。在不再需要一个对象时，将其引用设置为 <code>null</code> 或者将其从数据结构中删除。</li>
+</ul>
+<p><strong>2. 循环引用：</strong></p>
+<ul>
+<li><strong>问题：</strong> 两个或多个对象互相引用，形成循环，导致它们无法被垃圾回收。</li>
+<li><strong>解决方案：</strong> 使用弱引用（Weak References）或者重新设计数据结构以避免循环引用。</li>
+</ul>
+<p><strong>3. 未关闭资源：</strong></p>
+<ul>
+<li><strong>问题：</strong> 未关闭文件、网络连接、定时器等资源，导致这些资源一直占用内存。</li>
+<li><strong>解决方案：</strong> 在不再需要资源时，及时关闭它们，例如使用 <code>close()</code> 方法关闭文件或连接，清除定时器。</li>
+</ul>
+<p><strong>4. 事件监听器未移除：</strong></p>
+<ul>
+<li><strong>问题：</strong> 添加了事件监听器，但忘记在对象销毁时移除它们，导致对象无法被回收。</li>
+<li><strong>解决方案：</strong> 在不再需要对象时，确保移除所有事件监听器，可以使用 <code>removeEventListener</code>。</li>
+</ul>
+<p><strong>5. 闭包保留引用：</strong></p>
+<ul>
+<li><strong>问题：</strong> 闭包中的函数引用了外部作用域的变量，导致这些变量无法被垃圾回收。</li>
+<li><strong>解决方案：</strong> 在不再需要的时候，将闭包中的引用置为 <code>null</code>，释放外部作用域的引用。</li>
+</ul>
+<p><strong>6. 长时间运行的定时器：</strong></p>
+<ul>
+<li><strong>问题：</strong> 长时间运行的定时器可能会阻止相关对象被回收。</li>
+<li><strong>解决方案：</strong> 及时清除不再需要的定时器，使用 <code>clearInterval</code> 或 <code>clearTimeout</code>。</li>
+</ul>
+<p><strong>7. 大量 DOM 元素：</strong></p>
+<ul>
+<li><strong>问题：</strong> 大量的 DOM 元素可能导致内存泄漏，尤其是在频繁更新和删除 DOM 元素时。</li>
+<li><strong>解决方案：</strong> 及时删除不再需要的 DOM 元素，避免将大量元素添加到页面中。</li>
+</ul>
+<p><strong>8. 使用全局变量：</strong></p>
+<ul>
+<li><strong>问题：</strong> 在全局范围内定义的变量和对象可能会一直存在，占用内存。</li>
+<li><strong>解决方案：</strong> 尽量避免使用全局变量，使用模块化的方式来管理变量和对象。</li>
+</ul>
+<p><strong>9. 缓存数据不当：</strong></p>
+<ul>
+<li><strong>问题：</strong> 缓存大量数据，但未定期清理不再需要的数据。</li>
+<li><strong>解决方案：</strong> 定期清理缓存中不再需要的数据，避免无限增长的缓存。</li>
+</ul>
+<p><strong>10. 不合理的使用 Web Workers：</strong></p>
+<ul>
+<li><strong>问题：</strong> 使用 Web Workers 时，如果不及时终止或释放它们，可能会导致内存泄漏。</li>
+<li><strong>解决方案：</strong> 在不再需要的时候终止 Web Workers 并释放它们。</li>
+</ul>
+<p>内存泄漏通常是由不注意细节或不遵循最佳实践引起的。解决内存泄漏问题的关键在于及时释放不再需要的引用、资源和对象，以确保内存得到正  确管理。使用浏览器的开发者工具和内存分析工具可以帮助诊断和解决内存泄漏问题。</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/gvray/FE-interview/tree/main/docs/software/browser/9.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_bjoM" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>编辑此页</a></div><div class="col lastUpdated_Dykw"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="文件选项卡"><a class="pagination-nav__link pagination-nav__link--prev" href="/FE-interview/docs/software/browser/8"><div class="pagination-nav__sublabel">上一页</div><div class="pagination-nav__label">事件循环</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_hZ7f thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#垃圾回收garbage-collection" class="table-of-contents__link toc-highlight">垃圾回收（Garbage Collection）</a></li><li><a href="#内存泄漏memory-leak" class="table-of-contents__link toc-highlight">内存泄漏（Memory Leak）</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">面试宝典</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/FE-interview/docs">八股文(ALL.)</a></li><li class="footer__item"><a class="footer__link-item" href="/FE-interview/docs/category/设计模式">设计模式</a></li><li class="footer__item"><a class="footer__link-item" href="/FE-interview/docs/category/算法">算法</a></li><li class="footer__item"><a class="footer__link-item" href="/FE-interview/docs/category/软件服务">软件服务</a></li><li class="footer__item"><a class="footer__link-item" href="/FE-interview/docs/category/服务端开发">服务端开发</a></li><li class="footer__item"><a class="footer__link-item" href="/FE-interview/docs/category/手写练习场">手写练习场</a></li></ul></div><div class="col footer__col"><div class="footer__title">多端开发</div><ul class="footer__items clean-list"><li class="footer__item"><a href="#" class="footer__link-item">移动端</a></li><li class="footer__item"><a href="#" class="footer__link-item">小程序</a></li><li class="footer__item"><a class="footer__link-item" href="/FE-interview/docs/category/移动端开发">桌面软件</a></li></ul></div><div class="col footer__col"><div class="footer__title">社区</div><ul class="footer__items clean-list"><li class="footer__item"><a href="#" class="footer__link-item">Stack Overflow</a></li></ul></div><div class="col footer__col"><div class="footer__title">更多</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/FE-interview/blog">博客</a></li><li class="footer__item"><a href="https://github.com/gvray/FE-interview" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_j_ow"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 FE-interview. Built with GavinRay's Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

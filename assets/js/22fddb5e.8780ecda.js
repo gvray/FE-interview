@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkfe_interview=globalThis.webpackChunkfe_interview||[]).push([[961],{45721(e){e.exports=JSON.parse('{"label":"\u6570\u636e\u7ba1\u7406","permalink":"/FE-interview/blog/tags/\u6570\u636e\u7ba1\u7406","allTagsPath":"/FE-interview/blog/tags","count":1,"unlisted":false}')}}]);

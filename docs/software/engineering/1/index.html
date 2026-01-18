@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="zh-Hans" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-software/engineering/1" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.1.1">
+<title data-rh="true">前端都哪些渲染方式 | 前端面试</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://gvray.github.io/FE-interview/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://gvray.github.io/FE-interview/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://gvray.github.io/FE-interview/docs/software/engineering/1"><meta data-rh="true" property="og:locale" content="zh_Hans"><meta data-rh="true" name="docusaurus_locale" content="zh-Hans"><meta data-rh="true" name="docsearch:language" content="zh-Hans"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="前端都哪些渲染方式 | 前端面试"><meta data-rh="true" name="description" content="当然，我会为每种页面渲染方式提供更详细的介绍："><meta data-rh="true" property="og:description" content="当然，我会为每种页面渲染方式提供更详细的介绍："><link data-rh="true" rel="icon" href="/FE-interview/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://gvray.github.io/FE-interview/docs/software/engineering/1"><link data-rh="true" rel="alternate" href="https://gvray.github.io/FE-interview/docs/software/engineering/1" hreflang="zh-Hans"><link data-rh="true" rel="alternate" href="https://gvray.github.io/FE-interview/docs/software/engineering/1" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/FE-interview/blog/rss.xml" title="前端面试 RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/FE-interview/blog/atom.xml" title="前端面试 Atom Feed"><link rel="stylesheet" href="/FE-interview/assets/css/styles.b743332f.css">
+<script src="/FE-interview/assets/js/runtime~main.99301c2a.js" defer="defer"></script>
+<script src="/FE-interview/assets/js/main.ad720e1f.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const a=new URLSearchParams(window.location.search).entries();for(var[t,e]of a)if(t.startsWith("docusaurus-data-")){var n=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(n,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_mKfG" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><div class="announcementBar_l5ze" style="background-color:#6366f1;color:#ffffff" role="banner"><div class="announcementBarPlaceholder_iuq2"></div><div class="content_KYoq announcementBarContent_M7ac">⭐️ 如果您喜欢本网站，请点这里在<a target="_blank" class="cta" href="https://github.com/gvray/FE-interview"> <strong>GitHub</strong> </a>上给它一颗小星星！ ⭐️</div><button type="button" aria-label="关闭" class="clean-btn close closeButton_RJAU announcementBarClose_oPuH"><svg viewBox="0 0 15 15" width="14" height="14"><g stroke="currentColor" stroke-width="3.1"><path d="M.75.75l13.5 13.5M14.25.75L.75 14.25"></path></g></svg></button></div><nav aria-label="主导航" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/FE-interview/"><div class="navbar__logo"><img src="/FE-interview/img/logo.svg" alt="前端面试 Logo" class="themedComponent_Ke1j themedComponent--light_p2qZ"><img src="/FE-interview/img/logo.svg" alt="前端面试 Logo" class="themedComponent_Ke1j themedComponent--dark_YsdK"></div><b class="navbar__title text--truncate">前端面试</b></a><a class="navbar__item navbar__link" href="/FE-interview/docs/basic/">基础</a><a class="navbar__item navbar__link" href="/FE-interview/docs/frame/">框架</a><a class="navbar__item navbar__link" href="/FE-interview/docs/advance/">进阶</a><a class="navbar__item navbar__link" href="/FE-interview/docs/ai/">AI 开发</a><a class="navbar__item navbar__link" href="/FE-interview/docs/software/browser/">浏览器</a><a class="navbar__item navbar__link" href="/FE-interview/docs/pkg/">构建</a><a class="navbar__item navbar__link" href="/FE-interview/blog">实战案例</a></div><div class="navbar__items navbar__items--right"><a class="navbar__item navbar__link" href="/FE-interview/docs/network/">计算机网络</a><a class="navbar__item navbar__link" href="/FE-interview/docs/devops/">运维</a><a href="https://github.com/gvray/FE-interview" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_j_ow"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_I4jy colorModeToggle_Q83X"><button class="clean-btn toggleButton_z2h1 toggleButtonDisabled_SFuu" type="button" disabled="" title="切换浅色/暗黑模式（当前为浅色模式）" aria-label="切换浅色/暗黑模式（当前为浅色模式）" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_fkHc"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_pWxy"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_exMv"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_vPST"><div class="docsWrapper_oEiq"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_XSdM" type="button"></button><div class="docRoot_I1Wj"><aside class="theme-doc-sidebar-container docSidebarContainer_HZga"><div class="sidebarViewport_DZgC"><div class="sidebar_I8SY"><nav aria-label="文档侧边栏" class="menu thin-scrollbar menu_xGUh menuWithAnnouncementBar_TzMn"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/FE-interview/docs/">介绍</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/FE-interview/docs/category/前端基础">前端基础</a><button aria-label="展开侧边栏分类 &#x27;前端基础&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed red"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/FE-interview/docs/category/前端框架">前端框架</a><button aria-label="展开侧边栏分类 &#x27;前端框架&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/FE-interview/docs/category/ai-开发">AI 开发</a><button aria-label="展开侧边栏分类 &#x27;AI 开发&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/FE-interview/docs/category/前端进阶">前端进阶</a><button aria-label="展开侧边栏分类 &#x27;前端进阶&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/FE-interview/docs/category/计算机网络">计算机网络</a><button aria-label="展开侧边栏分类 &#x27;计算机网络&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/FE-interview/docs/category/设计模式">设计模式</a><button aria-label="展开侧边栏分类 &#x27;设计模式&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/FE-interview/docs/category/打包构建">打包构建</a><button aria-label="展开侧边栏分类 &#x27;打包构建&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/FE-interview/docs/category/服务端开发">服务端开发</a><button aria-label="展开侧边栏分类 &#x27;服务端开发&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" aria-expanded="true" href="/FE-interview/docs/category/软件服务">软件服务</a><button aria-label="折叠侧边栏分类 &#x27;软件服务&#x27;" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/FE-interview/docs/software/">工程软件服务</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" tabindex="0" href="/FE-interview/docs/category/git">Git</a><button aria-label="展开侧边栏分类 &#x27;Git&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" tabindex="0" href="/FE-interview/docs/category/浏览器">浏览 器</a><button aria-label="展开侧边栏分类 &#x27;浏览器&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" aria-expanded="true" tabindex="0" href="/FE-interview/docs/category/工程相关">工程相关</a><button aria-label="折叠侧边栏分类 &#x27;工程相关&#x27;" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/FE-interview/docs/software/engineering/">目录大纲</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/FE-interview/docs/software/engineering/FAQ">FAQ?</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/FE-interview/docs/software/engineering/1">前端都哪些渲染方式</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/FE-interview/docs/software/engineering/2">微前端</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/FE-interview/docs/software/engineering/3">包管理工具</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/FE-interview/docs/software/engineering/4">PWA</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/FE-interview/docs/software/engineering/5">C++ Java JavaScript的区别</a></li></ul></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/FE-interview/docs/category/移动端开发">移动端开发</a><button aria-label="展开侧边栏分类 &#x27;移动端开发&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/FE-interview/docs/category/devops开发运维">Devops(开发运维)</a><button aria-label="展开侧边栏分类 &#x27;Devops(开发运维)&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/FE-interview/docs/category/算法">算法</a><button aria-label="展开侧边栏分类 &#x27;算法&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/FE-interview/docs/category/手写练习场">手写练习场</a><button aria-label="展开侧边栏分类 &#x27;手写练习场&#x27;" type="button" class="clean-btn menu__caret"></button></div></li></ul></nav></div></div></aside><main class="docMainContainer_B66T"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_iTIt"><div class="docItemContainer_xTUK"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_tTgK" aria-label="页面路径"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="主页面" class="breadcrumbs__link" href="/FE-interview/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_R26V"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/FE-interview/docs/category/软件服务"><span itemprop="name">软件服务</span></a><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/FE-interview/docs/category/工程相关"><span itemprop="name">工程相关</span></a><meta itemprop="position" content="2"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">前端都哪些渲染方式</span><meta itemprop="position" content="3"></li></ul></nav><div class="tocCollapsible_S8Cf theme-doc-toc-mobile tocMobile_AQKx"><button type="button" class="clean-btn tocCollapsibleButton_C5yC">本页总览</button></div><div class="theme-doc-markdown markdown"><h1>前端都哪些渲染方式</h1>
+<p>当然，我会为每种页面渲染方式提供更详细的介绍：</p>
+<h3 class="anchor anchorWithStickyNavbar_Xbio" id="1-csr-client-side-rendering---客户端渲染">1. CSR (Client-Side Rendering - 客户端渲染)<a href="#1-csr-client-side-rendering---客户端渲染" class="hash-link" aria-label="1. CSR (Client-Side Rendering - 客户端渲染)的直接链接" title="1. CSR (Client-Side Rendering - 客户端渲染)的直接链接">​</a></h3>
+<p><strong>具体介绍：</strong></p>
+<ul>
+<li>客户端渲染是一种前端页面渲染方式，其中页面的初始加载时只包括基本的HTML结构，不包含内容数据。</li>
+<li>页面的数据获取和渲染是通过JavaScript在客户端（浏览器）上进行的，通常使用AJAX、Fetch API或其他数据获取技术从服务器请求数据。</li>
+<li>一旦数据到达客户端，JavaScript负责将数据渲染到页面上，以更新或替换现有内容。</li>
+<li>这种方式适用于需要动态交互和频繁变化的数据的应用，例如社交媒体应用、在线购物网站和协作工具。</li>
+<li>常用的前端框架，如React、Vue.js和Angular，支持CSR。</li>
+</ul>
+<p><strong>优点：</strong></p>
+<ul>
+<li>富交互性：允许创建具有高度交互性的应用程序。</li>
+<li>前后端分离：前端和后端可以相对独立地开发和维护。</li>
+<li>快速导航：一旦初始页面加载完成，导航速度非常快，因为只需获取和渲染数据。</li>
+</ul>
+<p><strong>缺点：</strong></p>
+<ul>
+<li>首次加载较慢：首次加载需要下载JavaScript代码和数据，因此速度相对较慢。</li>
+<li>不友好的SEO：搜索引擎难以抓取通过JavaScript生成的内容，对SEO不友好。</li>
+<li>复杂性：复杂的SPA可能需要复杂的路由和状态管理，增加了开发和维护的难度。</li>
+</ul>
+<p><strong>适用场景：</strong></p>
+<ul>
+<li>需要富交互性和动态数据的应用，如社交媒体平台、在线游戏、协作工具。</li>
+<li>对SEO不是关键因素的内部应用或工具。</li>
+<li>开发团队拥有前端开发经验，有能力管理复杂的客户端逻辑。</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_Xbio" id="2-ssr-server-side-rendering---服务器端渲染">2. SSR (Server-Side Rendering - 服务器端渲染)<a href="#2-ssr-server-side-rendering---服务器端渲染" class="hash-link" aria-label="2. SSR (Server-Side Rendering - 服务器端渲染)的直接链接" title="2. SSR (Server-Side Rendering - 服务器端渲染)的直接链接">​</a></h3>
+<p><strong>具体介绍：</strong></p>
+<ul>
+<li>服务器端渲染是一种前端页面渲染方式，其中页面的初始加载时在服务器上完成渲染，然后将渲染后的HTML发送到客户端。</li>
+<li>服务器使用服务器端框架（如Node.js、Ruby on Rails、Django等）动态生成包含页面内容的HTML，包括数据。</li>
+<li>渲染后的HTML可以包含页面的初始状态，从而加速首次加载速度。</li>
+<li>这种方式对SEO非常友好，因为搜索引擎可以轻松抓取渲染后的内容。</li>
+<li>前端框架如Next.js、Nuxt.js支持SSR。</li>
+</ul>
+<p><strong>优点：</strong></p>
+<ul>
+<li>SEO友好：搜索引擎可以抓取服务器渲染的内容，有利于SEO。</li>
+<li>快速首次加载：用户在首次加载页面时获得更快的渲染速度，因为页面在服务器上生成。</li>
+<li>性能稳定：客户端性能和设备性能对用户体验影响较小。</li>
+<li>渐进增强：可以在服务器上提供基本内容，然后使用CSR增加交互性。</li>
+</ul>
+<p><strong>缺点：</strong></p>
+<ul>
+<li>服务器负载：需要服务器动态渲染页面，可能会增加服务器负载。</li>
+<li>复杂性：SSR应用程序可能需要处理服务器和客户端的逻辑，增加了开发和维护的复杂性。</li>
+</ul>
+<p><strong>适用场景：</strong></p>
+<ul>
+<li>需要SEO优化的内容网站、博客、新闻网站等。</li>
+<li>需要快速首次加载的应用，如电子商务网站、社交媒体登录页。</li>
+<li>需要渐进增强的应用，以提供基本内容并在客户端增加交互性。</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_Xbio" id="3-ssg-static-site-generation---静态站点生成">3. SSG (Static Site Generation - 静态站点生成)<a href="#3-ssg-static-site-generation---静态站点生成" class="hash-link" aria-label="3. SSG (Static Site Generation - 静态站点生成)的直接链接" title="3. SSG (Static Site Generation - 静态站点生成)的直接链接">​</a></h3>
+<p><strong>具体介绍：</strong></p>
+<ul>
+<li>静态站点生成是一种前端页面渲染方式，其中页面在构建过程中提前生成为静态HTML文件。</li>
+<li>生成的静态文件包含页面内容和数据，可以被多个客户端请求。</li>
+<li>这种方式通常适用于内容不频繁变化的网站，如博客、企业官方网站和文档网站。</li>
+<li>常见的静态站点生成工具包括Gatsby和Next.js。</li>
+</ul>
+<p><strong>优点：</strong></p>
+<ul>
+<li>极快的加载速度：页面在构建时生成为静态HTML文件，加载速度非常快。</li>
+<li>低服务器负载：无需动态渲染，服务器负载较低，适用于大流量站点。</li>
+<li>高安全性：由于没有动态服务器代码，安全性较高。</li>
+<li>内容缓存和CDN支持：静态文件可以缓存在CDN中，提高全球访问速度。</li>
+</ul>
+<p><strong>缺点：</strong></p>
+<ul>
+<li>不适用于动态内容：静态站点生成适用于内容不频繁变化的网站，对于动态数据不太适用。</li>
+<li>构建时间：构建过程可能需要一些时间，特别是对于大型网站。</li>
+</ul>
+<p><strong>适用场景：</strong></p>
+<ul>
+<li>内容不频繁变化的博客、企业官方网站、文档网站等。</li>
+<li>对性能和安全性要求高的静态内容网站。</li>
+<li>需要全球分发和快速加载的站点，可与CDN结合使用。</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_Xbio" id="4-amp-accelerated-mobile-pages">4. AMP (Accelerated Mobile Pages)<a href="#4-amp-accelerated-mobile-pages" class="hash-link" aria-label="4. AMP (Accelerated Mobile Pages)的直接链接" title="4. AMP (Accelerated Mobile Pages)的直接链接">​</a></h3>
+<p><strong>具体介绍：</strong></p>
+<ul>
+<li>加速移动页面（AMP）是</li>
+</ul>
+<p>一种开放标准，用于创建移动网页，旨在提供极快的加载速度和良好的移动用户体验。</p>
+<ul>
+<li>AMP页面采用精简的HTML和内置加载性能优化，以确保页面在移动设备上快速加载。</li>
+<li>AMP页面通常用于内容页面，如新闻、博客和文章。</li>
+<li>Google搜索引擎对AMP页面有特殊支持，有助于SEO。</li>
+</ul>
+<p><strong>优点：</strong></p>
+<ul>
+<li>极速加载：AMP页面被优化以在移动设备上快速加载。</li>
+<li>SEO友好：Google搜索引擎对AMP页面有特殊支持，有利于SEO。</li>
+<li>良好的用户体验：AMP页面通常提供更好的移动用户体验。</li>
+</ul>
+<p><strong>缺点：</strong></p>
+<ul>
+<li>限制性：AMP页面有一些限制，可能无法满足某些高度定制化的需求。</li>
+<li>不适用于所有内容：AMP适用于内容页面，不适用于所有类型的应用。</li>
+</ul>
+<p><strong>适用场景：</strong></p>
+<ul>
+<li>移动内容页面，如新闻、博客、文章。</li>
+<li>需要快速加载和SEO优化的页面。</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_Xbio" id="5-prerendering">5. Prerendering<a href="#5-prerendering" class="hash-link" aria-label="5. Prerendering的直接链接" title="5. Prerendering的直接链接">​</a></h3>
+<p><strong>具体介绍：</strong></p>
+<ul>
+<li>预渲染是一种前端渲染方式，其中页面在构建过程中生成为静态HTML，并包含在HTML中。</li>
+<li>预渲染的HTML包含页面的初始状态，因此首次加载速度非常快。</li>
+<li>预渲染通常用于提高单页应用的首次加载性能，特别是对于内容不经常变化的页面。</li>
+</ul>
+<p><strong>优点：</strong></p>
+<ul>
+<li>快速首次加载：预渲染页面在构建时生成，并包含在HTML中，首次加载速度非常快。</li>
+<li>适用于单页应用：可以用于提高单页应用的首次加载性能。</li>
+</ul>
+<p><strong>缺点：</strong></p>
+<ul>
+<li>不适用于动态内容：预渲染适用于不经常变化的内容，对于动态数据不太适用。</li>
+<li>构建时间：构建过程可能需要一些时间。</li>
+</ul>
+<p><strong>适用场景：</strong></p>
+<ul>
+<li>单页应用需要提高首次加载性能的情况。</li>
+<li>内容不经常变化的页面。</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_Xbio" id="6-hybrid-rendering">6. Hybrid Rendering<a href="#6-hybrid-rendering" class="hash-link" aria-label="6. Hybrid Rendering的直接链接" title="6. Hybrid Rendering的直接链接">​</a></h3>
+<p><strong>具体介绍：</strong></p>
+<ul>
+<li>混合渲染是一种将SSR（服务器端渲染）和CSR（客户端渲染）结合使用的方式。</li>
+<li>可以在同一应用程序中选择使用SSR或CSR，根据需要提供性能和交互性。</li>
+<li>通常用于应用程序中某些页面需要SEO友好的SSR，而其他页面需要富交互性的CSR的情况。</li>
+</ul>
+<p><strong>优点：</strong></p>
+<ul>
+<li>结合SSR和CSR：允许在同一应用程序中结合使用SSR和CSR，以根据需要提供性能和交互性。</li>
+<li>灵活性：可以根据页面需求选择渲染方式。</li>
+</ul>
+<p><strong>缺点：</strong></p>
+<ul>
+<li>复杂性：组合使用两种渲染方式可能增加开发和维护的复杂性。</li>
+</ul>
+<p><strong>适用场景：</strong></p>
+<ul>
+<li>应用程序中某些页面需要SEO友好的SSR，而其他页面需要富交互性的CSR。</li>
+<li>对于混合渲染有特殊需求的应用。</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_Xbio" id="7-web-components">7. Web Components<a href="#7-web-components" class="hash-link" aria-label="7. Web Components的直接链接" title="7. Web Components的直接链接">​</a></h3>
+<p><strong>具体介绍：</strong></p>
+<ul>
+<li>Web组件是一种用于创建自定义HTML元素的技术，包括HTML、CSS和JavaScript。</li>
+<li>它们允许开发人员将页面元素封装为可重用的组件，提高了代码的可维护性和可复用性。</li>
+<li>Web组件可以在不同的前端框架和应用中重复使用，因为它们是平台无关的。</li>
+<li>Web组件支持封装内部功能、自定义  事件和属性等功能。</li>
+</ul>
+<p><strong>优点：</strong></p>
+<ul>
+<li>组件化开发：可以创建自定义的可重用Web组件，提高代码的可维护性和可复用性。</li>
+<li>跨框架：Web组件可以在不同的前端框架和应用中使用。</li>
+</ul>
+<p><strong>缺点：</strong></p>
+<ul>
+<li>浏览器兼容性：在某些旧版浏览器中可能需要额外的Polyfill支持。</li>
+</ul>
+<p><strong>适用场景：</strong></p>
+<ul>
+<li>希望将前端代码组织为可重用组件的应用。</li>
+<li>跨框架或多团队协作的项目。</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_Xbio" id="8-serverless-rendering">8. Serverless Rendering<a href="#8-serverless-rendering" class="hash-link" aria-label="8. Serverless Rendering的直接链接" title="8. Serverless Rendering的直接链接">​</a></h3>
+<p><strong>具体介绍：</strong></p>
+<ul>
+<li>无服务器渲染是一种使用无服务器计算（例如函数即服务 - FaaS）来动态渲染页面的方式。</li>
+<li>页面的渲染是通过无服务器函数来完成的，这些函数根据需要进行自动扩展，并根据请求来生成HTML。</li>
+<li>无服务器渲染允许动态渲染页面，同时无需管理传统服务器。</li>
+<li>它适用于需要动态渲染能力的应用，但又不希望管理传统服务器的情况。</li>
+</ul>
+<p><strong>优点：</strong></p>
+<ul>
+<li>动态渲染：使用无服务器计算来动态渲染页面，有弹性的渲染能力。</li>
+<li>自动扩展：无服务器计算可以根据需求自动扩展，适应流量变化。</li>
+</ul>
+<p><strong>缺点：</strong></p>
+<ul>
+<li>学习曲线：使用无服务器架构可能需要一些学习和配置。</li>
+<li>成本：随着使用量增加，无服务器计算可能会导致成本上升。</li>
+</ul>
+<p><strong>适用场景：</strong></p>
+<ul>
+<li>需要动态渲染能力的应用，但又不希望管理传统服务器。</li>
+<li>流量波动较大的应用，需要弹性</li>
+</ul>
+<p>扩展能力。</p>
+<p>每种页面渲染方式都有其独特的优势和限制，选择最适合项目需求的方式非常重要。通常，项目可能需要组合使用不同的渲染方式，以满足不同页面和功能的要求。</p>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="faq">FAQ<a href="#faq" class="hash-link" aria-label="FAQ的直接链接" title="FAQ的直接链接">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_Xbio" id="csr和ssr分别是什么">CSR和SSR分别是什么？<a href="#csr和ssr分别是什么" class="hash-link" aria-label="CSR和SSR分别是什么？的直接链接" title="CSR和SSR分别是什么？的直接链接">​</a></h3>
+<p>对于html的加载，以React为例，我们习惯的做法是加载js文件中的React代码，去生成页面渲染，同时，js也完成页面交互事件的绑定，这样的一个过程就是CSR（客户端渲染）。</p>
+<p>但如果这个js文件比较大的话，加载起来就会比较慢，到达页面渲染的时间就会比较长，导致首屏白屏。这时候，SSR（服务端渲染）就出来了：由服务端直接生成html内容返回给浏览器渲染首屏内容。</p>
+<p>但是服务端渲染的页面交互能力有限，如果要实现复杂交互，还是要通过引入js文件来辅助实现，我们把页面的展示内容和交互写在一起，让代码执行两次，这种方式就叫同构。</p>
+<p>CSR和SSR的区别在于，最终的html代码是从客户端添加的还是从服务端。</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/gvray/FE-interview/tree/main/docs/software/engineering/1.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_bjoM" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>编辑此页</a></div><div class="col lastUpdated_Dykw"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="文件选项卡"><a class="pagination-nav__link pagination-nav__link--prev" href="/FE-interview/docs/software/engineering/FAQ"><div class="pagination-nav__sublabel">上一页</div><div class="pagination-nav__label">FAQ?</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/FE-interview/docs/software/engineering/2"><div class="pagination-nav__sublabel">下一页</div><div class="pagination-nav__label">微前端</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_hZ7f thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#1-csr-client-side-rendering---客户端渲染" class="table-of-contents__link toc-highlight">1. CSR (Client-Side Rendering - 客户端渲染)</a></li><li><a href="#2-ssr-server-side-rendering---服务器端渲染" class="table-of-contents__link toc-highlight">2. SSR (Server-Side Rendering - 服务器端渲染)</a></li><li><a href="#3-ssg-static-site-generation---静态站点生成" class="table-of-contents__link toc-highlight">3. SSG (Static Site Generation - 静态站点生成)</a></li><li><a href="#4-amp-accelerated-mobile-pages" class="table-of-contents__link toc-highlight">4. AMP (Accelerated Mobile Pages)</a></li><li><a href="#5-prerendering" class="table-of-contents__link toc-highlight">5. Prerendering</a></li><li><a href="#6-hybrid-rendering" class="table-of-contents__link toc-highlight">6. Hybrid Rendering</a></li><li><a href="#7-web-components" class="table-of-contents__link toc-highlight">7. Web Components</a></li><li><a href="#8-serverless-rendering" class="table-of-contents__link toc-highlight">8. Serverless Rendering</a></li><li><a href="#faq" class="table-of-contents__link toc-highlight">FAQ</a><ul><li><a href="#csr和ssr分别是什么" class="table-of-contents__link toc-highlight">CSR和SSR分别是什么？</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">面试宝典</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/FE-interview/docs">八股文(ALL.)</a></li><li class="footer__item"><a class="footer__link-item" href="/FE-interview/docs/category/设计模式">设计模式</a></li><li class="footer__item"><a class="footer__link-item" href="/FE-interview/docs/category/算法">算法</a></li><li class="footer__item"><a class="footer__link-item" href="/FE-interview/docs/category/软件服务">软件服务</a></li><li class="footer__item"><a class="footer__link-item" href="/FE-interview/docs/category/服务端开发">服务端开发</a></li><li class="footer__item"><a class="footer__link-item" href="/FE-interview/docs/category/手写练习场">手写练习场</a></li></ul></div><div class="col footer__col"><div class="footer__title">多端开发</div><ul class="footer__items clean-list"><li class="footer__item"><a href="#" class="footer__link-item">移动端</a></li><li class="footer__item"><a href="#" class="footer__link-item">小程序</a></li><li class="footer__item"><a class="footer__link-item" href="/FE-interview/docs/category/移动端开发">桌面软件</a></li></ul></div><div class="col footer__col"><div class="footer__title">社区</div><ul class="footer__items clean-list"><li class="footer__item"><a href="#" class="footer__link-item">Stack Overflow</a></li></ul></div><div class="col footer__col"><div class="footer__title">更多</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/FE-interview/blog">博客</a></li><li class="footer__item"><a href="https://github.com/gvray/FE-interview" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_j_ow"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 FE-interview. Built with GavinRay's Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

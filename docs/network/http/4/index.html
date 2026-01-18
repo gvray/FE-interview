@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="zh-Hans" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-network/http/4" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.1.1">
+<title data-rh="true">Http缓存 | 前端面试</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://gvray.github.io/FE-interview/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://gvray.github.io/FE-interview/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://gvray.github.io/FE-interview/docs/network/http/4"><meta data-rh="true" property="og:locale" content="zh_Hans"><meta data-rh="true" name="docusaurus_locale" content="zh-Hans"><meta data-rh="true" name="docsearch:language" content="zh-Hans"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Http缓存 | 前端面试"><meta data-rh="true" name="description" content="HTTP缓存是一种通过存储常用的网络资源（如文档、图像、样式表等）以便以后重用的机制，从而提高网页加载速度、减少网络流量和降低服务器负载。HTTP缓存可以在客户端（浏览器）和服务器之间进行，通过在HTTP请求和响应中添加特定的头部字段来控制缓存行为。这些头部字段告诉客户端和服务器如何处理和存储资源，以及何时从缓存加载资源或从服务器获取最新版本。"><meta data-rh="true" property="og:description" content="HTTP缓存是一种通过存储常用的网络资源（如文档、图像、样式表等）以便以后重用的机制，从而提高网页加载速度、减少网络流量和降低服务器负载。HTTP缓存可以在客户端（浏览器）和服务器之间进行，通过在HTTP请求和响应中添加特定的头部字段来控制缓存行为。这些头部字段告诉客户端和服务器如何处理和存储资源，以及何时从缓存加载资源或从服务器获取最新版本。"><link data-rh="true" rel="icon" href="/FE-interview/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://gvray.github.io/FE-interview/docs/network/http/4"><link data-rh="true" rel="alternate" href="https://gvray.github.io/FE-interview/docs/network/http/4" hreflang="zh-Hans"><link data-rh="true" rel="alternate" href="https://gvray.github.io/FE-interview/docs/network/http/4" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/FE-interview/blog/rss.xml" title="前端面试 RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/FE-interview/blog/atom.xml" title="前端面试 Atom Feed"><link rel="stylesheet" href="/FE-interview/assets/css/styles.b743332f.css">
+<script src="/FE-interview/assets/js/runtime~main.99301c2a.js" defer="defer"></script>
+<script src="/FE-interview/assets/js/main.ad720e1f.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const a=new URLSearchParams(window.location.search).entries();for(var[t,e]of a)if(t.startsWith("docusaurus-data-")){var n=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(n,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_mKfG" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><div class="announcementBar_l5ze" style="background-color:#6366f1;color:#ffffff" role="banner"><div class="announcementBarPlaceholder_iuq2"></div><div class="content_KYoq announcementBarContent_M7ac">⭐️ 如果您喜欢本网站，请点这里在<a target="_blank" class="cta" href="https://github.com/gvray/FE-interview"> <strong>GitHub</strong> </a>上给它一颗小星星！ ⭐️</div><button type="button" aria-label="关闭" class="clean-btn close closeButton_RJAU announcementBarClose_oPuH"><svg viewBox="0 0 15 15" width="14" height="14"><g stroke="currentColor" stroke-width="3.1"><path d="M.75.75l13.5 13.5M14.25.75L.75 14.25"></path></g></svg></button></div><nav aria-label="主导航" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/FE-interview/"><div class="navbar__logo"><img src="/FE-interview/img/logo.svg" alt="前端面试 Logo" class="themedComponent_Ke1j themedComponent--light_p2qZ"><img src="/FE-interview/img/logo.svg" alt="前端面试 Logo" class="themedComponent_Ke1j themedComponent--dark_YsdK"></div><b class="navbar__title text--truncate">前端面试</b></a><a class="navbar__item navbar__link" href="/FE-interview/docs/basic/">基础</a><a class="navbar__item navbar__link" href="/FE-interview/docs/frame/">框架</a><a class="navbar__item navbar__link" href="/FE-interview/docs/advance/">进阶</a><a class="navbar__item navbar__link" href="/FE-interview/docs/ai/">AI 开发</a><a class="navbar__item navbar__link" href="/FE-interview/docs/software/browser/">浏览器</a><a class="navbar__item navbar__link" href="/FE-interview/docs/pkg/">构建</a><a class="navbar__item navbar__link" href="/FE-interview/blog">实战案例</a></div><div class="navbar__items navbar__items--right"><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/FE-interview/docs/network/">计算机网络</a><a class="navbar__item navbar__link" href="/FE-interview/docs/devops/">运维</a><a href="https://github.com/gvray/FE-interview" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_j_ow"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_I4jy colorModeToggle_Q83X"><button class="clean-btn toggleButton_z2h1 toggleButtonDisabled_SFuu" type="button" disabled="" title="切换浅色/暗黑模式（当前为浅色模式）" aria-label="切换浅色/暗黑模式（当前为浅色模式）" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_fkHc"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_pWxy"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_exMv"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_vPST"><div class="docsWrapper_oEiq"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_XSdM" type="button"></button><div class="docRoot_I1Wj"><aside class="theme-doc-sidebar-container docSidebarContainer_HZga"><div class="sidebarViewport_DZgC"><div class="sidebar_I8SY"><nav aria-label="文档侧边栏" class="menu thin-scrollbar menu_xGUh menuWithAnnouncementBar_TzMn"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/FE-interview/docs/network/">计算机网络</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" aria-expanded="true" href="/FE-interview/docs/category/http-1">HTTP</a><button aria-label="折叠侧边栏分类 &#x27;HTTP&#x27;" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/FE-interview/docs/network/http/">目录大纲</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/FE-interview/docs/network/http/FAQ">FAQ?</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/FE-interview/docs/network/http/1">get和post请求</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/FE-interview/docs/network/http/2">说一下http和https</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/FE-interview/docs/network/http/3">WebSocket的实现和应用</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/FE-interview/docs/network/http/4">Http缓存</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/FE-interview/docs/network/http/6">Http 状态码</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/FE-interview/docs/network/http/7">TCP的三次握手和四次挥手</a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_B66T"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_iTIt"><div class="docItemContainer_xTUK"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_tTgK" aria-label="页面路径"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="主页面" class="breadcrumbs__link" href="/FE-interview/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_R26V"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/FE-interview/docs/category/http-1"><span itemprop="name">HTTP</span></a><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Http缓存</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_S8Cf theme-doc-toc-mobile tocMobile_AQKx"><button type="button" class="clean-btn tocCollapsibleButton_C5yC">本页总览</button></div><div class="theme-doc-markdown markdown"><h1>Http缓存</h1>
+<p>HTTP缓存是一种通过存储常用的网络资源（如文档、图像、样式表等）以便以后重用的机制，从而提高网页加载速度、减少网络流量和降低服务器负载。HTTP缓存可以在客户端（浏览器）和服务器之间进行，通过在HTTP请求和响应中添加特定的头部字段来控制缓存行为。这些头部字段告诉客户端和服务器如何处理和存储资源，以及何时从缓存加载资源或从服务器获取最新版本。</p>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="缓存的优缺点">缓存的优缺点<a href="#缓存的优缺点" class="hash-link" aria-label="缓存的优缺点的直接链接" title="缓存的优缺点的直接链接">​</a></h2>
+<p>缓存是一种在计算机系统中常见的优化技术，它可以显著提高性能和效率，但也可能引发一些问题。以下是缓存的优点和缺点：</p>
+<p><strong>优点：</strong></p>
+<ol>
+<li>
+<p><strong>提高性能：</strong> 缓存允许重复使用已经获取过的数据，减少了重复获取相同数据的时间和网络资源开销，从而加速数据的访问速度，提高了系统的响应性能。</p>
+</li>
+<li>
+<p><strong>减少网络流量：</strong> 通过在本地缓存中存储数据，可以减少对服务器的请求次数，从而降低了网络流量和延迟，特别是对于移动设备等带宽受限的环境。</p>
+</li>
+<li>
+<p><strong>降低服务器负载：</strong> 缓存可以减轻服务器的负担，因为部分请求可以被本地缓存满足，从而减少服务器的请求处理压力。</p>
+</li>
+<li>
+<p><strong>改善用户体验：</strong> 缓存可以加快页面加载速度，提供更快的响应时间，使用户能够更快地访问网站内容，提升用户体验。</p>
+</li>
+<li>
+<p><strong>节省能源：</strong> 减少服务器的请求次数和响应时间可以降低服务器的能源消耗，对环境友好。</p>
+</li>
+</ol>
+<p><strong>缺点：</strong></p>
+<ol>
+<li>
+<p><strong>可能导致过期数据：</strong> 缓存的数据可能在服务器端发生了变化，但客户端仍然使用旧的缓存数据。这可能会导致显示不准确或过期的信息。</p>
+</li>
+<li>
+<p><strong>一致性问题：</strong> 在分布式系统中，不同节点的缓存可能会引发一致性问题。当一个节点更新了数据，其他节点的缓存可能仍然存有旧的数据，导致不一致状态。</p>
+</li>
+<li>
+<p><strong>内存开销：</strong> 缓存需要一定的内存来存储数据。如果缓存过多的数据，可能会导致内存开销增加，甚至影响系统的稳定性。</p>
+</li>
+<li>
+<p><strong>缓存更新问题：</strong> 当数据发生变化时，需要确保缓存及时更新。管理缓存的过程可能会变得复杂，特别是在需要同时更新多个缓存实例的情况下。</p>
+</li>
+<li>
+<p><strong>缓存穿透：</strong> 当请求查询一个不存在的数据，缓存无法命中，会导致请求直接传递给后端，增加服务器负担。</p>
+</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="http缓存分类">HTTP缓存分类<a href="#http缓存分类" class="hash-link" aria-label="HTTP缓存分类的直接链接" title="HTTP缓存分类的直接链接">​</a></h2>
+<p>HTTP缓存可以根据不同的机制和特性进行分类。以下是HTTP缓存的主要分类：</p>
+<p><strong>1. 强缓存（Expires 和 Cache-Control）：</strong></p>
+<ul>
+<li>
+<p><strong>Expires：</strong> 通过在HTTP响应头中设置<code>Expires</code>字段，服务器可以指定资源的过期时间，即资源在客户端本地缓存中的有效期限。浏览器在过期时间之前可以直接从缓存中加载资源，而不需要向服务器发起请求。然而，<code>Expires</code>是一个绝对时间，如果服务器与客户端时间不同步，可能会导致缓存失效问题。</p>
+</li>
+<li>
+<p><strong>Cache-Control：</strong> <code>Cache-Control</code> 是一个更灵活的头部字段，通过在HTTP响应头中设置不同的指令，可以更精确地控制缓存策略。例如，使用 <code>max-age</code> 指令来设置资源的最大缓存时间，<code>no-cache</code> 指令告诉客户端在使用缓存前要先验证资源是否过期，<code>no-store</code> 指令禁止缓存等。</p>
+<ul>
+<li>
+<p><code>Cache-Control</code> 取值含义：</p>
+<ol>
+<li>
+<p><strong><code>public</code>：</strong> 表示资源可以被任何中间缓存（例如代理服务器）缓存，适用于公共资源，如公共样式表、图像等。</p>
+</li>
+<li>
+<p><strong><code>private</code>：</strong> 表示资源只能被终端用户的浏览器缓存，而不能被共享缓存（如代理服务器）缓存。适用于个人用户相关的数据，如用户特定的页面。</p>
+</li>
+<li>
+<p><strong><code>max-age=&lt;seconds&gt;</code>：</strong> 指定资源的最大缓存时间，以秒为单位。浏览器在该时间内可以从缓存中加载资源，而无需向服务器发起请求。</p>
+</li>
+<li>
+<p><strong><code>no-store</code>：</strong> 禁止缓存，浏览器不应该将资源存储在缓存中，每次都要向服务器请求最新的资源。也就没有所谓的强缓存、协商缓存了。</p>
+</li>
+<li>
+<p><strong><code>no-cache</code>：</strong> 要求浏览器在使用缓存前，先向服务器验证资源是否过期。服务器会发送验证请求，如果资源未过期，则返回状态码304，浏览器从缓存加载资源。跳过设置强缓存，但是不妨碍设置协商缓存；一般如果你做了强缓存，只有在强缓存失效了才走协商缓存的，设置了no-cache就不会走强缓存了，每次请求都回询问服务端。</p>
+</li>
+<li>
+<p><strong><code>must-revalidate</code>：</strong> 如果资源过期，浏览器必须向服务器验证资源是否仍然有效，用于控制缓存的强制重新验证。</p>
+</li>
+<li>
+<p><strong><code>proxy-revalidate</code>：</strong> 类似于<code>must-revalidate</code>，但只适用于共享缓存（如代理服务器）。</p>
+</li>
+<li>
+<p><strong><code>s-maxage=&lt;seconds&gt;</code>：</strong> 类似于<code>max-age</code>，但仅适用于共享缓存，如代理服务器。</p>
+</li>
+<li>
+<p><strong><code>immutable</code>：</strong> 表示资源在指定的有效期内不会发生变化，即使到期也不需要重新验证。适用于静态资源，可以提高缓存命中率。有一些 “聪明” 的用户会点击浏览器左上角的刷新按钮去刷新页面，这时候就算资源没有过期，浏览器也会直接去请求服务器，再加个immutable的话，就算用户刷新页面，浏览器也不会发起请求去服务，浏览器会直接从本地磁盘或者内存中读取缓存并返回200状态，（from memory cache）。这是2015年facebook团队向制定 HTTP 标准的 IETF 工作组提到的建议：他们希望 HTTP 协议能给 Cache-Control 响应头增加一个属性字段表明该资源永不过期，浏览器就没必要再为这些资源发送条件请求了。</p>
+</li>
+<li>
+<p><strong><code>no-transform</code>：</strong> 禁止中间缓存对资源进行转换，如压缩、加密等。</p>
+</li>
+</ol>
+<p>通过组合这些指令，可以实现灵活的缓存策略，控制缓存的行 为。<code>Cache-Control</code>提供了更精细的控制，相对于<code>Expires</code>头部来说，它更现代、更可靠，更适用于实际应用中的缓存管理。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>使用场景：</strong> 协商缓存适用于那些可能会发生变化，但变化频率相对较低的资源。如果资源发生变化的频率较低，使用协商缓存可以减少不必要的数据传输。它也适用于需要准确判断资源变化的情况。</p>
+</li>
+<li>
+<p><strong>Cache-Control和Expires哪些优先级高</strong></p>
+</li>
+</ul>
+<p>在HTTP响应头部中，Cache-Control和Expires都可以用来控制缓存，并且都是用来设置缓存最长有效时间。但是它们的方式和优先级有所不同。</p>
+<p>Cache-Control是HTTP/1.1新增的缓存控制方式，它比Expires更加灵活，可以优先级更高地控制缓存，因此优先级更高。如果同时存在Cache-Control和Expires，Cache-Control会覆盖Expires的设置。</p>
+<p>Expires是HTTP/1.0中定义的缓存控制方式，它只能设置缓存过期时间，精度只能到秒级别，且存在时区差异问题，缺少灵活性。如果同时存在Cache-Control和Expires，浏览器会优先使用Cache-Control来判断是否使用缓存。</p>
+<p>因此，尽管Expires仍然被广泛支持，但缓存控制的首选方法是Cache-Control。在实践中，建议同时使用Cache-Control和Expires来确保更好的缓存控制，例如：</p>
+<div class="codeBlockContainer__bYn theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_oqyV"><pre tabindex="0" class="prism-code language-text codeBlock_pH9g thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_xX5i"><span class="token-line" style="color:#393A34"><span class="token plain">Cache-Control: public, max-age=86400</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Expires: Wed, 22 Jul 2020 09:00:00 GMT</span><br></span></code></pre><div class="buttonGroup_gqTI"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_lr74" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_PJSy"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_j3ue"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>其中，<code>Cache-Control</code>指定了<code>public</code>可被公共缓存，<code>max-age</code>为缓存最长有效时间；<code>Expires</code>指定了缓存过期时间。在这个例子中，缓存将在2020年7月22日9:00:00 GMT之后失效，或者在一天之内没有任何更新情况下被浏览器重新加载。</p>
+<p><strong>2. 协商缓存（ETag 和 Last-Modified）：</strong></p>
+<ul>
+<li>
+<p><strong>ETag：</strong> <code>ETag</code> 是服务器为资源生成的唯一标识符，它在资源内容发生变化时会改变。服务器在响应头中返回 <code>ETag</code> 值，浏览器在后续请求中发送 <code>If-None-Match</code> 头部，用以验证资源是否发生变化。如果资源没有变化，服务器会返回状态码304（未修改），浏览器从缓存加载资源。</p>
+</li>
+<li>
+<p><strong>Last-Modified：</strong> <code>Last-Modified</code> 是资源的最后修改时间，服务器在响应头中返回该字段。浏览器在后续请求中发送 <code>If-Modified-Since</code> 头部，用以验证资源是否发生变化。如果资源没有变化，服务器会返回状态码304，浏览器从缓存加载资源。然而，<code>Last-Modified</code> 只精确到秒级，如果资源的变化频率较高，可能无法准确判断。</p>
+</li>
+<li>
+<p><strong>使用场景：</strong> 协商缓存适用于那些可能会发生变化，但变化频率 相对较低的资源。如果资源发生变化的频率较低，使用协商缓存可以减少不必要的数据传输。它也适用于需要准确判断资源变化的情况。</p>
+</li>
+<li>
+<p><strong>为什么要有etag？</strong></p>
+<ul>
+<li>你可能会觉得使用last-modified已经足以让浏览器知道本地的缓存副本是否足够新，为什么还需要etag呢？HTTP1.1中etag的出现（也就是说，etag是新增的）主要是为了解决几个last-modified比较难解决的问题：<!-- -->
+<ol>
+<li>一些文件也许会周期性的更改，但是他的内容并不改变(仅仅改变的修改时间)，这个时候我们并不希望客户端认为这个文件被修改了，而重新get；</li>
+<li>某些文件修改非常频繁，比如在秒以下的时间内进行修改，(比方说1s内修改了N次)，if-modified-since能检查到的粒度是秒级的，这种修改无法判断(或者说UNIX记录MTIME只能精确到秒)；</li>
+<li>某些服务器不能精确的得到文件的最后修改时间。</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p>response header中的etag、last-modified在客户端重新向服务端发起请求时，会在request header中换个key名：</p>
+<div class="codeBlockContainer__bYn theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_oqyV"><pre tabindex="0" class="prism-code language-text codeBlock_pH9g thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_xX5i"><span class="token-line" style="color:#393A34"><span class="token plain"> // response header</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> etag: &#x27;5c20abbd-e2e8&#x27;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> last-modified: Mon, 24 Dec 2018 09:49:49 GMT</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> // request header 变为</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> if-none-matched: &#x27;5c20abbd-e2e8&#x27;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> if-modified-since: Mon, 24 Dec 2018 09:49:49 GMT</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span></code></pre><div class="buttonGroup_gqTI"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_lr74" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_PJSy"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_j3ue"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+</li>
+</ul>
+<p><strong>3. Vary 头部：</strong></p>
+<ul>
+<li><code>Vary</code> 头部用于告诉缓存服务器，响应的内容可能因请求的不同特征而变化，例如根据不同的<code>User-Agent</code>来提供不同的内容。这可以确保缓存服务器针对不同的请求特征，提供适当的缓存内容，避免交叉污染。</li>
+<li><strong>使用场景：</strong> 当响应的内容可能因请求的不同特征而变化时，使用Vary头部可以避免交叉污染。这在根据不同的User-Agent提供不同内容、多语言网站的内容变化等情况下特别有用。</li>
+</ul>
+<p><strong>4. Pragma 头部：</strong></p>
+<ul>
+<li>虽然 <code>Pragma</code> 头部在 HTTP/1.0 中用于控制缓存，但在 HTTP/1.1 中已经被 <code>Cache-Control</code> 取代。在现代网络环境中，很少使用 <code>Pragma</code> 头部来控制缓存。</li>
+<li><strong>使用场景：</strong> 在现代网络环 境中，很少使用Pragma头部来控制缓存，因为大部分情况下Cache-Control提供了更灵活的控制。然而，在旧版本的HTTP/1.0中，使用Pragma: no-cache可以实现禁用缓存的效果。</li>
+</ul>
+<p>综合来说，HTTP缓存通过不同的机制和头部字段，允许服务器和客户端在资源请求和响应中协调缓存策略，从而提高性能和效率。不同的缓存策略适用于不同的应用场景，开发者应根据实际需求选择适当的缓存机制。</p>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="缓存策略和缓存行为分">缓存策略和缓存行为分<a href="#缓存策略和缓存行为分" class="hash-link" aria-label="缓存策略和缓存行为分的直接链接" title="缓存策略和缓存行为分的直接链接">​</a></h2>
+<p>缓存策略和缓存行为是关于如何处理和使用缓存的两个概念，它们在HTTP通信中起着重要的作用。</p>
+<p><strong>缓存策略：</strong></p>
+<p>缓存策略是在服务器端设定的指导浏览器和中间缓存如何缓存和重用特定资源的规则集合。它是一种用于控制缓存行为的高级方法。缓存策略可以根据资源的特性、重要性和变化频率来设定，以便提高性能、减少网络流量和改善用户体验。</p>
+<p>缓存策略包括设置HTTP响应头部中的字段，如<code>Cache-Control</code>、<code>Expires</code>、<code>ETag</code>、<code>Last-Modified</code>等。通过这些字段，服务器可以告诉浏览器何时可以缓存资源、何时需要重新验证资源、何时需要重新获取最新资源等。</p>
+<p><strong>缓存行为：</strong></p>
+<p>缓存行为是浏览器或客户端根据服务器提供的缓存策略，对资源进行加载、缓存和重用的具体操作。缓存行为决定了浏览器在请求资源时是否可以从本地缓存中加载，或者是否需要重新获取资源。它直接影响到页面加载速度、网络流量和用户体验。</p>
+<p>在执行缓存行为时，浏览器会根据服务器返回的响应头部中的指令（如<code>Cache-Control</code>、<code>Expires</code>、<code>ETag</code>等），判断资源是否可以从缓存中加载，或者是否需要与服务器交互以获取更新的资源。浏览器还会根据缓存行为来验证资源是否过期，以及如何处理过期资源的情况。</p>
+<p>综合来看，缓存策略是服务器为资源设定的指导规则，而缓存行为是浏览器或客户端根据这些规则执行的实际操作，从而实现缓存的有效管理和使用。</p>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="图">图<a href="#图" class="hash-link" aria-label="图的直接链接" title="图的直接链接">​</a></h2>
+<p>TODO</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/gvray/FE-interview/tree/main/docs/network/http/4.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_bjoM" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>编辑此页</a></div><div class="col lastUpdated_Dykw"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="文件选项卡"><a class="pagination-nav__link pagination-nav__link--prev" href="/FE-interview/docs/network/http/3"><div class="pagination-nav__sublabel">上一页</div><div class="pagination-nav__label">WebSocket的实现和应用</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/FE-interview/docs/network/http/6"><div class="pagination-nav__sublabel">下一页</div><div class="pagination-nav__label">Http 状态码</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_hZ7f thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#缓存的优缺点" class="table-of-contents__link toc-highlight">缓存的优缺点</a></li><li><a href="#http缓存分类" class="table-of-contents__link toc-highlight">HTTP缓存分类</a></li><li><a href="#缓存策略和缓存行为分" class="table-of-contents__link toc-highlight">缓存策略和缓存行为分</a></li><li><a href="#图" class="table-of-contents__link toc-highlight">图</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">面试宝典</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/FE-interview/docs">八股文(ALL.)</a></li><li class="footer__item"><a class="footer__link-item" href="/FE-interview/docs/category/设计模式">设计模式</a></li><li class="footer__item"><a class="footer__link-item" href="/FE-interview/docs/category/算法">算法</a></li><li class="footer__item"><a class="footer__link-item" href="/FE-interview/docs/category/软件服务">软件服务</a></li><li class="footer__item"><a class="footer__link-item" href="/FE-interview/docs/category/服务端开发">服务端开发</a></li><li class="footer__item"><a class="footer__link-item" href="/FE-interview/docs/category/手写练习场">手写练习场</a></li></ul></div><div class="col footer__col"><div class="footer__title">多端开发</div><ul class="footer__items clean-list"><li class="footer__item"><a href="#" class="footer__link-item">移动端</a></li><li class="footer__item"><a href="#" class="footer__link-item">小程序</a></li><li class="footer__item"><a class="footer__link-item" href="/FE-interview/docs/category/移动端开发">桌面软件</a></li></ul></div><div class="col footer__col"><div class="footer__title">社区</div><ul class="footer__items clean-list"><li class="footer__item"><a href="#" class="footer__link-item">Stack Overflow</a></li></ul></div><div class="col footer__col"><div class="footer__title">更多</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/FE-interview/blog">博客</a></li><li class="footer__item"><a href="https://github.com/gvray/FE-interview" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_j_ow"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 FE-interview. Built with GavinRay's Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

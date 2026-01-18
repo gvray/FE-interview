@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="zh-Hans" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-software/engineering/FAQ" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.1.1">
+<title data-rh="true">FAQ? | 前端面试</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://gvray.github.io/FE-interview/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://gvray.github.io/FE-interview/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://gvray.github.io/FE-interview/docs/software/engineering/FAQ"><meta data-rh="true" property="og:locale" content="zh_Hans"><meta data-rh="true" name="docusaurus_locale" content="zh-Hans"><meta data-rh="true" name="docsearch:language" content="zh-Hans"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="FAQ? | 前端面试"><meta data-rh="true" name="description" content="semver规范"><meta data-rh="true" property="og:description" content="semver规范"><link data-rh="true" rel="icon" href="/FE-interview/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://gvray.github.io/FE-interview/docs/software/engineering/FAQ"><link data-rh="true" rel="alternate" href="https://gvray.github.io/FE-interview/docs/software/engineering/FAQ" hreflang="zh-Hans"><link data-rh="true" rel="alternate" href="https://gvray.github.io/FE-interview/docs/software/engineering/FAQ" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/FE-interview/blog/rss.xml" title="前端面试 RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/FE-interview/blog/atom.xml" title="前端面试 Atom Feed"><link rel="stylesheet" href="/FE-interview/assets/css/styles.b743332f.css">
+<script src="/FE-interview/assets/js/runtime~main.99301c2a.js" defer="defer"></script>
+<script src="/FE-interview/assets/js/main.ad720e1f.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const a=new URLSearchParams(window.location.search).entries();for(var[t,e]of a)if(t.startsWith("docusaurus-data-")){var n=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(n,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_mKfG" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><div class="announcementBar_l5ze" style="background-color:#6366f1;color:#ffffff" role="banner"><div class="announcementBarPlaceholder_iuq2"></div><div class="content_KYoq announcementBarContent_M7ac">⭐️ 如果您喜欢本网站，请点这里在<a target="_blank" class="cta" href="https://github.com/gvray/FE-interview"> <strong>GitHub</strong> </a>上给它一颗小星星！ ⭐️</div><button type="button" aria-label="关闭" class="clean-btn close closeButton_RJAU announcementBarClose_oPuH"><svg viewBox="0 0 15 15" width="14" height="14"><g stroke="currentColor" stroke-width="3.1"><path d="M.75.75l13.5 13.5M14.25.75L.75 14.25"></path></g></svg></button></div><nav aria-label="主导航" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/FE-interview/"><div class="navbar__logo"><img src="/FE-interview/img/logo.svg" alt="前端面试 Logo" class="themedComponent_Ke1j themedComponent--light_p2qZ"><img src="/FE-interview/img/logo.svg" alt="前端面试 Logo" class="themedComponent_Ke1j themedComponent--dark_YsdK"></div><b class="navbar__title text--truncate">前端面试</b></a><a class="navbar__item navbar__link" href="/FE-interview/docs/basic/">基础</a><a class="navbar__item navbar__link" href="/FE-interview/docs/frame/">框架</a><a class="navbar__item navbar__link" href="/FE-interview/docs/advance/">进阶</a><a class="navbar__item navbar__link" href="/FE-interview/docs/ai/">AI 开发</a><a class="navbar__item navbar__link" href="/FE-interview/docs/software/browser/">浏览器</a><a class="navbar__item navbar__link" href="/FE-interview/docs/pkg/">构建</a><a class="navbar__item navbar__link" href="/FE-interview/blog">实战案例</a></div><div class="navbar__items navbar__items--right"><a class="navbar__item navbar__link" href="/FE-interview/docs/network/">计算机网络</a><a class="navbar__item navbar__link" href="/FE-interview/docs/devops/">运维</a><a href="https://github.com/gvray/FE-interview" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_j_ow"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_I4jy colorModeToggle_Q83X"><button class="clean-btn toggleButton_z2h1 toggleButtonDisabled_SFuu" type="button" disabled="" title="切换浅色/暗黑模式（当前为浅色模式）" aria-label="切换浅色/暗黑模式（当前为浅色模式）" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_fkHc"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_pWxy"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_exMv"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_vPST"><div class="docsWrapper_oEiq"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_XSdM" type="button"></button><div class="docRoot_I1Wj"><aside class="theme-doc-sidebar-container docSidebarContainer_HZga"><div class="sidebarViewport_DZgC"><div class="sidebar_I8SY"><nav aria-label="文档侧边栏" class="menu thin-scrollbar menu_xGUh menuWithAnnouncementBar_TzMn"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/FE-interview/docs/">介绍</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/FE-interview/docs/category/前端基础">前端基础</a><button aria-label="展开侧边栏分类 &#x27;前端基础&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed red"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/FE-interview/docs/category/前端框架">前端框架</a><button aria-label="展开侧边栏分类 &#x27;前端框架&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/FE-interview/docs/category/ai-开发">AI 开发</a><button aria-label="展开侧边栏分类 &#x27;AI 开发&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/FE-interview/docs/category/前端进阶">前端进阶</a><button aria-label="展开侧边栏分类 &#x27;前端进阶&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/FE-interview/docs/category/计算机网络">计算机网络</a><button aria-label="展开侧边栏分类 &#x27;计算机网络&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/FE-interview/docs/category/设计模式">设计模式</a><button aria-label="展开侧边栏分类 &#x27;设计模式&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/FE-interview/docs/category/打包构建">打包构建</a><button aria-label="展开侧边栏分类 &#x27;打包构建&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/FE-interview/docs/category/服务端开发">服务端开发</a><button aria-label="展开侧边栏分类 &#x27;服务端开发&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" aria-expanded="true" href="/FE-interview/docs/category/软件服务">软件服务</a><button aria-label="折叠侧边栏分类 &#x27;软件服务&#x27;" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/FE-interview/docs/software/">工程软件服务</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" tabindex="0" href="/FE-interview/docs/category/git">Git</a><button aria-label="展开侧边栏分类 &#x27;Git&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" tabindex="0" href="/FE-interview/docs/category/浏览器">浏览 器</a><button aria-label="展开侧边栏分类 &#x27;浏览器&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" aria-expanded="true" tabindex="0" href="/FE-interview/docs/category/工程相关">工程相关</a><button aria-label="折叠侧边栏分类 &#x27;工程相关&#x27;" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/FE-interview/docs/software/engineering/">目录大纲</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/FE-interview/docs/software/engineering/FAQ">FAQ?</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/FE-interview/docs/software/engineering/1">前端都哪些渲染方式</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/FE-interview/docs/software/engineering/2">微前端</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/FE-interview/docs/software/engineering/3">包管理工具</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/FE-interview/docs/software/engineering/4">PWA</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/FE-interview/docs/software/engineering/5">C++ Java JavaScript的区别</a></li></ul></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/FE-interview/docs/category/移动端开发">移动端开发</a><button aria-label="展开侧边栏分类 &#x27;移动端开发&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/FE-interview/docs/category/devops开发运维">Devops(开发运维)</a><button aria-label="展开侧边栏分类 &#x27;Devops(开发运维)&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/FE-interview/docs/category/算法">算法</a><button aria-label="展开侧边栏分类 &#x27;算法&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/FE-interview/docs/category/手写练习场">手写练习场</a><button aria-label="展开侧边栏分类 &#x27;手写练习场&#x27;" type="button" class="clean-btn menu__caret"></button></div></li></ul></nav></div></div></aside><main class="docMainContainer_B66T"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_iTIt"><div class="docItemContainer_xTUK"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_tTgK" aria-label="页面路径"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="主页面" class="breadcrumbs__link" href="/FE-interview/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_R26V"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/FE-interview/docs/category/软件服务"><span itemprop="name">软件服务</span></a><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/FE-interview/docs/category/工程相关"><span itemprop="name">工程相关</span></a><meta itemprop="position" content="2"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">FAQ?</span><meta itemprop="position" content="3"></li></ul></nav><div class="tocCollapsible_S8Cf theme-doc-toc-mobile tocMobile_AQKx"><button type="button" class="clean-btn tocCollapsibleButton_C5yC">本页总览</button></div><div class="theme-doc-markdown markdown"><h1>FAQ?</h1>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="semver规范">semver规范<a href="#semver规范" class="hash-link" aria-label="semver规范的直接链接" title="semver规范的直接链接">​</a></h2>
+<p>SemVer规范是指“语义化版本”规范，它是一种版本标记约定，旨在使软件版本号更加清晰、有意义和易于比较。</p>
+<p>SemVer 标准的版本格式为 MAJOR.MINOR.PATCH。在这个版本号格式中：</p>
+<p>MAJOR 表示主版本号，定义了不向后兼容的 API 或功能改变；
+MINOR 表示次版本号，定义了向后兼容的新功能；
+PATCH 表示修订版本号，定义了向后兼容的问题修正。
+除了这三个标准号码外， SemVer 还支持在版本号后添加预发布信息和版本元信息。预发布信息是指版本号后面的连字符和标识符（如 1.0.0-alpha.1），用于标识尚处于开发或测试阶段的软件版本。版本元数据是指版本号后面的加号和标识符（例如 1.2.3+build.1234），用于为版本号添加附加信息，如构建 ID 或 Git SHA-1 校验和等。</p>
+<p>SemVer 标准还定义了版本号比较规则，使得版本号可以按照严格的语义化方式进行比较。例如，一个版本号大于另一个版本号，当且仅当它的主版本号更高、次版本号相等的情况下，或者它的主版本号相等、次版本号更高、修订版本号相等的情况下，或者它的主版本号、次版本号相等、修订版本号更高的情况下。</p>
+<p>在软件的开发、维护和分发过程中，使用 SemVer 标准来标记版本号，可以使得版本控制更加清晰、可靠和可预测。</p>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="babel的原理是什么">Babel的原理是什么?<a href="#babel的原理是什么" class="hash-link" aria-label="Babel的原理是什么?的直接链接" title="Babel的原理是什么?的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="如何写一个babel插件">如何写一个babel插件?<a href="#如何写一个babel插件" class="hash-link" aria-label="如何写一个babel插件?的直接链接" title="如何写一个babel插件?的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="webpack和gulp区别模块化与流的区别">webpack和gulp区别（模块化与流的区别）<a href="#webpack和gulp区别模块化与流的区别" class="hash-link" aria-label="webpack和gulp区别（模块化与流的区别）的直接链接" title="webpack和gulp区别（模块化与流的区别）的直接链接">​</a></h2>
+<p>Webpack 是一个模块化打包工具。它的主要功能是分析项目中的模块依赖关系，然后将这些模块打包成一些浏览器可以直接使用的静态资源文件（例如 JavaScript、CSS、图片等）。Webpack 非常适合用于构建大型的、模块化的 Web 应用程序，它可以自动化打包和压缩代码，并提供一些常用插件和工具库，以便于开发者进行高效的开发、测试和部署。</p>
+<p>相比之下，Gulp 是一个流式构建工具，它通过指定一系列任务来处理项目中的源文件。每一个任务都以源文件和目标文件为输入和输出，通过流的方式将数据从一个任务传递到另一个任务。Gulp 对于处理复杂的任务和构建管道非常有用。它提供了大量的插件和工具库，可以帮助开发者解决常见的 Web 开发任务，例如编译 Sass、压缩图片、打包 CSS 和 JavaScript 等。</p>
+<p>总之，Webpack 适合处理模块化的 Web 应用程序，而 Gulp 适合处理流式的 Web 开发任务，例如代码压缩、图片优化等。在实际项目中，可以根据实际情况选择合适的工具，或者将它们结合起来使用，以便于更高效地构建和维护 Web 应用程序。</p>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="swc和babel的区别">SWC和babel的区别<a href="#swc和babel的区别" class="hash-link" aria-label="SWC和babel的区别的直接链接" title="SWC和babel的区别的直接链接">​</a></h2>
+<p>SWC和Babel都是JavaScript编译器，但它们之间仍有一些区别。</p>
+<p>SWC代表Superfast WebAssembly Compiler。它是一个较新的编译器，专为速度而设计。它使用WebAssembly进行编译，并且可以处理大多数Babel可以处理的相同类型的语法。SWC还内置了许多传统编译器中存在的优化，可以提供更快和更紧凑的输出。</p>
+<p>Babel是更成熟的编译器，已经存在了很长时间。 它使用JavaScript进行编译，并且可以处理的语法比SWC更广泛。 Babel具有非常活跃的社区和生态系统，支持各种插件和配置选项。</p>
+<p>因此，SWC适用于需要快速编译速度的项目和对输出大小有要求的项目，而Babel适用于对语法支持更广泛，有更多的可扩展性和适应性的项目。</p>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="选mocha还是jest">选mocha还是jest<a href="#选mocha还是jest" class="hash-link" aria-label="选mocha还是jest的直接链接" title="选mocha还是jest的直接链接">​</a></h2>
+<p>Mocha:</p>
+<ul>
+<li>Mocha 是一个灵活的测试框架，它提供了强大的功能和丰富的插件生态系统。</li>
+<li>Mocha 不依赖于断言库或模拟库，这使得您可以根据自己的喜好选择适合的工具。</li>
+<li>Mocha 支持异步测试，包括使用回调函数、Promises 或 async/await。</li>
+<li>Mocha 对于编写大型测试套件和复杂的测试场景非常适用。</li>
+</ul>
+<p>Jest:</p>
+<ul>
+<li>Jest 是一个全功能的 JavaScript 测试框架，提供了内置的断言库、模拟功能和覆盖率报告。</li>
+<li>Jest 具有简单的设置和使用，适合于快速启动项目和编写小型测试套件。</li>
+<li>Jest 具有零配置的模拟功能，使得模拟复杂的依赖关系变得更加容易。</li>
+<li>Jest 集成了覆盖率报告，并提供易于理解的可视化报告。</li>
+</ul>
+<p>根据项目的特点和需求，您可以考虑以下因素来做出选择：</p>
+<ul>
+<li>项目规模和复杂度：如果您的项目很大且复杂，涉及许多异步操作和定制需求，那么 Mocha 可能更适合。</li>
+<li>快速启动和简单性：如果您希望快速启动测试并且不想花费太多时间进行配置，Jest 可能更适合。</li>
+<li>插件和生态系统：根据您可能需要的插件和扩展功能，了解 Mocha 和 Jest 的生态系统，以确定哪个框架提供更好的支持。</li>
+<li>社区和支持：查看每个框架的社 区支持、更新频率和文档质量，这些因素都可以对选择产生影响。</li>
+</ul>
+<p>无论您选择 Mocha 还是 Jest，重要的是在项目中使用适合您团队和需求的测试框架，并编写高质量的测试来确保代码的可靠性和稳定性。</p>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="本地开发端口映射">本地开发端口映射<a href="#本地开发端口映射" class="hash-link" aria-label="本地开发端口映射的直接链接" title="本地开发端口映射的直接链接">​</a></h2>
+<p>一般来说，如果你想在本地开发环境中进行端口映射，可以尝试以下几种方法：</p>
+<ol>
+<li>
+<p>使用代理服务器：你可以在本地启动一个代理服务器，将请求转发到指定的端口。常见的代理服务器工具有<code>nginx</code>、<code>http-proxy-middleware</code>等，你可以根据自己的需求选择合适的工具进行配置。</p>
+</li>
+<li>
+<p>使用反向代理：在一些开发服务器工具（如<code>webpack-dev-server</code>、<code>http-server</code>等）中，提供了反向代理的功能，你可以通过配置反向代理来实现端口映射。</p>
+</li>
+<li>
+<p>使用浏览器插件：有一些浏览器插件可以帮助你实现端口映射，比如 Chrome 浏览器中的插件 <code>SwitchyOmega</code> 或者 <code>Proxy SwitchySharp</code>。</p>
+</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="mvvmmvcmvp-的区别">MVVM、MVC、MVP 的区别<a href="#mvvmmvcmvp-的区别" class="hash-link" aria-label="MVVM、MVC、MVP 的区别的直接链接" title="MVVM、MVC、MVP 的区别的直接链接">​</a></h2>
+<p>MVVM、MVC、MVP 是三种常见的软件架构模式，用于组织和管理前端或后端应用程序的代码。它们的区别如下：</p>
+<ol>
+<li>
+<p>MVC（Model-View-Controller）：</p>
+<ul>
+<li>Model（模型）：表示数据和业务逻辑。</li>
+<li>View（视图）：负责展示数据，与用户进行交互。</li>
+<li>Controller（控制器）：处  理用户输入，更新模型和视图之间的关系。</li>
+<li>特点：模型和视图是分离的，通过控制器进行交互。主要用于后端开发，将应用程序分为三个不同的部分，每个部分有各自的职责。</li>
+</ul>
+</li>
+<li>
+<p>MVP（Model-View-Presenter）：</p>
+<ul>
+<li>Model（模型）：表示数据和业务逻辑。</li>
+<li>View（视图）：负责展示数据，与用户进行交互。</li>
+<li>Presenter（展示器）：从模型中获取数据，并将数据传递给视图。处理视图的事件和用户输入。</li>
+<li>特点：Presenter 充当了控制器和视图之间的中介角色，将数据的获取和处理逻辑从视图中分离出来。主要用于前端开发。</li>
+</ul>
+</li>
+<li>
+<p>MVVM（Model-View-ViewModel）：</p>
+<ul>
+<li>Model（模型）：表示数据和业务逻辑。</li>
+<li>View（视图）：负责展示数据，与用户进行交互。</li>
+<li>ViewModel（视图模型）：连接视图和模型，负责处理视图和模型之间的数据绑定、事件处理等。</li>
+<li>特点：视图和模型之间通过双向数据绑定实现自动更新。ViewModel 将视图的状态和行为抽象为数据模型，使得视图和模型之间的耦合度降低。主要用于前端开发。</li>
+</ul>
+</li>
+</ol>
+<p>总结：</p>
+<ul>
+<li>MVC 是将应用程序分为模型、视图和控制器，主要用于后端开发。</li>
+<li>MVP 将模型和视图分离，并通过展示器进行交互，主要用于前端开发。</li>
+<li>MVVM 在 MVP 的基础上引入了双向数据绑定，将视图和模型的关系进一步解耦。</li>
+</ul>
+<p>这些架构模式旨在提供一种组织代码的方式，以实现可维护、可扩展和可测试的应用程序。具体选择哪种架构模式取决于应用程序的需求、开发团队的偏好以及技术栈的限制。</p>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="webpack-与-gruntgulp-的不同">webpack 与 grunt、gulp 的不同？<a href="#webpack-与-gruntgulp-的不同" class="hash-link" aria-label="webpack 与 grunt、gulp 的不同？的直接链接" title="webpack 与 grunt、gulp 的不同？的直接链接">​</a></h2>
+<p>Grunt、Gulp 是基于任务运⾏的⼯具： 它们会⾃动执⾏指定的任务， 就像流⽔线，把资源放上去然后通过不同插件进⾏加⼯，它们包含活 跃的社区，丰富的插件，能⽅便的打造各种⼯作流。 Webpack 是基于模块化打包的⼯具: ⾃动化处理模块，webpack 把⼀ 切当成模块，当 webpack 处理应⽤程序时，它会递归地构建⼀个依 赖关系图 (dependency graph)，其中包含应⽤程序需要的每个模块， 然后将所有这些模块打包成⼀个或多个 bundle。 因此这是完全不同的两类⼯具,⽽现在主流的⽅式是⽤npm script 代 替 Grunt、Gulp，npm script 同样可以打造任务流。</p>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="webpackrollupparcel-优劣">webpack、rollup、parcel 优劣？<a href="#webpackrollupparcel-优劣" class="hash-link" aria-label="webpack、rollup、parcel 优劣？的直接链接" title="webpack、rollup、parcel 优劣？的直接链接">​</a></h2>
+<p>webpack 适⽤于⼤型复杂的前端站点构建: webpack 有强⼤的 loader 和插件⽣态,打包后的⽂件实际上就是⼀个⽴即执⾏函数，这个⽴即 执⾏函数接收⼀个参数，这个参数是模块对象，键为各个模块的路径， 值为模块内容。⽴即执⾏函数内部则处理模块之间的引⽤，执⾏模块 等,这种情况更适合⽂件依赖复杂的应⽤开发。</p>
+<p>rollup 适⽤于基础库的打包，如 vue、d3 等: Rollup 就是将各个模 块打包进⼀个⽂件中，并且通过 Tree-shaking 来删除⽆⽤的代码, 可以最⼤程度上降低代码体积,但是rollup没有webpack如此多的的 如代码分割、按需加载等⾼级功能，其更聚焦于库的打包，因此更适 合库的开发。</p>
+<p>parcel 适⽤于简单的实验性项⽬: 他可以满⾜低⻔槛的快速看到  效 果,但是⽣态差、报错信息不够全⾯都是他的硬伤，除了⼀些玩具项 ⽬或者实验项⽬不建议使⽤。</p>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="有哪些常的-loader">有哪些常⻅的 Loader？<a href="#有哪些常的-loader" class="hash-link" aria-label="有哪些常⻅的 Loader？的直接链接" title="有哪些常⻅的 Loader？的直接链接">​</a></h2>
+<ol>
+<li>
+<p><code>babel-loader</code>：用于将 ES6+ 代码转换为兼容的 JavaScript 代码，以便在旧版本浏览器中运行。</p>
+</li>
+<li>
+<p><code>css-loader</code>：用于加载和处理 CSS 文件，支持处理 CSS 文件中的 <code>@import</code> 和 <code>url()</code> 引用。</p>
+</li>
+<li>
+<p><code>style-loader</code>：将 CSS 代码注入到页面的 <code>&lt;style&gt;</code> 标签中，使其生效。</p>
+</li>
+<li>
+<p><code>sass-loader</code>：用于加载和处理 SASS/SCSS 文件，将其转换为 CSS 代码。</p>
+</li>
+<li>
+<p><code>less-loader</code>：用于加载和处理 LESS 文件，将其转换为 CSS 代码。</p>
+</li>
+<li>
+<p><code>file-loader</code>：用于处理文件资源（如图片、字体等），根据配置将文件移动到输出目录，并返回文件的路径。</p>
+</li>
+<li>
+<p><code>url-loader</code>：与 <code>file-loader</code> 类似，但还可以根据文件大小将文件转换为 Base64 字符串嵌入到代码中，以减少 HTTP 请求。</p>
+</li>
+<li>
+<p><code>eslint-loader</code>：用于在构建过程中进行代码的静态检查，可以配合 ESLint 使用。</p>
+</li>
+<li>
+<p><code>ts-loader</code>：用于将 TypeScript 代码转换为 JavaScript 代码。</p>
+</li>
+<li>
+<p><code>postcss-loader</code>：使用 PostCSS 对 CSS 进行后处理，可以实现自动添加前缀、压缩等功能。</p>
+</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="有哪些常的-plugin">有哪些常⻅的 Plugin？<a href="#有哪些常的-plugin" class="hash-link" aria-label="有哪些常⻅的 Plugin？的直接链接" title="有哪些常⻅的 Plugin？的直接链接">​</a></h2>
+<ol>
+<li>
+<p><code>HtmlWebpackPlugin</code>：用于生成 HTML 文件，并自动将生成的 bundle 文件注入到 HTML 文件中。</p>
+</li>
+<li>
+<p><code>MiniCssExtractPlugin</code>：将 CSS 从 JavaScript 中提取出来，生成单独的 CSS 文件。</p>
+</li>
+<li>
+<p><code>CleanWebpackPlugin</code>：在每次构建前清理输出目录。</p>
+</li>
+<li>
+<p><code>CopyWebpackPlugin</code>：用于复制文件或文件夹到构建目录。</p>
+</li>
+<li>
+<p><code>DefinePlugin</code>：允许在代码中定义全局常量，可以在开发和生产环境下使用不同的配置。</p>
+</li>
+<li>
+<p><code>HotModuleReplacementPlugin</code>：启用热模块替换功能，使代码更新后能够在浏览器中实时展示，无需刷新页面。</p>
+</li>
+<li>
+<p><code>ProvidePlugin</code>：自动加载模块，将某些模块作为全局变量在所有模块中可用。</p>
+</li>
+<li>
+<p><code>webpack-bundle-analyzer</code>：分析打包结果，可视化地展示每个模块的大小和依赖关系，帮助优化构建产物。</p>
+</li>
+<li>
+<p><code>CompressionWebpackPlugin</code>：在构建过程中对静态资源进行压缩，以减小文件体积，提高加载速度。</p>
+</li>
+<li>
+<p><code>ImageminWebpackPlugin</code>：用于压缩图片资源，减小图片文件的大小。</p>
+</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="bundlechunkmodule-是什么">bundle，chunk，module 是什么？<a href="#bundlechunkmodule-是什么" class="hash-link" aria-label="bundle，chunk，module 是什么？的直接链接" title="bundle，chunk，module 是什么？的直接链接">​</a></h2>
+<p>在 webpack 中，bundle、chunk 和 module 是三个重要的概念，它们分别代表着不同的概念和组织方式：</p>
+<ol>
+<li>
+<p>Bundle（打包文件）：一个 bundle 是由 webpack 构建出来的最终文件，它包含了应用程序的代码和资源。在开发过程中，可以将一个应用程序分割成多个 bundle，每个 bundle 包含一组相关的模块。</p>
+</li>
+<li>
+<p>Chunk（代码块）：一个 chunk 是 webpack 在打包过程中的中间产物，它表示着一个或多个模块的集合。Webpack 根据入口文件和代码的依赖关系，将代码分割成多个 chunk。在默认配置下，一个入口文件对应一个 chunk。</p>
+</li>
+<li>
+<p>Module（模块）：一个 module 是指应用程序中的一个模块，可以是一个 JavaScript 文件、一个 CSS 文件、一个图片文件等。Webpack 将应用程序中的所有文件都视为模块，并对它们进行处理和组织。</p>
+</li>
+</ol>
+<p>总结来说，module 是 webpack 对应用程序中每个文件的抽象，chunk 是在构建过程中的中间产物，它表示着一组相关的模块，而 bundle 是最终构建出来的文件，它包含了应用程序的代码和资源。在实际开发中，可以通过配置 entry、output、splitChunks 等选项来控制 bundle 和 chunk 的生成和组织方式，以满足项目的需求和优化目标。</p>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="loader-和-plugin-的不同">Loader 和 Plugin 的不同？<a href="#loader-和-plugin-的不同" class="hash-link" aria-label="Loader 和 Plugin 的不同？的直接链接" title="Loader 和 Plugin 的不同？的直接链接">​</a></h2>
+<p>Loader 和 Plugin 是 webpack 中两个不同的概念，它们在构建过程中扮演不同的角色：</p>
+<ol>
+<li>
+<p>Loader（加载器）：Loader 用于告诉 webpack 如何处理非 JavaScript 文件（模块）。它们作为 webpack 构建过程中的转换器，将不同类型的文件转换为模块，使得这些文件能够被应用程序所使用。Loader 在模块的加载阶段被执行，可以对模块的源代码进行处理，例如将 ES6+ 代码转换为 ES5、处理 CSS、处理图片等。Loader 在 webpack 的配置中以函数或字符串的形式进行配置。</p>
+</li>
+<li>
+<p>Plugin（插件）：Plugin 用于扩展 webpack 的功能，它通过在构建过程的不同阶段插入自定义逻辑，来完成各种额外的任务。插件可以用于资源的优化、文件的生成、环境变量的注入、代码的分析等。Plugin 通过 webpack 的插件系统实现，它可以监听 webpack 构建过程中的事件，并在适当的时机执行自定义的逻辑。Plugin 的配置项是一个实例化对象。</p>
+</li>
+</ol>
+<p>总结来说，Loader 主要处理模块的转换和加载，而 Plugin 则用于扩展 webpack 的功能，添加额外的处理逻辑。Loader 和 Plugin 在 webpack 的配置文件中通过不同的配置项进行配置和使用。通过合理使用 Loader 和 Plugin，可以实现对不同类型文件的处理和构建过程的扩展，以满足项目的需求和优化目标。</p>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="webpack-热更新的实现原理">webpack 热更新的实现原理？<a href="#webpack-热更新的实现原理" class="hash-link" aria-label="webpack 热更新的实现原理？的直接链接" title="webpack 热更新的实现原理？的直接链接">​</a></h2>
+<p>webpack 的热更新（Hot Module Replacement，HMR）是一种在开发过程中实现实时更新代码和模块的机制。它能够使得在不刷新整个页面的情况下，将修改的代码和模块部分更新到正在运行的应用程序中。</p>
+<p>以下是 webpack 热更新的基本实现原理：</p>
+<ol>
+<li>
+<p>Webpack Dev Server：webpack-dev-server 是一个基于 Express 的开发服务器，它使用了 webpack 的编译和打包能力，配合热更新实现了实时刷新和模块热替换的功能。</p>
+</li>
+<li>
+<p>HMR Runtime：Webpack 在编译过程中会生成用于热更新的 HMR Runtime 代码。这段代码会注入到客户端应用程序中，负责处理热更新的逻辑。</p>
+</li>
+<li>
+<p>WebSocket 通信：Webpack Dev Server 和客户端之间通过 WebSocket 建立长连接，实现实时的双向通信。</p>
+</li>
+<li>
+<p>构建更新的代码块：当一个模块发生变化时，Webpack Dev Server 会重新编译该模块，并生成一个更新的代码块。</p>
+</li>
+<li>
+<p>发送更新通知：Webpack Dev Server 通过 WebSocket 向客户端发送更新通知，告知客户端有哪些模块发生了变化。</p>
+</li>
+<li>
+<p>客户端更新处理：客户端收到更新通知后，根据更新的代码块信息，使用 HMR Runtime 在运行时更新相应的模块。</p>
+</li>
+<li>
+<p>应用程序更新：经过热更新处理后，客户端应用程序的界面和状态会实时更新，而不需要刷新整个页面。</p>
+</li>
+</ol>
+<p>总结来说，webpack 的热更新通过与 Webpack Dev Server 的配合，使用 HMR Runtime 和 WebSocket 实现了实时刷新和模块热替换的功能。它能够提高开发效率，减少开发过程中的刷新和重建时间，同时保持应用程序的状态和用户交互。开发者可以在 webpack 的配置中启用热更新功能，以便在开发过程中更快地进行代码修改和调试。</p>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="babel-的原理是什么">Babel 的原理是什么?<a href="#babel-的原理是什么" class="hash-link" aria-label="Babel 的原理是什么?的直接链接" title="Babel 的原理是什么?的直接链接">​</a></h2>
+<p>Babel 是一个广泛使用的 JavaScript 编译器，用于将高版本的 JavaScript 代码转换为向后兼容的低版本代码。它的主要原理可以总结为以下几个步骤：</p>
+<ol>
+<li>
+<p>解析（Parsing）：Babel 首先将输入的源代码解析为抽象语法树（AST），它会将代码解析成一种结构化的数据表示形式，以便于后续的处理和转换。</p>
+</li>
+<li>
+<p>转换（Transformation）：Babel 将 AST 进行遍历，并根据预先定义的插件或预设规则，对其中的节点进行转换。这些转换可以是将新语法转换为旧版本的 JavaScript 代码，应用编译器的优化规则，添加特定平台的兼容性补丁等。转换过程中可以根据需要进行增删改查的操作，使得开 发者可以自定义需要的转换逻辑。</p>
+</li>
+<li>
+<p>生成（Code Generation）：经过转换后，Babel 将修改后的 AST 重新生成为目标代码，即转换后的 JavaScript 代码。生成的过程中会将 AST 转化为字符串形式的代码，并进行必要的格式化和缩进等处理，最终生成输出文件。</p>
+</li>
+</ol>
+<p>Babel 的核心原理是通过解析源代码、应用一系列插件或预设规则，对 AST 进行转换，并最终生成目标代码。通过这个过程，开发者可以使用最新的 JavaScript 特性和语法，而不必担心兼容性问题，因为 Babel 能够将其转换为较低版本的 JavaScript 代码，以确保在不同的浏览器或环境中都能够正常运行。Babel 的灵活性和可扩展性使得它成为了现代 JavaScript 开发中不可或缺的工具之一。</p>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="使用缓存注意事项">使用缓存注意事项<a href="#使用缓存注意事项" class="hash-link" aria-label="使用缓存注意事项的直接链接" title="使用缓存注意事项的直接链接">​</a></h2>
+<p>在使用缓存时，以下是一些需要注意的重要事项：</p>
+<ol>
+<li>
+<p>缓存一致性：确保缓存中的数据与源数据的一致性。如果源数据发生了变化，缓存应该及时更新，以避免使用过期或无效的数据。</p>
+</li>
+<li>
+<p>缓存策略：选择合适的缓存策略以满足应用需求。不同的数据可能需要不同的缓存策略，包括缓存的过期时间、缓存更新机制等。</p>
+</li>
+<li>
+<p>缓存失效处理：当缓存失效时，需要考虑如何处理。可以重新加载数据，更新缓存，或者向用户显示错误信息。确保在缓存失效时能够正确处理，以避免不一致的数据或错误的结果。</p>
+</li>
+<li>
+<p>缓存容量限制：对缓存进行合理的容量管理，避免过多的数据存储在缓存中导致内存占用过大。可以考虑使用淘汰策略，如最近最少使用（LRU）等，来管理缓存中的数据。</p>
+</li>
+<li>
+<p>缓存安全性：对于敏感数据或对安全性要求较高的数据，需要谨慎处理缓存。确保适当的数据加密、访问控制和权限验证，以保护缓存中的数据安全。</p>
+</li>
+<li>
+<p>缓存的性能测试和监控：定期进行性能测试和监控，以确保缓存机制对系统性能的实际提升，并及时发现和解决缓存相关的性能问题。</p>
+</li>
+<li>
+<p>清理过期缓存：定期清理过期的缓存，以释放内存资源并确保缓存的及时更新。</p>
+</li>
+<li>
+<p>考虑缓存击穿和缓存雪崩：缓存击穿是指在高并发情况下，一个缓存失效导致大量请求直接访问后端数据库或服务，造成性能问题。缓存雪崩是指缓存中大量数据同时过期，导致大量请求直接访问后端，造成系统崩溃。需要采取措施防止和应对这些问题，如使用互斥锁、设置合适的缓存过期时间等。</p>
+</li>
+</ol>
+<p>总之，使用缓存需要综合考虑数据一致性、缓存策略、缓存失效处理、安全性、性能等方面的因素。合理而谨慎地使用缓存，可以显著提高系统性能和用户体验。</p>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="oss-和-cdn-什么区别">oss 和 cdn 什么区别<a href="#oss-和-cdn-什么区别" class="hash-link" aria-label="oss 和 cdn 什么区别的直接链接" title="oss 和 cdn 什么区别的直接链接">​</a></h2>
+<p>阿里云 OSS（Object Storage Service）和 CDN（Content Delivery Network）是两种不同的云服务，用于不同的用途，但在某些情况下它们可以一起使用来提供更好的性能和用户体验。</p>
+<p><strong>OSS（Object Storage Service）：</strong></p>
+<p>OSS 是一个用于存储和管理对象（如文件、图片、视频等）的云存储服务。它的主要特点是高可用性、可扩展性和安全性。你可以将各种类型的文件上传到 OSS 存储桶中，并通过生成的 URL 进行访问。OSS 适合用于数据的长期存储、备份、归档等需求。</p>
+<p><strong>CDN（Content Delivery Network）：</strong></p>
+<p>CDN 是一种用于加速内容传输的网络架构。CDN 的主要目标是提高用户访问网站或应用时的加载速度和响应时间。CDN 通过在全球分布的节点上缓存内容（如图片、CSS、JavaScript 等静态资源），使用户能够从离他们更近的节点访问这些资源，从而减少了加载时间。CDN 还可以通过减少源服务器的负载，提高整体的可用性和稳定性。</p>
+<p><strong>区别：</strong></p>
+<ol>
+<li>
+<p><strong>用途不同：</strong> OSS 主要用于存储和管理数据对象，而 CDN 主要用于加速静态资源的分发。</p>
+</li>
+<li>
+<p><strong>数据存储 vs. 加速分发：</strong> OSS 提供数据存储服务，将数据存储在云端；CDN 提供数据加速分发服务，将静态资源缓存在分布式节点上，加速用户访问。</p>
+</li>
+<li>
+<p><strong>数据类型：</strong> OSS 可以存储各种类型的对象数据，而 CDN 主要用于缓存静态资源，如图片、CSS、JavaScript 等。</p>
+</li>
+<li>
+<p><strong>定价模式：</strong> OSS 通常按照存储容量和网络流量计费，而 CDN 则按照流量计费。</p>
+</li>
+<li>
+<p><strong>协同使用：</strong> 在一些场景下，你可以将 OSS 和 CDN 结合使用，通过将存储在 OSS 中的静态资源缓存到 CDN 节点上，从而更有效地提供内容加速。</p>
+</li>
+</ol>
+<p>总之，OSS 和 CDN 是两种不同的服务，分别用于数据存储和内容加速，但它们可以在某些情况下协同使用，以提供更好的性能和用户体验。</p>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="spring-boot开发中经常听到的povodaobodtopojo到底是什么">Spring Boot开发中，经常听到的PO、VO、DAO、BO、DTO、POJO到底是什么？<a href="#spring-boot开发中经常听到的povodaobodtopojo到底是什么" class="hash-link" aria-label="Spring Boot开发中，  经常听到的PO、VO、DAO、BO、DTO、POJO到底是什么？的直接链接" title="Spring Boot开发中，经常听到的PO、VO、DAO、BO、DTO、POJO到底是什么？的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="多线程和多进程哪个更高效">多线程和多进程哪个更高效<a href="#多线程和多进程哪个更高效" class="hash-link" aria-label="多线程和多进程哪个更高效的直接链接" title="多线程和多进程哪个更高效的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="进程线程死锁">进程线程死锁<a href="#进程线程死锁" class="hash-link" aria-label="进程线程死锁的直接链接" title="进程线程死锁的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="restful-接口规范是什么">restful 接口规范是什么？<a href="#restful-接口规范是什么" class="hash-link" aria-label="restful 接口规范是什么？的直接链接" title="restful 接口规范是什么？的直接链接">​</a></h2>
+<p>TODO</p>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="说说sourcemap的原理">说说sourcemap的原理？<a href="#说说sourcemap的原理" class="hash-link" aria-label="说说sourcemap的原理？的直接链接" title="说说sourcemap的原理？的直接链接">​</a></h2>
+<p>TODO</p>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="说说你对spa的理解">说说你对SPA的理解<a href="#说说你对spa的理解" class="hash-link" aria-label="说说你对SPA的理解的直接链接" title="说说你对SPA的理解的直接链接">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_Xbio" id="单页应用如何提高加载速度">单页应用如何提高加载速度？<a href="#单页应用如何提高加载速度" class="hash-link" aria-label="单页应用如何提高加载速度？的直接链接" title="单页应用如何提高加载速度？的直接链接">​</a></h2>
+<p>提高单页应用（SPA）加载速度可以通过以下几种方法实现：</p>
+<ol>
+<li><strong>代码分割</strong>：<!-- -->
+<ul>
+<li><strong>动态导入</strong>：使用动态导入（<code>import()</code>）将应用代码拆分成多个文件，按需加载。这样可以减少初始加载时的 JavaScript 文件大小。</li>
+<li><strong>路由懒加载</strong>：对不同的路由组件进行懒加载，只有在用户访问特定路由时才加载相关组件。</li>
+</ul>
+</li>
+<li><strong>优化资源</strong>：<!-- -->
+<ul>
+<li><strong>压缩和混淆</strong>：使用工具（如 Webpack、Terser）压缩和混淆 JavaScript 和 CSS 文件，减少文件大小。</li>
+<li><strong>图像优化</strong>：对图像进行压缩和优化，使用适当的格式和尺寸，并考虑使用响应式图像或懒加载技术。</li>
+</ul>
+</li>
+<li><strong>缓存策略</strong>：<!-- -->
+<ul>
+<li><strong>浏览器缓存</strong>：使用缓存策略（如 HTTP 缓存头）来缓存静态资源，减少重复加载。</li>
+<li><strong>Service Worker</strong>：使用 Service Worker 实现离线缓存和更复杂的缓存策略。</li>
+</ul>
+</li>
+<li><strong>使用 CDN</strong>：<!-- -->
+<ul>
+<li><strong>内容分发网络</strong>：将静态资源（如 JavaScript、CSS、图像）托管在 CDN 上，利用 CDN 的全球分发能力，提高资源加载速度。</li>
+</ul>
+</li>
+<li><strong>减少 HTTP 请求</strong>：<!-- -->
+<ul>
+<li><strong>合并文件</strong>：合并多个 CSS 和 JavaScript 文件，减少 HTTP 请求次数。</li>
+<li><strong>使用内联资源</strong>：对于小的 CSS 和 JavaScript 资源，可以考虑内联到 HTML 文件中。</li>
+</ul>
+</li>
+<li><strong>懒加载和预加载</strong>：<!-- -->
+<ul>
+<li><strong>懒加载</strong>：懒加载资源（如图片和组件），仅在需要时加载，减少初始加载的负担。</li>
+<li><strong>预加载</strong>：预加载关键资源，如在用户可能访问的页面上预加载必要的 JavaScript 和 CSS 文件。</li>
+</ul>
+</li>
+<li><strong>性能优化</strong>：<!-- -->
+<ul>
+<li><strong>代码优化</strong>：避免不必要的重新渲染和计算，优化渲染性能。</li>
+<li><strong>异步操作</strong>：尽量将耗时的操作（如数据获取）放在异步任务中，避免阻塞主线程。</li>
+</ul>
+</li>
+<li><strong>分析和监控</strong>：<!-- -->
+<ul>
+<li><strong>性能分析</strong>：使用工具（如 Lighthouse、WebPageTest）分析应用性能，识别瓶颈并进行优化。</li>
+<li><strong>实时监控</strong>：监控应用性能指标，及时发现和解决性能问题。</li>
+</ul>
+</li>
+</ol>
+<p>通过以上方法，可以显著提高单页应用的加载速度和整体性能。</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/gvray/FE-interview/tree/main/docs/software/engineering/FAQ.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_bjoM" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>编辑此页</a></div><div class="col lastUpdated_Dykw"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="文件选项卡"><a class="pagination-nav__link pagination-nav__link--prev" href="/FE-interview/docs/software/engineering/"><div class="pagination-nav__sublabel">上一页</div><div class="pagination-nav__label">目录大纲</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/FE-interview/docs/software/engineering/1"><div class="pagination-nav__sublabel">下一页</div><div class="pagination-nav__label">前端都哪些渲染方式</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_hZ7f thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#semver规 范" class="table-of-contents__link toc-highlight">semver规范</a></li><li><a href="#babel的原理是什么" class="table-of-contents__link toc-highlight">Babel的原理是什么?</a></li><li><a href="#如何写一个babel插件" class="table-of-contents__link toc-highlight">如何写一个babel插件?</a></li><li><a href="#webpack和gulp区别模块化与流的区别" class="table-of-contents__link toc-highlight">webpack和gulp区别（模块化与流的区别）</a></li><li><a href="#swc和babel的区别" class="table-of-contents__link toc-highlight">SWC和babel的区别</a></li><li><a href="#选mocha还是jest" class="table-of-contents__link toc-highlight">选mocha还是jest</a></li><li><a href="#本地开发端口映射" class="table-of-contents__link toc-highlight">本地开发端口映射</a></li><li><a href="#mvvmmvcmvp-的区别" class="table-of-contents__link toc-highlight">MVVM、MVC、MVP 的区别</a></li><li><a href="#webpack-与-gruntgulp-的不同" class="table-of-contents__link toc-highlight">webpack 与 grunt、gulp 的不同？</a></li><li><a href="#webpackrollupparcel-优劣" class="table-of-contents__link toc-highlight">webpack、rollup、parcel 优劣？</a></li><li><a href="#有哪些常的-loader" class="table-of-contents__link toc-highlight">有哪些常⻅的 Loader？</a></li><li><a href="#有哪些常的-plugin" class="table-of-contents__link toc-highlight">有哪些常⻅的 Plugin？</a></li><li><a href="#bundlechunkmodule-是什么" class="table-of-contents__link toc-highlight">bundle，chunk，module 是什么？</a></li><li><a href="#loader-和-plugin-的不同" class="table-of-contents__link toc-highlight">Loader 和 Plugin 的不同？</a></li><li><a href="#webpack-热更新的实现原理" class="table-of-contents__link toc-highlight">webpack 热更新的实现原理？</a></li><li><a href="#babel-的原理是什么" class="table-of-contents__link toc-highlight">Babel 的原理是什么?</a></li><li><a href="#使用缓存注意事项" class="table-of-contents__link toc-highlight">使用缓存注意事项</a></li><li><a href="#oss-和-cdn-什么区别" class="table-of-contents__link toc-highlight">oss 和 cdn 什么区别</a></li><li><a href="#spring-boot开发中经常听到的povodaobodtopojo到底是什么" class="table-of-contents__link toc-highlight">Spring Boot开发中，经常听到的PO、VO、DAO、BO、DTO、POJO到底是什么？</a></li><li><a href="#多线程和多进程哪个更高效" class="table-of-contents__link toc-highlight">多线程和多进程哪个更高效</a></li><li><a href="#进程线程死锁" class="table-of-contents__link toc-highlight">进程线程死锁</a></li><li><a href="#restful-接口规范是什么" class="table-of-contents__link toc-highlight">restful 接口规范是什么？</a></li><li><a href="#说说sourcemap的原理" class="table-of-contents__link toc-highlight">说说sourcemap的原理？</a></li><li><a href="#说说你对spa的理解" class="table-of-contents__link toc-highlight">说说你对SPA的理解</a></li><li><a href="#单页应用如何提高加载速度" class="table-of-contents__link toc-highlight">单页应用如何提高加载速度？</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">面试宝典</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/FE-interview/docs">八股文(ALL.)</a></li><li class="footer__item"><a class="footer__link-item" href="/FE-interview/docs/category/设计模式">设计模式</a></li><li class="footer__item"><a class="footer__link-item" href="/FE-interview/docs/category/算法">算法</a></li><li class="footer__item"><a class="footer__link-item" href="/FE-interview/docs/category/软件服务">软件服务</a></li><li class="footer__item"><a class="footer__link-item" href="/FE-interview/docs/category/服务端开发">服务端开发</a></li><li class="footer__item"><a class="footer__link-item" href="/FE-interview/docs/category/手写练习场">手写练习场</a></li></ul></div><div class="col footer__col"><div class="footer__title">多端开发</div><ul class="footer__items clean-list"><li class="footer__item"><a href="#" class="footer__link-item">移动端</a></li><li class="footer__item"><a href="#" class="footer__link-item">小程序</a></li><li class="footer__item"><a class="footer__link-item" href="/FE-interview/docs/category/移动端开发">桌面软件</a></li></ul></div><div class="col footer__col"><div class="footer__title">社区</div><ul class="footer__items clean-list"><li class="footer__item"><a href="#" class="footer__link-item">Stack Overflow</a></li></ul></div><div class="col footer__col"><div class="footer__title">更多</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/FE-interview/blog">博客</a></li><li class="footer__item"><a href="https://github.com/gvray/FE-interview" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_j_ow"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 FE-interview. Built with GavinRay's Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
