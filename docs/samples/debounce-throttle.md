@@ -239,6 +239,14 @@ console.log('debounce flush', val); // 1
 | 拖拽时同步位置 | 节流 | 每 16ms 一次保证流畅 |
 | 鼠标移动绘制轨迹 | 节流 | 控制采样率 |
 
+### 搜索场景追问：防抖取消后，请求也停止了吗？
+
+假设搜索请求 A 已经发出，稍后发出的请求 B 先返回，A 的旧结果却最后到达。防抖只控制回调何时执行；这里的 `debounced.cancel()` 只能清除尚未执行的定时任务，不会取消回调已经启动的请求。
+
+可以把 `AbortSignal` 传给支持取消的请求，但异步操作也可能忽略它。因此，提交结果前还需要检查请求编号，只接受最新请求的结果。清理时也要核对身份：旧请求的 `finally` 只能清理自己的 controller，不能清掉新请求保存的 controller。
+
+可选编码练习：[Take Latest — Abort Previous Requests](https://frontendatlas.com/javascript/coding/js-take-latest)（免费题目与完整解答），练习请求取消、过期结果拦截和 controller 清理。
+
 ## 进阶追问
 
 1. **防抖和节流的本质区别？** 防抖关心「最后一次」，节流关心「固定频率」。防抖在静止后才执行；节流在过程中持续执行。
